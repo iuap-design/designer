@@ -2,18 +2,45 @@
  * Created by chief on 16/7/15.
  */
 
-define('resize',[],function(){
-   var init = function (options){
+define('template', [], function (a) {
 
-       var container = options.container;
-       var id = options.id+".html" || "template.html";
+    var template = function (options) {
+
+        var container = options.container;
+        var id = options.id + ".html" || "template.html";
+
+        var template = require('html!../../static/page/' + id);
+
+        $(container).html(template);
+
+        this.drag('.widgetBox');
+    };
+    template.prototype = {
+        html:function(){
+
+        },
+        drag:function(elements){
+            require.ensure(['./../trd/jquery-ui/jquery-ui'],function(ui){
+                var ui = require('./../trd/jquery-ui/jquery-ui');
+                $(elements).sortable({
+                    placeholder: "ui-portlet-placeholder",
+                    connectWith: elements,
+                    forcePlaceholderSize: true,
+                    stop: function (i,ui) {
+                        //console.log(i);
+                    },
+                    over: function () {
+
+                    }
+                }).disableSelection();
+            });
+        }
+    };
 
        var template =  require('html!../../static/page/template/'+id);
 
-       $(container).html(template);
-   };
 
     return {
-        init:init
+        init: template
     }
 });
