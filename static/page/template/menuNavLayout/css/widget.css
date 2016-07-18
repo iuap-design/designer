@@ -1,0 +1,142 @@
+header {
+    background: #fff;
+    height: 56px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0px 3px 6px rgb(204, 204, 204);
+}
+
+.foldingpad {
+    position: absolute;
+    top: 16px;
+    left: 210px;
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 200;
+    color: #777;
+    font-size: 16px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.foldingpad.rotate {
+    right: -18px;
+    z-index: 1;
+    left: 65px;
+}
+
+.foldingpad.rotate i {
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+/*左侧menu*/
+
+.page-sidebar {
+    z-index: 100;
+    width: 200px;
+    position: fixed;
+    top: 0px;
+    min-height: 100%;
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #213049;
+    /*margin-left: -200px;*/
+}
+
+.log {
+    height: 55px;
+    background: #16243d;
+    position: relative;
+}
+
+.log .title {
+    color: #FFF;
+    line-height: 55px;
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+ul#nav-zone,
+ul.nav-menu {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-menu {
+    height: calc(100% - 65px)
+}
+
+.nav-menu li.nav-li {
+    height: 50px;
+    line-height: 51px;
+    border-top: 1px solid transparent;
+    position: relative;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+.nav-menu li.nav-li:hover {
+    background-color: #22293c;
+    color: #fff;
+}
+
+.nav-menu li.nav-li >a {
+    display: block;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.page-small-sidebar {
+    width: 55px;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    margin-left: 0px;
+    height: 100%;
+    background: #213045;
+}
+
+.samll-logo {
+    width: 40px;
+    position: relative;
+    left: 7px;
+    top: 15px;
+}
+
+.nav-title {
+    color: #ddd;
+}
+
+.nav-li-small {
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #273541;
+    text-align: center;
+    position: relative;
+}
+
+.nav-li-small i {
+    font-size: 18px;
+    color: #A6ACB4;
+}
+
+.nav-li i.fa {
+    font-size: 16px;
+    color: #A6ACB4;
+}

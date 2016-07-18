@@ -1,0 +1,29 @@
+.u-checkbox {
+	width: 16px;
+	height: 16px;
+	vertical-align: baseline;
+}
+
+.u-checkbox-outline {
+	top: 0;
+	height: 20px;
+	width: 20px;
+	border: none;
+}
+
+.u-checkbox.is-checked .u-checkbox-tick-outline {
+	background: url(images/checkO.png);
+}
+
+.u-checkbox.is-checked .u-checkbox-outline {
+	border: none;
+}
+
+.u-checkbox .u-checkbox-tick-outline {
+	background: url(images/checkH.png);
+}
+
+.u-checkbox-tick-outline {
+	-webkit-mask-image: none;
+	mask-image: none;
+}

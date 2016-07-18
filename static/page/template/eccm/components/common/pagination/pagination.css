@@ -1,0 +1,13 @@
+.u-pagination > li > a, .u-pagination > li > span {
+	margin: 0 4px;
+	border: 1px solid #d7d7d7;
+}
+
+.u-pagination > li > a:hover, .u-pagination > li > span:hover, .u-pagination > li > a:focus, .u-pagination > li > span:focus {
+	background-color: #fff;
+	color: #d33;
+}
+
+.u-pagination > li[role="gap"] > a {
+	border: none;
+}

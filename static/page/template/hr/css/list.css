@@ -1,0 +1,78 @@
+.head-icon{
+    margin-top: -6px;
+    margin-left: 3px;
+}
+.head-save{
+    overflow: visible;
+}
+.head-save-div{
+    position: relative;
+}
+.page{
+    background: #eceff1;
+}
+.search{
+    background: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+    padding: 20px 50px;
+    box-sizing: border-box;
+    margin-bottom:30px;
+    top: 20px;
+    position: relative;
+}
+.high{
+    float: right;
+    margin-top: -30px;
+    color: #303F9F;
+    cursor: pointer;
+}
+.high-icon{
+    float: left;
+    margin-top: 2px;
+}
+.message-head-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.more{
+    position: relative;
+}
+.more-icon{
+    display: block;
+    z-index: 1;
+    right: 175px;
+    top: 8px;
+    color: #75757C;
+    position: absolute;
+}
+.more-input{
+    position: absolute;
+    right: 0;
+    height: 25px;
+    padding-left: 30px;
+}
+.table-button{
+    border: none!important;
+    background: none!important;
+}
+.table:nth-child(2n){
+    background-color:#eee
+}
+.table tr:nth-child(2n+1){
+    background-color:#fff
+}
+.table th,.table td{
+    position: relative;
+}
+.table-checkbox{
+    position: absolute;
+    top: 8px;
+}
+.table-div{
+    width: 100%;
+    background: #fff;
+}
+.table-tr:hover{
+    background: #EDF8FF;
+}

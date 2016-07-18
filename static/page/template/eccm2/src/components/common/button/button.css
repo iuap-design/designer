@@ -1,0 +1,31 @@
+.u-button {
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.u-button.primary.raised, .u-button.primary.floating {
+}
+
+.u-button.primary.raised:hover, .u-button.primary.floating:hover {
+	color: #f1f1f1;
+}
+
+.u-button.accent {
+	
+}
+
+.u-button.accent.raised, .u-button.accent.floating {
+	background-color: #84c351;
+    border: 1px #84c351 solid;
+}
+
+.u-button.accent.raised:hover, .u-button.accent.floating:hover {
+	background-color: #84c351;
+    color: #f1f1f1;
+}
+
+.u-button:hover {
+}
+    
