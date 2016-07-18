@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>designer</title>
+    <link rel="stylesheet" href="/trd/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/fonts/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/fonts/portalfont/iconfont.css">
+    <link rel="stylesheet" href="/trd/uui/assets/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+    <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u-extend.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="http://design.yyuap.com/dist/static/img/logo-small.png" width="25" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">iUAP Design</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont icon-add"></i> 创建
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/widget" data-toggle="collapse" data-target=".site-menubar" aria-expanded="true">
+                            <i class="iconfont icon-component"></i> 组件
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/layout" data-toggle="collapse" data-target="#layout-container" aria-expanded="true">
+                            <i class="iconfont icon-template"></i> 模版
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont icon-setting01"></i> 设定
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <i class="portalfont icon-pencil" title="编辑"></i> 编辑
+                        </a>
+                    </li>
+                    <li>
+                        <div class="hidden-sm hidden-xs" id="responsive">
+                            <a class="active" href="#" id="desktop"><i class="fa fa-desktop"></i></a>
+                            <a href="#" id="tablet-landscape" class=""><i class="fa fa-tablet"></i></a>
+                            <a href="#" id="tablet-portrait"><i class="fa fa-tablet"></i></a>
+                            <a href="#" id="phone-landscape" class=""><i class="fa fa-mobile"></i></a>
+                            <a href="#" id="phone-portrait" class=""><i class="fa fa-mobile"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="portalfont icon-baocun" title="保存"></i> 保存
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="sidebar-container" class="site-menubar collapse.in collapse in"></div>
+    <div class="container-fluid">
+        <div class="container-header"></div>
+        <div class="container-left"></div>
+        <div class="container-right"></div>
+        <div class="container-content"></div>
+        <div class="container-footer"></div>
+    </div>
+
+    <div id="layout-container" class="layout-container collapse.in collapse in">
+
+    </div>
+
+    <script src="/trd/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/trd/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        window.contextRoot = 'designer';
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+.navbar-default {
+    margin-bottom:0;
+    z-index: 10;
+}
+.navbar-default a {
+    color:#fff;
+    outline: 0;
+}
+.container-header {
+    border-bottom:1px dashed #cbcbcb;
+    height:80px;
+}
+.container-content {
+    margin:0 65px;
+}
+.container-left {
+    position:absolute;
+    left:0;
+    height:100%;
+    width:80px;
+    top:52px;
+    border-right:1px dashed #cbcbcb;
+}
+.container-right {
+    position:absolute;
+    right:0;
+    height:100%;
+    width:80px;
+    top:52px;
+    border-left:1px dashed #cbcbcb;
+}
+.container-footer {
+    border-top:1px dashed #cbcbcb;
+    height:50px;
+    bottom:0;
+    width:auto;
+    position:absolute;
+}
+
+#responsive {
+    display: block;
+    float: right;
+    margin: 0 25px;
+}
+#responsive > a {
+    color: #6a6a6a;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0 5px;
+    text-decoration: none;
+    outline: 0;
+    -moz-transition: all 0.3s;
+}
+#responsive > a.active, #responsive > a:hover, #responsive > a:focus, #responsive > a:active {
+    color: #000;
+}
+#responsive #tablet-landscape, #responsive #phone-landscape {
+    transform:rotate(-90deg);
+}
