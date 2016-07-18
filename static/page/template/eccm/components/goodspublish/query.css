@@ -1,9 +1,0 @@
-/***商品查询条件01****/
-.spcxtj01-box{border-top: 1px solid #e5e5e5;}
-.spcxtj01-box .ul{}
-.spcxtj01-box .li{clear:both;border-width:0 0 1px 0;border-style:solid;line-height:32px;}
-.spcxtj01-box .more-sx{width:100%;line-height:32px;height:32px;text-align:center;}
-.spcxtj01-box a:hover{color:#d33;}
-.spcxtj01-box .i-jt01{display:inline-block;background: url("../images/i-xtjt-01.png") no-repeat 0 2px;height:9px;width:9px;margin-left:1px;}
-.spcxtj01-box a.active .i-jt01{background: url("../images/i-xtjt-01.png") no-repeat 0 -6px;}
-/***商品查询条件01--end****/

@@ -11,8 +11,34 @@
     border-bottom:1px dashed #cbcbcb;
     height:80px;
 }
-.container-content {
-    margin:0 65px;
+#container-content {
+    overflow: overlay;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: width 300ms;
+    -moz-transition: width 300ms;
+    -o-transition: width 300ms;
+    -ms-transition: width 300ms;
+    transition: width 300ms;
+    margin-top: 0;
+    margin-right: auto;;
+    margin-left: auto;
+}
+#container-content.phone-landscape {
+    border-color: #999;
+    border-radius: 36px; 
+    border-style: solid;
+}
+#container-content.phone-portrait, #container-content.phone-landscape {
+    border-color: #999;
+    border-radius: 36px;
+    border-style: solid;
+}
+#container-content.phone-portrait {
+    border-width: 60px 16px;
+}
+#container-content.phone-landscape {
+    border-width: 16px 60px;
 }
 .container-left {
     position:absolute;
@@ -20,7 +46,7 @@
     height:100%;
     width:80px;
     top:52px;
-    border-right:1px dashed #cbcbcb;
+    /*border-right:1px dashed #cbcbcb;*/
 }
 .container-right {
     position:absolute;
@@ -28,7 +54,7 @@
     height:100%;
     width:80px;
     top:52px;
-    border-left:1px dashed #cbcbcb;
+    /*border-left:1px dashed #cbcbcb;*/
 }
 .container-footer {
     border-top:1px dashed #cbcbcb;
@@ -59,4 +85,37 @@
 }
 #responsive #tablet-landscape, #responsive #phone-landscape {
     transform:rotate(-90deg);
+}
+/*
+    运维 多屏幕适应
+*/
+.tablet-portrait .yunwei-part1{
+    width: 50%;
+}
+.tablet-portrait .yunwei-part2{
+    width: 100%;
+}
+.tablet-portrait .yunwei-part3{
+    width: 100%;
+}
+.phone-portrait .yunwei-part1{
+    width: 100%;
+}
+.phone-portrait .yunwei-part2{
+    width: 100%;
+}
+.phone-portrait .yunwei-part3{
+    width: 100%;
+}
+.phone-landscape .yunwei-part1{
+    width: 50%;
+}
+.phone-landscape .yunwei-part2{
+    width: 100%;
+}
+.phone-landscape .yunwei-part3{
+    width: 100%;
+}
+.tablet-landscape .u-widget-body{
+    padding: 30px 7px;
 }
