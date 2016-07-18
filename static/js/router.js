@@ -16,7 +16,10 @@ router.on('/edit',function(){
 //预览多端  mobile,pc,iphone,ipad
 router.on('/preview/:id',function(id){
     var template =  require('../../static/js/template');
-    template.init('.container-content');
+    template.init({
+        container:'.container-content',
+        id:id
+    });
 });
 
 

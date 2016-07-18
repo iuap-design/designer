@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="http://design.yyuap.com/templates/website/tenxcloud/css/console/main.526.css?rev=0.1.0">
+<div class="page-container" style="background:#f5f6f6">
+    <div class="dashboard">
+        <div class="u-row">
+            <div class="u-col-xs-12 u-col-md-4">
+                <section>
+                    <div class="u-widget">
+                        <div class="u-widget-heading">
+                            <h3 class="u-widget-title">本月消费
+
+                                <a class="u-link u-widget-more">充值</a></h3>
+                        </div>
+                        <div class="u-widget-body">
+                            <div style="margin-top: -24px;margin-left: -32px;" class="condition">
+                                <!--<img style="margin: 0 auto;-->
+                                <!--display: block;" src="images/wasteMoney.png">-->
+                            </div>
+                            <div class="notice text-center">
+                                账户余额：￥<span id="thisMonthconsumptionSum">-</span>
+                                <p style="font-size:12px">其中优惠券：￥<span id="thisMonthGruntSum">0</span>，充值余额：￥<span id="thisMonthPaySum">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="u-col-xs-12 u-col-md-4">
+                <section>
+                    <div class="u-widget">
+                        <div class="u-widget-heading">
+                            <h3 class="u-widget-title">资源详情
+                            </h3>
+                        </div>
+                        <div class="u-widget-body">
+                            <ul class="server-list">
+                                <li>
+                                    <a onclick="_permalink(this)" data-permalink="">
+                                                <span class="server-info-icon"><i class="fa_icon server_icon_1"></i>
+                                            <span>服务个数：</span>
+                                                </span>
+                                        <span class="pull-right u-tag u-tag-info u-tag-round">0&nbsp;个</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="_permalink(this)" data-permalink="">
+                                                <span class="server-info-icon"><i class="fa_icon server_icon_2">1</i>
+                                            <span>项目个数：</span>
+                                                </span>
+                                        <span class="pull-right u-tag u-tag-primary u-tag-round">1&nbsp;个</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="_permalink(this)" data-permalink="">
+                                                <span class="server-info-icon"><i class="fa_icon server_icon_3">0</i>
+                                            <span>镜像个数：</span>
+                                                </span>
+                                        <span class="pull-right u-tag u-tag-warning u-tag-round">1&nbsp;个</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="_permalink(this)" data-permalink="">
+                                                <span class="server-info-icon"><i class="fa_icon server_icon_hosting"></i>
+                                            <span>主机个数：</span>
+                                                </span>
+                                        <span class="pull-right u-tag u-tag-success u-tag-round">1&nbsp;个</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="u-col-xs-12 u-col-md-4">
+                <section style="background:none;">
+                    <div class="u-widget">
+                        <div class="u-widget-heading">
+                            <h3 class="u-widget-title">消息中心
+                                <div class="symbol pull-right">
+                                    <i class="fa fa-angle-down"></i></div>
+                            </h3>
+                        </div>
+                        <div class="u-widget-body" id="message-center" style="display: block;">
+                            消息为空，在这里您会收到镜像的消息
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="u-row">
+            <div class="u-col-xs-12 u-col-md-8">
+                <section>
+                    <div class="u-widget">
+                        <div class="u-widget-heading">
+                            <h3 class="u-widget-title">资源配额使用情况
+
+                            </h3>
+                        </div>
+                        <div class="u-widget-body use-condition">
+                            <div class="u-row">
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">CPU</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pCPU" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">0 &nbsp; 核</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">网络</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pNet" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">10 &nbsp; M</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">内存</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pMemory" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">0 &nbsp; G</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">存储</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pStorage" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">0 &nbsp; G</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">任务</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pTask" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">0 &nbsp; 个</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">编排</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pLayout" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">10 &nbsp; 个</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">集群</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pCluster" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">0 &nbsp; 个</span>
+                                </div>
+                                <div class="u-col-xs-12 u-col-md-6 per">
+                                    <span class="part1-info">主机</span>
+                                    <div class="u-progress u-progress-sm part2-info is-upgraded" id="pMaster" data-upgraded=",u.Progress"><div class="progressbar bar bar1" style="width: 0%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                                    <span class="part3-info">10 &nbsp; 个</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="u-col-xs-12 u-col-md-4">
+                <section style="background:none;">
+                    <div class="u-widget">
+                        <div class="u-widget-heading">
+                            <h3 class="u-widget-title">最近操作
+                                <div class="symbol pull-right">
+                                    <i class="fa fa-angle-down"></i>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="u-widget-body">
+                            暂无操作记录
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
