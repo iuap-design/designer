@@ -1,0 +1,101 @@
+.u-grid {
+	border: none;
+}
+
+.u-grid .u-grid-content-left, .u-grid table {
+	background-color: #f2fcfd;
+	border: none;
+}
+
+.u-grid-header-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.u-grid-header-th {
+	height: 55px;
+	background-color: #00bcd5;
+	text-align: center;
+}
+
+.u-grid-header-th:hover {
+	background-color: #00bcd5;
+}
+
+.u-grid td {
+	height: 55px;
+	line-height: 55px;
+	border: none;
+}
+
+.u-grid-content-num {
+	height: 55px;
+	line-height: 55px;
+	border: none;
+}
+
+.u-grid-content-td-div {
+	
+    text-align: center;
+	font-size: 14px;
+	
+}
+
+.u-grid-content-focus-row {
+	background-color: transparent !important;// 需要确定此处的颜色
+}
+
+.u-grid-move-bg {
+	background-color: #e5f8fc;
+}
+
+.u-grid-content-div tbody > tr:nth-of-type(even), 
+	.u-grid-content-left .u-grid-content-num:nth-of-type(even),
+	.u-grid-content-left .u-grid-content-multiSelect:nth-of-type(even) {
+    background-color: #e5f8fc;
+}
+
+ {
+	background-color: #e5f8fc;
+}
+
+.u-grid-header-left {
+	background-color: #00bcd5;
+}
+
+.u-grid-content-multiSelect {
+	height: 55px;
+    border: none;
+}
+
+.u-grid-checkbox-outline {
+	width: 20px;
+	height: 20px;
+	border: none;
+	display: inline-block;
+}
+
+.u-grid-checkbox-outline.is-checked {
+	border: none;
+}
+
+.u-grid-checkbox-outline.is-checked .u-grid-checkbox-tick-outline {
+	background: url(images/checkO.png);
+}
+
+.u-grid-checkbox-outline .u-grid-checkbox-tick-outline {
+	background: url(images/checkH.png);
+	-webkit-mask: none;
+    mask: none;
+}
+
+.u-grid-header-num {
+	line-height: 55px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.u-grid-header-multi-select {
+	padding-left: 12px;
+}

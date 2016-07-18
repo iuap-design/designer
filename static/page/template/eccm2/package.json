@@ -1,0 +1,16 @@
+{
+  "name": "ectemplates",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^2.1.2"
+  },
+  "dependencies": {}
+}

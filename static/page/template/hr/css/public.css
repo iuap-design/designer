@@ -1,0 +1,311 @@
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/*导航*/
+.nav-div{
+    height: 44px;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 3;
+}
+.nav-ul{
+    background: #3F51B5;
+    position: relative;
+}
+.nav-first,.nav-second,.nav-third,.nav-four,.nav-five,.nav-six{
+    position: absolute;
+    color: #fff;
+}
+.nav-first{
+    left:0;
+    font-size: 20px;
+}
+.nav-second{
+    left: 50px;
+}
+.nav-third{
+    right: 200px;
+}
+.nav-four{
+    right: 155px;
+}
+.nav-five{
+    right: 110px;
+    overflow: visible;
+}
+.nav-six{
+    right:0;
+    overflow: visible;
+}
+.nav-num{
+    position: absolute;
+    color: #fff;
+    background-color: #ed4047;
+    top: 5px;
+    right: 17px;
+    border-radius: 50%;
+    display: block;
+    z-index: 2;
+    height: 15px;
+    font-size: 10px;
+    width: 15px;
+    line-height: 14px;
+    padding: 2px;
+}
+/*头*/
+.head{
+    margin-top: 20px;
+    height: 66px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+    margin-bottom:30px;
+    background: #fff;
+    position: relative;
+    top: 28px;
+    z-index: 2;
+}
+.head div{
+    text-align: center;
+    line-height: 66px;
+}
+.head-back{
+    position: relative;
+    padding-left: 30px;
+    top: -5px;
+}
+.head-back-left{
+    position: absolute;
+    top: 8px;
+    left:8px;
+}
+.head-save{
+    background: #39B588;
+    color: #fff;
+}
+.head-save:hover{
+    background: #349972;
+}
+
+/*左侧列表*/
+.menu{
+    width: 16%;
+    overflow-y: auto;
+    position: fixed;
+    background: #FFF;
+    top: 28px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    /*height: 648px;*/
+    z-index: 2;
+}
+.menu-item{
+    width: auto;
+    margin: 10px 0;
+    /*height: 38px;*/
+    line-height: 38px;
+}
+.menu-item.active{
+    background: rgba(33,33,33,.05);
+    border-top: 1px solid rgba(0,0,0,.04);
+    border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.menu-item a{
+    display: block;
+    color: rgba(117,117,117,.9);
+    white-space: nowrap;
+    cursor: pointer;
+}
+.menu-item:hover{
+    background: #F4F4F4;
+}
+.menu-item-middle{
+    background: #EAEAEA;
+    height: 2px;
+}
+.menu-close{
+    z-index: -1;
+    width: 0;
+}
+.menu-icon{
+    display: block;
+    float: right;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+.menu-second{
+    color: rgba(117,117,117,.9);
+    background: #F4F4F4;
+}
+.menu-second,.menu-third{
+    display: none;
+}
+/*搜索框*/
+.head-search{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 3;
+}
+.head-search-close{
+    height: 0;
+}
+.search-input{
+    padding-left: 40px;
+    height: 48px;
+}
+.search-before{
+    position: absolute;
+    color: #AFAFAF;
+    top:16px;
+    text-align: center;
+    width: 36px;
+}
+.search-after:hover {
+    color: #AFAFAF;
+}
+.search-after{
+    position: absolute;
+    color: #E6E6E6;
+    top: 14px;
+    right: 0;
+    height: 100%;
+    text-align: center;
+    width: 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*消息列表*/
+.message{
+    background: #fff;
+    width: 370px;
+    padding: 0;
+    border: 1px solid #E0E0E0;
+    position: absolute;
+    display: block;
+    right: 0;
+    z-index: 2;
+    color: #424242;
+    top: 55px;
+}
+.message-head-left,.message-head-new,.item-left,.item-right{
+    display: inline-block;
+}
+.message-head,.message-item,.message-bottom{
+    height: 70px;
+    box-sizing: border-box;
+}
+.message-head{
+    position: relative;
+    padding: 20px 20px;
+    /*background-color: #fff;*/
+    border-bottom: 1px solid #e0e0e0;
+}
+.message-head-left{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+}
+.message-head-new{
+    background: #ed4047;
+    border-radius: 100px;
+    color: #fff;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 75%;
+    text-align: center;
+    right: 20px;
+    position: absolute;
+    top: 25px;
+}
+.message-list{
+    overflow: auto;
+    height: 280px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.message-list-li{
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    height: 70px;
+}
+.message-list-li:hover{
+    background: #EEEEEE;
+}
+.item-left,.item-right{
+    position: absolute;
+    text-align: left;
+}
+.item-left{
+    left: 10px;
+    top: 12px;
+}
+.item-right{
+    left: 50px;
+    top: -10px;
+    /*height: 20px*/
+}
+.item-right-head,.item-right-body{
+    position: relative;
+    top:0;
+    height: 50%;
+}
+.item-right-head{
+    top: 10px;
+}
+.item-right-body{
+    top:-10px;
+}
+.message-bottom{
+    position: relative;
+    padding: 20px 20px;
+    background: #EEEEEE;
+}
+.message-bottom-bell{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 75%;
+    text-align: center;
+    right: 20px;
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+}
+.message-head-left>a,.message-bottom-bell{
+    color: #9E9E9C;
+}
+.message-head-left>a:hover,.message-bottom-bell:hover{
+    color:#5BBF9B;
+}
+/*个人中心*/
+.list-group{
+    width: 160px;
+    background: #fff;
+    color: #757575;
+    margin:0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+}
+.list-group-item{
+    cursor: pointer;
+    height: 38px;
+    margin: 2px 0;
+    text-align: center;
+}
+.list-group-middle{
+    height: 1px;
+    background: #e0e0e0;
+}
+.list-group-item:hover{
+    background: #EEEEEE;
+}
+

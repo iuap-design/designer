@@ -1,0 +1,40 @@
+/*logo*/
+.header .logo-2014{float: left;width:220px;display: inline-block;overflow: hidden;}
+.header .logo-2014 img{max-width: 200px;}
+/*****右侧-搜索*****/
+.top-rt-ss-box{margin-top:20px;}
+.top-rt-ss-box .ul-k{}
+.top-rt-ss-box .ul-k .li-k{float: left;margin-left:15px;}
+.wdgz-btn01{display:inline-block;height:34px;line-height:34px;background-color: #f9f9f9;padding:0 10px;border: 1px solid #e5e5e5;border-radius:5px;}
+.wdgz-btn01 .img{}
+.wdgz-btn01 .s-txt{margin:0 10px;margin-bottom:5px;}
+/*****右侧-搜索--end*****/
+
+/**** 二级导航 *****/
+.ec-nav-sub {
+	position: relative;
+	border-top: solid 1px #e6e6e6;
+}
+
+.ec-nav-sub-item {
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	margin-right: 18px;
+	height: 39px;
+	line-height: 39px;
+	font-size: 14px;
+	text-decoration: none; 
+	cursor: pointer;
+	
+}
+
+.ec-nav-sub-item:hover {
+	color: #ea544a;   
+}
+
+.ec-nav-sub-item.current {
+	border-top: solid 1px #ea544a;   
+	color: #ea544a;   
+}
+/**** 二级导航 end *****/

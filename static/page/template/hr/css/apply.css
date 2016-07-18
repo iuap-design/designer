@@ -1,0 +1,26 @@
+/*内容*/
+.page{
+    background: #eceff1;
+}
+.search{
+    background: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+    padding: 20px 50px;
+    box-sizing: border-box;
+    margin-bottom:30px;
+    top: 20px;
+    position: relative;
+}
+.info{
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 0;
+    position: relative;
+    top: 20px;
+}
+.email{
+    background: #EEEEEE;
+    text-align: center;
+}

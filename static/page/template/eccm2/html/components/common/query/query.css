@@ -1,0 +1,41 @@
+.ec-query .ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ec-query .ul .li{
+	display: inline-block;
+	    width: 100%;
+}
+
+.ec-query .dl, .ec-query .dl .dd{
+	display: inline-block;
+	margin: 0;
+	    padding: 0 0;
+}
+
+.ec-query-item {
+    height: 32px;
+    line-height: 32px;
+}
+
+.ec-query-title {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+    
+}
+
+.ec-query-item-choice {
+	padding: 0 8px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #666;
+}
+
+.ec-query-item-choice:hover {
+	color: rgb(0,188,212);
+	text-decoration: none;
+}

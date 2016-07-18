@@ -1,0 +1,24 @@
+.ec-search_ico {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(images/search_ico.png) no-repeat;
+}
+
+.ec-form-item-title {
+	float: left;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    width: 130px;
+    line-height: 29px;
+    text-align: right;
+    padding: 20px 0;
+}
+
+.ec-form-item-content {
+	margin-left: 140px;
+}

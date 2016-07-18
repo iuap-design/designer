@@ -1,0 +1,39 @@
+.ec-table {
+	background-color: #f2fcfd;
+}
+.ec-table > thead > tr > th, .ec-table > tbody > tr > td {
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+	border: none;
+}
+
+.ec-table > thead > tr > th {
+    background-color: #00bcd5;
+    font-weight: bold;
+	font-size: 16px;
+    color: #fff;
+}
+
+.ec-table > tbody > tr:nth-of-type(even) {
+    background-color: #e5f8fc;
+}
+
+.ec-table > tbody > tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.ec-table > tbody > tr:hover {
+    background-color: #e5f8fc;
+}
+
+.ec-table-op-del {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    background: url(images/ico6H.png) no-repeat;
+}
+
+.ec-table-op-del:hover {
+    background: url(images/ico6O.png) no-repeat;
+}

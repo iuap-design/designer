@@ -1,0 +1,16 @@
+/***友情链接****/
+.yqlj01-box{}
+.yqlj01-box .links{ float:left; width:1200px;  padding:15px 0 5px 0; }
+.yqlj01-box .links ul li{ float:left;border-right:#ccc 1px solid; margin:10px 10px 0  0; padding:0 10px 0 0;}
+.yqlj01-box .links ul li a{}
+/***友情链接--end***/
+/***footer****/
+.footer .nav_d{ float:left;width:1200px; border-width:1px 0 0 0;border-style: solid; padding:10px 0; margin:10px 0 0 0; }
+.footer .nav_d ul li{ float:left; margin:5px 10px 0  0; padding:0 10px 0 0;}
+.footer .nav_d ul li a{}
+.footer .copyright{ float:left;width:1200px;}
+.footer .copyright span{ margin-right:20px;}
+.footer .link_p{float:left;width:1200px; margin:10px 0 0 0;}
+.footer .link_p span{margin:0 10px 0 0;}
+.footer .link_p span img{ width:auto; height:40px;}
+/***footer--end***/

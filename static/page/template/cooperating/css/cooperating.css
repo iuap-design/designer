@@ -1,0 +1,124 @@
+.tab-content{
+   display: inherit;
+}
+.u-tabs__tab-bar,.tab-content {
+    display: inherit;
+    background: #fff;
+    
+}
+.tabContent{
+    background: #fff;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+body{
+    background: #F8F6F2;
+}
+.tab-content{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.u-tabs__panel{
+    
+    padding: 20px;
+}
+.avatar-face-img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.avatar-face-name{
+    margin-left: 5px;
+    color: #8a959e;
+}
+.avatar-face-flag{
+    font-size: 16px;
+    color: #e7e7df;
+}
+.avatar-face-flag:hover{
+    color: #da4f4a;
+    cursor: pointer;
+}
+.avatar-task h4{
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 150%;
+}
+.avatar-task .avatar-task-type{
+    color: #aaa;
+}
+.avatar-datetime{
+    color: #d7d7d7;
+}
+.column{
+    line-height: 48px;
+}
+.column.avatar-task{
+    line-height: 0;
+}
+.u-table-hover td{
+    padding: 2px !important;
+}
+.u-table-hover td:last-child{
+    text-align: right;
+}
+.u-table-hover td:last-child span{
+    padding-right: 30px;
+}
+.u-table-hover td:first-child span{
+    padding-left: 30px;
+}
+.u-table-base>tbody>tr>td, .u-table-base>tbody>tr>th, .u-table-base>tfoot>tr>td, .u-table-base>tfoot>tr>th, .u-table-base>thead>tr>td, .u-table-base>thead>tr>th{
+    border-top: 1px solid #f8f6f2;
+}
+.u-table-hover>tbody>tr:hover{
+    background-color:#f8f6f2;
+}
+.u-row{
+    height: 100%;
+    width: 100%;
+    background: #F8F6F2;
+    padding: 20px;
+    margin-right: 0;
+    margin-left: 0;
+}
+.left ul{
+    list-style: none;
+    background-color: #f8f6f2;
+    padding-bottom: 7px;
+    padding-top: 20px;
+    width: 190px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.left ul li{
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.left ul li:hover{
+    background-color: #eeece8;
+    color: #484744;
+    border-radius: 3px;
+}
+.left ul >span{
+    padding-bottom: 20px;
+    display: inline-block;
+    font-size: 14px;
+}
+.left ul a{
+    text-decoration: none;
+    color: #484744;
+}
+.active{
+    background-color: #eeece8;
+    color: #484744;
+    border-radius: 3px;
+}
+.active-flag{
+    color:#da4f4a;
+}

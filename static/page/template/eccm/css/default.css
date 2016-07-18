@@ -1,0 +1,22 @@
+/*
+Default默认属性
+*/
+body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, blockquote { padding: 0; margin: 0; }
+body, textarea, select, input, button{color: #333; font:12px/1.125 "microsoft yahei",Arial,Verdana; }
+*{padding:0; margin:0;}
+html, body { width: 100%; height: 100%; border: 0;}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em, i { font-style: normal; text-align: left; font-size: inherit; }
+html, body, img, iframe { border: 0; }
+textarea { resize: none; overflow: auto; }
+input:focus, textarea:focus, span:focus, a:focus { outline: none; }
+li, s { list-style: none; }
+img{border: 0; }
+mark { background: none; }
+[hidefocus] {outline:none;}
+a{text-decoration: none;color: #333;}
+a:hover {text-decoration:none;color:#666;}
+a:hover {text-decoration:none;color:#d33;}
+a, a *{cursor: pointer; }
+table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+select option{padding:4px 0;}
