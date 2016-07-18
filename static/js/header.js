@@ -15,6 +15,7 @@ define('desigener',[],function(){
             preview.removeClass("active");
             $(this).addClass("active");
         });
+
     };
     return init = init;
 });
