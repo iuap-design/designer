@@ -1,8 +1,12 @@
 body{
     color:#fff;
 }
-.page-login:before {
+/*.page-login:before {
     background-image: url("../img/login.png");
+}*/
+.page-login{
+    background-image: url("/img/login.png");
+    padding-top: 30px;
 }
 .page-dark.layout-full:before {
     position: fixed;
