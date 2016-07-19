@@ -28,6 +28,6 @@ app.use(function *(next){
   }
 });
 
-app.use(serve(path.join(__dirname, './')));
+app.use(serve(path.join(__dirname, './build')));
 
 app.listen( 9000 );
