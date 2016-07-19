@@ -9,7 +9,7 @@ define('template', [], function (a) {
         var container = options.container;
         var id = options.id + ".html" || "template.html";
 
-        var template = require('html!../../static/page/' + id);
+        var template = require('html!../../static/page/template/' + id);
 
         $(container).html(template);
 
@@ -37,7 +37,6 @@ define('template', [], function (a) {
         }
     };
 
-       var template =  require('html!../../static/page/template/'+id);
 
 
     return {
