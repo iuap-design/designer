@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "designer for yonyou",
   "repository": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --progress",
-    "build": "./node_modules/.bin/webpack --progress --colors --config webpack.config.js"
+    "server": "node server.js",
+    "build": "rm -rf build && gulp && ./node_modules/.bin/webpack -p --progress --colors"
   },
   "keywords": [
     "designer"
@@ -38,5 +39,12 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-body": "^1.4.0",
+    "koa-gzip": "^0.1.0",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0"
   }
 }

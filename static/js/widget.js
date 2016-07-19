@@ -8,7 +8,20 @@ define('widget',[],function(){
 
         $(container).html(template);
         drag(".widget-list li");
+
+        widgetshow();
     };
+
+    var widgetshow = function(){
+        var widget  = $('.widget-select');
+        var widgetContent = $('.widget-list');
+
+        widget.on('change',function(e){
+            var i = $(this).find("option:selected").index();
+            widgetContent.hide();
+            widgetContent.eq(i).show();
+        })
+    }
 
     var drag = function(elements){
         require.ensure(['./../trd/jquery-ui/jquery-ui'],function(ui) {
