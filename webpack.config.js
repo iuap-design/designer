@@ -30,7 +30,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, "build/"),//文件输出目录
         filename: "index_bundle.js",//根据入口文件输出的对应多个文件名
-        publicPath: "http://127.0.0.1:8080/build/"//用于配置文件发布路径，如CDN或本地服务器
+        publicPath: "/build/"//用于配置文件发布路径，如CDN或本地服务器
     },
     resolve: {
         extension: ['', '.jsx', '.js', '.json','.css'],
