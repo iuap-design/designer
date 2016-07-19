@@ -1,9 +1,35 @@
 
 .ui-portlet-placeholder {
-    background:#f3f3f3;
+    background:#fff;
 }
 .ui-sortable {
     background:#f3f3f3;
     border:1px dashed #ccc;
     min-height:100px;
+}
+.widget-menubar {
+    position:absolute;
+    right: -10px;
+    top: 14px;
+}
+.widget-menubar {
+    list-style: none;
+    width:40px;
+    margin:0;
+    padding:0;
+    background:#fff;
+    border-radius:6px;
+}
+.widget-menubar li {
+    list-style: none;
+    display:inline-block;
+}
+.widget-menubar li:hover {
+    background:none;
+}
+.widget-menubar li  i {
+    border:none;
+}
+.widget-menubar li  i:hover {
+    color:rgb(0, 188, 212);
 }
