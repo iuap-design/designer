@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --progress",
     "server": "node server.js",
-    "build": "gulp && ./node_modules/.bin/webpack --progress --colors --config webpack.config.js"
+    "build": "rm -rf build && gulp && ./node_modules/.bin/webpack -p --progress --colors"
   },
   "keywords": [
     "designer"
