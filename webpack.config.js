@@ -21,7 +21,7 @@ module.exports = {
         hot: true,
         inline: true,
         contentBase: './build',
-        port: 8080,
+        port: 9000,
         stats: { colors: true }
     },
     entry: {
