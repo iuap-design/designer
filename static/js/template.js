@@ -11,22 +11,22 @@ define('template', [], function (a) {
         var id = options.id + ".html" || "template.html";
 
 
-        $.ajax({
-            url:'/templates/website/'+options.id+'/index.html',
-            type:'get',
-            dataType:'string',
-            success:function(data){
-                var html = $(data);
-                var content = html.find('#designerEdit');
-                $(container).html(content);
-                self.drag('.widgetBox');
-                self.edit();
-            }
-        });
+        //$.ajax({
+        //    url:'/templates/website/'+options.id+'/index.html',
+        //    type:'get',
+        //    dataType:'string',
+        //    success:function(data){
+        //        var html = $(data);
+        //        var content = html.find('#designerEdit');
+        //        $(container).html(content);
+        //        self.drag('.widgetBox');
+        //        self.edit();
+        //    }
+        //});
 
-        //var template = require('html!../../static/page/template/' + id);
+        var template = require('html!../../static/page/template/' + id);
 
-        //$(container).html(template);
+        $(container).html(template);
 
     };
     template.prototype = {
