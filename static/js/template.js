@@ -10,9 +10,6 @@ define('template', [], function (a) {
 
         var id = options.id + ".html" || "template.html";
 
-        var template = require('html!../../static/page/template/' + id);
-
-        $(container).html(template);
 
         $.ajax({
             url:'/ficloud/home/'+options.id,
@@ -22,6 +19,12 @@ define('template', [], function (a) {
                 console.log(data);
             }
         });
+
+        var template = require('html!../../static/page/template/' + id);
+
+        $(container).html(template);
+
+
 
         this.drag('.widgetBox');
         this.edit();
