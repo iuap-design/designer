@@ -9,6 +9,11 @@ define('layout',[],function(){
 
 
         $(container).html(template);
+
+        $(container).find(".layout-btn").bind("click",function(){
+        	$(container).find(".active").removeClass("active");
+        	$(this).addClass("active");
+        })
     };
 
     return {

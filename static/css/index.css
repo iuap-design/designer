@@ -80,8 +80,9 @@
     outline: 0;
     -moz-transition: all 0.3s;
 }
+
 #responsive > a.active, #responsive > a:hover, #responsive > a:focus, #responsive > a:active {
-    color: #000;
+    color: #00BCD4;
 }
 #responsive #tablet-landscape, #responsive #phone-landscape {
     transform:rotate(-90deg);
@@ -300,4 +301,17 @@
 }
 #yunwei .u-widget-body{
     min-height: 220px;
+}
+.layout-list li{
+    border-radius: 3px;
+    padding: 12px 12px !important;
+}
+.layout-list li a{
+    text-decoration: none;
+}
+.layout-list li:hover,.layout-list li:active,.layout-list li:focus,.layout-list li.active{
+    background-color: #00BCD4;
+}
+.layout-list li:hover a,.layout-list li:active a,.layout-list li:focus a,.layout-list li.active a{
+    color: #fff;
 }
