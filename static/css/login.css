@@ -5,7 +5,7 @@ body{
     background-image: url("../img/login.png");
 }*/
 .page-login{
-    background-image: url("/img/login.png");
+    background-image: url("img/login.png");
     padding-top: 30px;
 }
 .page-dark.layout-full:before {
