@@ -12,7 +12,7 @@ define('template', [], function (a) {
 
 
         $.ajax({
-            url:'templates/website/'+options.id+'/index.html',
+            url:'/templates/website/'+options.id+'/index.html',
             type:'get',
             dataType:'string',
             success:function(data){
