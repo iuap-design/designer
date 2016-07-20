@@ -273,5 +273,6 @@ img{
 #jinrong .nav-search{
     margin-top: 18px;
 }
-
-
+.u-bread-icon {
+    display: none;
+}

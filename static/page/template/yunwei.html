@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="http://design.yyuap.com/templates/website/tenxcloud/css/console/main.526.css?rev=0.1.0">
-<div class="page-container" style="background:#f5f6f6">
+<div id="yunwei" class="page-container" style="background:#f5f6f6">
     <div class="dashboard">
         <div class="u-row">
-            <div class="yunwei-part1 u-col-xs-12 u-col-md-3 u-col-sm-6">
+            <div class="yunwei-part1 u-col-xs-12 u-col-md-4 u-col-sm-6">
                 <section class="widgetBox">
                     <div class="u-widget">
                         <div class="u-widget-heading">
@@ -11,9 +11,8 @@
                                 <a class="u-link u-widget-more">充值</a></h3>
                         </div>
                         <div class="u-widget-body">
-                            <div style="margin-top: -24px;margin-left: -32px;" class="condition">
-                                <!--<img style="margin: 0 auto;-->
-                                <!--display: block;" src="images/wasteMoney.png">-->
+                            <div  class="condition" style="margin-top: -28px;margin-left: -30px;">
+                                <img  src="/img/wasteMoney.png">
                             </div>
                             <div class="notice text-center">
                                 账户余额：￥<span id="thisMonthconsumptionSum">-</span>
@@ -23,7 +22,7 @@
                     </div>
                 </section>
             </div>
-            <div class="yunwei-part1 u-col-xs-12 u-col-md-3 u-col-sm-6">
+            <div class="yunwei-part1 u-col-xs-12 u-col-md-4 u-col-sm-6">
                 <section class="widgetBox">
                     <div class="u-widget">
                         <div class="u-widget-heading">
@@ -64,12 +63,29 @@
                                         <span class="pull-right u-tag u-tag-success u-tag-round">1&nbsp;个</span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a onclick="_permalink(this)" data-permalink="">
+                                                <span class="server-info-icon"><i class="fa_icon server_icon_2">1</i>
+                                            <span>项目个数：</span>
+                                                </span>
+                                        <span class="pull-right u-tag u-tag-primary u-tag-round">1&nbsp;个</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="_permalink(this)" data-permalink="">
+                                                <span class="server-info-icon"><i class="fa_icon server_icon_3">0</i>
+                                            <span>镜像个数：</span>
+                                                </span>
+                                        <span class="pull-right u-tag u-tag-warning u-tag-round">1&nbsp;个</span>
+                                    </a>
+                                </li>
+                                
                             </ul>
                         </div>
                     </div>
                 </section>
             </div>
-            <div class="yunwei-part1 u-col-xs-12 u-col-md-3 u-col-sm-6">
+            <div class="yunwei-part1 u-col-xs-12 u-col-md-4 u-col-sm-6">
                 <section class="widgetBox" style="background:none;">
                     <div class="u-widget">
                         <div class="u-widget-heading">
@@ -84,21 +100,7 @@
                     </div>
                 </section>
             </div>
-            <div class="yunwei-part1 u-col-xs-12 u-col-md-3 u-col-sm-6">
-                <section class="widgetBox" style="background:none;">
-                    <div class="u-widget">
-                        <div class="u-widget-heading">
-                            <h3 class="u-widget-title">消息中心
-                                <div class="symbol pull-right">
-                                    <i class="fa fa-angle-down"></i></div>
-                            </h3>
-                        </div>
-                        <div class="u-widget-body" id="message-center" style="display: block;">
-                            消息为空，在这里您会收到镜像的消息
-                        </div>
-                    </div>
-                </section>
-            </div>
+           
         </div>
         <div class="u-row">
             <div class="u-col-xs-12 u-col-md-8 yunwei-part2">
