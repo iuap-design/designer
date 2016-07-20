@@ -15,7 +15,7 @@ define('template', [], function (a) {
         $(container).html(template);
 
         $.ajax({
-            url:'ficloud/home/'+options.id,
+            url:'/ficloud/home/'+options.id,
             type:'get',
             dataType:'string',
             success:function(data){
