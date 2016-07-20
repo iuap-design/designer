@@ -14,6 +14,15 @@ define('template', [], function (a) {
 
         $(container).html(template);
 
+        $.ajax({
+            url:'ficloud/home/'+options.id,
+            type:'get',
+            dataType:'string',
+            success:function(data){
+                console.log(data);
+            }
+        });
+
         this.drag('.widgetBox');
         this.edit();
     };
