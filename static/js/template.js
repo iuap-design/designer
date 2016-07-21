@@ -27,6 +27,8 @@ define('template', [], function (a) {
         var template = require('html!../../static/page/template/' + id);
 
         $(container).html(template);
+        this.drag('.widgetBox');
+        this.edit();
 
     };
     template.prototype = {
