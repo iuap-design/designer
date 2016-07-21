@@ -315,3 +315,11 @@
 .layout-list li:hover a,.layout-list li:active a,.layout-list li:focus a,.layout-list li.active a{
     color: #fff;
 }
+.widget-list li{
+    color: #000;
+}
+.goright{
+    margin-left: 20%;
+    width: 80%;
+
+}
