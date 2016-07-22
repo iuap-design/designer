@@ -9,7 +9,11 @@ define('widget',[],function(){
         $(container).html(template);
         drag(".widget-list li");
 
+        
+
         widgetshow();
+
+        widgetContentShow();
     };
 
     var widgetshow = function(){
@@ -21,6 +25,33 @@ define('widget',[],function(){
             widgetContent.hide();
             widgetContent.eq(i).show();
         })
+    }
+    /*
+        侧边工具二级菜单显示
+    */
+    var widgetContentShow = function(){
+        var widgetContent = $(".widget-list li");
+        var widgetContainer = $("#sidebar-container");
+
+         widgetContent.on('mouseenter',function(){
+            $(".second-widget").hide();
+            var widget = $(this).attr("widget")
+            if($("#"+widget+"container").length === 0){
+                var template = require('html!../../static/page/widget/'+widget+'.html');
+                var secondWidgetContainer = "<div id='"+widget+"container' class='second-widget'>"+template+"</div>";
+                $(this).after(secondWidgetContainer);
+                if(widget === "checkbox" || widget == "radio"){
+                   // 如果是checkbox或者radio需要调用样式方法初始化样式
+                    u.compMgr.updateComp();
+                }
+            }
+            $("#"+widget+"container").show();
+         })
+
+         widgetContainer.on('mouseleave',function(){
+            $(".second-widget").hide();
+         })
+
     }
 
     var drag = function(elements){
