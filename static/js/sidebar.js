@@ -108,10 +108,10 @@ define('sidebar',[],function(){
                     ui.helper.removeAttr("style");
                     var target = $(event.target);
                     var html =
-                        '<ul class="widget-menubar"><li><i class="portalfont btn btn-outline btn-pill-right icon-max" data-type="window" title="最大最小化"></i></li>'+
-                        '<li><i class="portalfont btn btn-outline icon-unfold" data-type="collage" title="折叠"></i></li>' +
-                        '<li><i class="portalfont btn btn-outline btn-pill-left icon-pencil" data-type="edit"  data-toggle="modal" data-target="#modalBlue" title="编辑"></i></li>' +
-                        '<li><i class="portalfont btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul>';
+                        '<ul class="widget-menubar"><li><i class="uf uf-increasesizeoption btn btn-outline btn-pill-right icon-max" data-type="window" title="最大最小化"></i></li>'+
+                        '<li><i class="uf uf-chevronup btn btn-outline icon-unfold" data-type="collage" title="折叠"></i></li>' +
+                        '<li><i class="uf uf-fontselectioneditor  btn btn-outline btn-pill-left icon-pencil" data-type="edit"  data-toggle="modal" data-target="#modalBlue" title="编辑"></i></li>' +
+                        '<li><i class="uf uf-trash  btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul>';
 
                     ui.helper.append(html);
                 }
