@@ -441,3 +441,13 @@
 .footer  span{
     line-height: 50px;
 }
+.togglebutton{
+    position: absolute;
+    background: #00BCD4;
+    left: calc(50% - 70px);
+    width: 148px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: -5px;
+}
