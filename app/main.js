@@ -7,6 +7,7 @@ require('../static/css/sidebar.css');
 require('../static/css/layout.css');
 require('../static/css/designer.css');
 require('../static/css/header.css');
+require('../static/css/main.css');
 
 
 require('../static/js/router.js');
