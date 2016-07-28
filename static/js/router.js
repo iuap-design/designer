@@ -24,8 +24,8 @@ router.on('/preview/:id',function(id){
 
 
 //组件面板
-router.on('/widget',function(id){
-    var template =  require('../../static/js/widget');
+router.on('/sidebar',function(id){
+    var template =  require('../../static/js/sidebar');
     template.init('#sidebar-container');
 });
 

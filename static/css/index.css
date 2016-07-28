@@ -1,4 +1,3 @@
-
 .navbar-default {
     margin-bottom:0;
     z-index: 10;
@@ -6,6 +5,9 @@
 .navbar-default a {
     color:#fff;
     outline: 0;
+}
+.navbar-nav li {
+    border-right:1px dashed #979797;
 }
 .container-header {
     border-bottom:1px dashed #cbcbcb;
