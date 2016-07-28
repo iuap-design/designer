@@ -21,7 +21,7 @@ define('sidebar',[],function(){
         var widgetContent =  $(container).find('.sidebar-panels');
         var widgetContainer = $(container).find('.sidebar-panel-container');
 
-        widget.on('mouseover',function(e){
+        widget.on('click',function(e){
             var i = $(this).index();
             widgetContent.hide();
             widgetContent.eq(i).show();
@@ -51,10 +51,7 @@ define('sidebar',[],function(){
             $("#"+widget+"container").show();
             widgetContainer.show();
         });
-        $(container).on('mouseleave',function(e){
-            var target = $(e.target);
-            widgetContainer.hide();
-        });
+
     };
     /*
         侧边工具二级菜单显示
