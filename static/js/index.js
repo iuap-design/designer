@@ -22,6 +22,11 @@ define('index',[],function(){
             }
         }).on('mouseleave',function(event){
             $('.widget-menubar').hide();
+        }).on('click',function(e){
+            var target = $(e.target);
+            if(target.hasClass('icon-cancel02')){
+                target.closest('.widget-menubar').parent().remove();
+            }
         });
 
         require.ensure(['./../trd/jquery-ui/jquery-ui'],function(ui){
