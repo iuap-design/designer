@@ -451,3 +451,40 @@
     border-radius: 10px;
     margin-top: -5px;
 }
+.edit-panel{
+    border: 1px solid #8B7D7D;
+    max-width: 300px;
+}
+.eidit-panel-header{
+    line-height: 32px;
+    background: #3F51B5;
+    color: #fff;
+    padding: 0 10px;
+}
+.eidit-panel-header .uf-removesymbol{
+    float: right;
+}
+.edit-panel-body{
+    background: #fff;
+    padding: 0 10px 10px 10px;
+}
+.edit-panel-body .u-button-file{
+    width: 100%;
+}
+.edit-panel-body p{
+    margin-top: 0;
+    padding-top: 10px;
+}
+.edit-panel-body .panel-part{
+    margin: 5px 0;
+}
+.edit-panel-body input[type=color]{
+    width: 44%;
+}
+.edit-panel-body .text-part{
+    display: inline-block;
+    border: 1px dashed #aaa;
+    width: 45%;
+    text-align: center;
+    margin-left: 10px;
+}
