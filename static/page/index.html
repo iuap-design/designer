@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>designer</title>
     <link rel="stylesheet" href="trd/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="fonts/iconfont/iconfont.css">
-    <link rel="stylesheet" href="fonts/portalfont/iconfont.css">
+    <link rel="stylesheet" href="fonts/designfont/iconfont.css">
     <link rel="stylesheet" href="trd/uui/assets/fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u.css">
     <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/u-extend.css">
@@ -21,45 +20,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <img src="http://design.yyuap.com/dist/static/img/logo-small.png" width="25" />
-                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">iUAP Design</a>
+                        <a href="#/sidebar" data-toggle="collapse" data-target=".site-menubar" aria-expanded="true">
+                            <i class="uf uf-plussigninablackcircle uf-add"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">模版名称</a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="iconfont icon-add"></i> 创建
+                            工具 <i class="iconfont icon-arrow-down"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#/widget" data-toggle="collapse" data-target=".site-menubar" aria-expanded="true">
-                            <i class="iconfont icon-component"></i> 组件
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/layout" data-toggle="collapse" data-target="#layout-container" aria-expanded="true">
-                            <i class="iconfont icon-template"></i> 模版
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="iconfont icon-setting01"></i> 设定
+                        <a href="javascript:;" data-toggle="collapse" data-target="#layout-container" aria-expanded="true">
+                            页面设置
                         </a>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">
-                            <i class="portalfont icon-pencil" title="编辑"></i> 编辑
-                        </a>
-                    </li>
                     <li>
                         <div class="hidden-sm hidden-xs" id="responsive">
                             <a class="active" href="#" id="desktop"><i class="fa fa-desktop"></i></a>
@@ -71,7 +57,12 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="portalfont icon-baocun" title="保存"></i> 保存
+                            下载
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            正在编辑
                         </a>
                     </li>
                 </ul>
@@ -80,7 +71,7 @@
     </nav>
 
     <div id="sidebar-container" class="site-menubar collapse.in collapse in"></div>
-    <div class="container-fluid">
+    <div class="main-container container-fluid">
         <div class="container-header"></div>
         <div class="container-left"></div>
         <div class="container-right"></div>
@@ -97,7 +88,6 @@
     <script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>
     <script>
         window.contextRoot = 'designer';
-        
     </script>
 </body>
 </html>

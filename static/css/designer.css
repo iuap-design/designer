@@ -1,20 +1,28 @@
-
+#container-content {
+    background:url(/img/bg.png) repeat;
+}
 .ui-portlet-placeholder {
     background:#fff;
 }
 .ui-sortable {
-    background:#f3f3f3;
     border:1px dashed #ccc;
     min-height:100px;
 }
+.u-row .ui-sortable {
+    background: #f3f3f3;
+    position:relative;
+}
 .widget-menubar {
     position:absolute;
-    right: -10px;
-    top: 14px;
+    left: 18px;
+    top:0;
+}
+.u-drag {
+    position:relative;
 }
 .widget-menubar {
     list-style: none;
-    width:40px;
+    width:164px;
     margin:0;
     padding:0;
     background:#fff;
