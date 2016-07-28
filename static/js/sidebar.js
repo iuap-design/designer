@@ -49,7 +49,7 @@ define('sidebar',[],function(){
                 }
             }
             $("#"+widget+"container").show();
-            widgetContainer.show();
+            widgetContainer.removeAttr("style").removeClass('collapse in').show();
         });
 
     };

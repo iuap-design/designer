@@ -80,7 +80,7 @@
     border-left:0;
     height:100% !important;
     display:none;
-    transition: width 0.25s ease 0s, opacity 0.25s ease 0s, transform 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 .u-row [class^="u-col-"] {
@@ -185,6 +185,5 @@
 }
 
 .sidebar-panel-container.collapse.in {
-    transform:translateX(-100%);
-    pointer-events: none;
+   display:none !important;
 }
