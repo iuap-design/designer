@@ -28,17 +28,48 @@
     background:#fff;
     border-radius:6px;
     display:none;
+    animation: fade-in;/*动画名称*/  
+    animation-duration: 0.6s;/*动画持续时间*/  
+    -webkit-animation:fade-in 0.6s;/*针对webkit内核*/  
+
 }
 .widget-menubar li {
     list-style: none;
-    display:inline-block;
+    display: inline-block;
+    background: #fff;
+    border-radius: 31px;
+    margin-left: 5px;
+    box-shadow: 0 1px 0px 0 rgba(188, 199, 199, 0.5);
+    width: 26px;
+    text-align: center;
+    height: 24px;
+    border: 1px solid #eee;
+    padding-bottom: 7px !important;
 }
 .widget-menubar li:hover {
-    background:none;
+    /*background:none;*/
 }
 .widget-menubar li  i {
     border:none;
 }
 .widget-menubar li  i:hover {
-    color:rgb(0, 188, 212);
+    color:#fff;
+    background: #4A90E2;
+}
+.widget-menubar li i{
+    display: inline-block;
+    padding: 1px !important;
+    width: 22px;
+    height: 20px;
+    border-radius: 26px;
+}
+@keyframes fade-in {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    40% {opacity: 0.5;}/*过渡状态 透明度为0*/  
+    100% {opacity: 1;}/*结束状态 透明度为1*/
+}  
+@-webkit-keyframes fade-in {/*针对webkit内核*/  
+    0% {opacity: 0;}  
+    40% {opacity: 0.5;}  
+    100% {opacity: 1;}  
 }
