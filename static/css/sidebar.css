@@ -1,11 +1,12 @@
 #sidebar-container {
     width:90px;
-    position:absolute;
+    position:fixed;
     height:100% !important;
     z-index:3;
     border-right:1px solid #e7e7e7;
     border-bottom:1px solid #e7e7e7;
     transition: width 0.25s ease 0s, opacity 0.25s ease 0s, transform 0.25s ease 0s;
+    top:54px;
 }
 #sidebar-container ul.widget-type {
     padding:5px;
@@ -150,6 +151,10 @@
     float:left;
     margin:0 6px;
     margin-bottom:3px;
+    transition: all 0.25s ease 0s;
+}
+.lay-box:hover {
+    border:1px solid #3B83F2;
 }
 .lay-header {
     background:#F5A623;
@@ -173,10 +178,10 @@
 .layout-panel .u-row [class^="u-col-"] {
     background:#EEEEEE;
     border:1px solid #fff;
+    transition: all 0.25s ease 0s;
 }
 .layout-panel .u-row:hover [class^="u-col-"] {
     background:#A4DEFE;
-
 }
 .layout-panel .container-fluid {
     padding-left:5px;
