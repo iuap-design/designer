@@ -23,12 +23,6 @@ router.on('/preview/:id',function(id){
 });
 
 
-//组件面板
-router.on('/sidebar',function(id){
-    var template =  require('../../static/js/sidebar');
-    template.init('#sidebar-container');
-});
-
 //布局模版
 router.on('/layout',function(id){
     var template =  require('../../static/js/layout');

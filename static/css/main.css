@@ -1,3 +1,15 @@
 .main-container {
-    margin-left:118px;
+    margin-left:90px;
+    transition: all 0.25s ease 0s;
+    height:100% !important;
+    display:block !important;
+    margin-top:58px;
+}
+.main-container.collapse.in {
+    margin-left:258px;
+    height:100% !important;
+}
+.main-container.collapse {
+    margin-left:90px;
+    height:100% !important;
 }

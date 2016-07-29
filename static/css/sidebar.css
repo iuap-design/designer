@@ -29,10 +29,11 @@
     text-decoration: none;
     outline:0;
     font-weight:normal;
+    transition:all 0.25s ease 0s;
+    border-radius: 10px;
 }
 .widget-type .child-menu a:hover {
     background:#7986cb;
-    border-radius: 10px;
 }
 #sidebar-container ul {
     list-style: none;

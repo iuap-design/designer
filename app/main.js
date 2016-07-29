@@ -23,6 +23,15 @@ require('../static/js/header.js');
 })();
 
 
+//侧边栏
+;(function(){
+    var template =  require('../static/js/sidebar');
+    template.init('#sidebar-container');
+})();
+
+
+
+
 
 
 
