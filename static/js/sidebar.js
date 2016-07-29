@@ -48,8 +48,8 @@ define('sidebar',[],function(){
                     drag(widgetElement,'.layoutBox .widgetBox','widget');
                 }
             }
-            $("#"+widget+"container").show();
-            widgetContainer.show();
+            // $("#"+widget+"container").css("left","90px");
+            // widgetContainer.show(");
         });
 
     };
@@ -76,7 +76,7 @@ define('sidebar',[],function(){
          })
 
          widgetContainer.on('mouseleave',function(){
-            $(".second-widget").hide();
+            // $(".second-widget").css("left":"-170px");
          })
 
     }
