@@ -92,7 +92,7 @@ define('sidebar',[],function(){
                 var i = $(this).index(0)+1;
                 var template = require('html!../../static/page/widget/widget'+i+'.html');
 
-                return $(template);
+                return $(template).addClass('u-drag');
             };
 
             $(elements).draggable({

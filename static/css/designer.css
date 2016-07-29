@@ -27,6 +27,7 @@
     padding:0;
     background:#fff;
     border-radius:6px;
+    display:none;
 }
 .widget-menubar li {
     list-style: none;

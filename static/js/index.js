@@ -15,13 +15,16 @@ define('index',[],function(){
 
         $(container).on('mouseover',function(event){
             var target = $(event.target);
-            var parent = target.closest('.ui-sortable');
-
+            $(container).find('.widget-menubar').hide();
+            var parent = target.closest('.u-drag')||target.closest('.widgetBox');
             if(parent.length>0){
-                parent.find('.widget-menubar').eq(0).show();
+                parent.find('>.widget-menubar').eq(0).show();
+            }
+            else {
+                $(container).find('.widget-menubar').hide();
             }
         }).on('mouseleave',function(event){
-            $('.widget-menubar').hide();
+            $(container).find('.widget-menubar').hide();
         }).on('click',function(e){
             var target = $(e.target);
             if(target.hasClass('icon-cancel02')){
