@@ -50,6 +50,8 @@ define('sidebar',[],function(){
             }
             // $("#"+widget+"container").css("left","90px");
             // widgetContainer.show(");
+            // $("#"+widget+"container").show();
+            // widgetContainer.removeAttr("style").removeClass('collapse in').show();
         });
 
     };

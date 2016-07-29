@@ -84,7 +84,6 @@
     height:100% !important;
     transition: left 0.25s;
     z-index:2;
-    transition: left 0.25s !important;
 }
 
 .u-row [class^="u-col-"] {
