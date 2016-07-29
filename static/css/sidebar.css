@@ -30,7 +30,7 @@
     outline:0;
     font-weight:normal;
     transition:all 0.25s ease 0s;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .widget-type .child-menu a:hover {
     background:#7986cb;
@@ -147,12 +147,11 @@
 .lay-box {
     width:60px;
     border:1px dashed #979797;
-    opacity: 0.34;
     cursor: pointer;
     float:left;
     margin:0 6px;
     margin-bottom:3px;
-    transition: all 0.25s ease 0s;
+    transition: border 0.25s ease 0s;
 }
 .lay-box:hover {
     border:1px solid #3B83F2;
@@ -160,14 +159,17 @@
 .lay-header {
     background:#F5A623;
     height:9px;
+    opacity: 0.34;
 }
 .lay-body {
     background:#00BCD4;
     height:34px;
+    opacity: 0.34;
 }
 .lay-footer {
     background:#3F51B5;
     height:9px;
+    opacity: 0.34;
 }
 
 .layout-panel .u-row {
@@ -197,4 +199,23 @@
 }
 .sidebar-panel-container.collapse.in{
     left: 90px;
+}
+
+.layoutDefault-2 .lay-body {
+    width:90%;
+    margin:0 auto;
+}
+.lay-sidebar {
+    width:12px;
+    background:#303F9F;
+    height:34px;
+    position:absolute;
+    opacity: 0.5;
+    z-index:2;
+}
+.layoutDefault-4 .lay-sidebar {
+    height:43px;
+}
+.layoutDefault-4 .lay-body {
+    height:43px;
 }
