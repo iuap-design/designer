@@ -1,31 +1,14 @@
 <div class="u-widget" panelname="carousel-panel">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
-		<ol class="carousel-indicators">
-		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		
+		<ol class="carousel-indicators" data-bind="foreach: carousels">
+			<li data-target="#carousel-example-generic" data-bind="attr: { 'data-slide-to': $index,class: $index() < 1? 'active':''}"></li>
 		</ol>
-
-		  <!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
-		    <div class="item active">
-		      <img src="http://design.yyuap.com/static/img/carousel-1.jpg" alt="...">
-		      <div class="carousel-caption">
-		        carousel-1
-		      </div>
-		    </div>
-		    <div class="item">
-		      <img src="http://design.yyuap.com/static/img/carousel-2.jpg" alt="...">
-		      <div class="carousel-caption">
-		        carousel-2
-		      </div>
-		    </div>
-		    <div class="item">
-		      <img src="http://design.yyuap.com/static/img/carousel-3.jpg" alt="...">
-		      <div class="carousel-caption">
-		        carousel-3
-		      </div>
+		<div class="carousel-inner" role="listbox" data-bind="foreach: carousels">
+		    <div class="item" data-bind="css: { active:  $index() < 1 }">
+		        <img data-bind="attr: { src: carouselImg, alt: carouselName }" />
+		        <div class="carousel-caption" data-bind="text: carouselName"></div>
 		    </div>
 		</div>
 
