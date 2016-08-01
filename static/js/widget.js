@@ -13,8 +13,9 @@ define('widget',[],function(){
             ko.applyBindings(viewModel,el);  
             if(name == "widget7"){
                 setTimeout(function(){
+                    console.log($('#carousel-example-generic'));
                     $('#carousel-example-generic').carousel();
-                }, 3000 );
+                }, 5000 );
             }
             
         });
