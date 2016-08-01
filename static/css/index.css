@@ -458,6 +458,8 @@
     position: absolute;
     cursor: move;
     z-index: 9999;
+    top:30px;
+    left:30px;
 }
 .eidit-panel-header{
     line-height: 32px;
@@ -467,10 +469,12 @@
 }
 .eidit-panel-header .uf-removesymbol{
     float: right;
+    cursor:pointer;
 }
 .edit-panel-body{
     background: #fff;
     padding: 0 10px 10px 10px;
+    min-width:200px;
 }
 .edit-panel-body .u-button-file{
     width: 100%;

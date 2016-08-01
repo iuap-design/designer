@@ -17,6 +17,10 @@
     left: 18px;
     top:0;
 }
+.widget-menubar ul {
+    padding:0;
+    margin:0;
+}
 .u-drag {
     position:relative;
 }
@@ -25,7 +29,6 @@
     width:164px;
     margin:0;
     padding:0;
-    background:#fff;
     border-radius:6px;
     display:none;
     animation: fade-in;/*动画名称*/  
