@@ -8,7 +8,7 @@ define('widget',[],function(){
         $.getJSON('../page/widgetdata/'+name+'.json',function(widgetViewModel){
             
             var viewModel = {
-                carousels: ko.observableArray(widgetViewModel)
+                carousels: ko.observable(widgetViewModel)
             }
             ko.applyBindings(viewModel,el);  
             if(name == "widget7"){
