@@ -112,14 +112,15 @@ define('sidebar',[],function(){
                     ui.helper.removeAttr("style");
                     var target = $(event.target);
                     var html =
-                        '<ul class="widget-menubar">'+ 
+                        '<div class="widget-menubar"><ul>'+
                         '<li><i class="uf uf-reply btn btn-outline btn-pill-right icon-max" data-type="window" title="回退"></i></li>'+
                         '<li><i class="uf btn btn-outline btn-pill-right icon-max" data-type="window" title="回退" style="font-size:15px;">T</i></li>'+
                         '<li><i class="uf uf-pencil  btn btn-outline btn-pill-left icon-pencil" data-type="edit"  data-toggle="modal" data-target="#modalBlue" title="编辑"></i></li>' +
                         '<li><i class="uf uf-linksymbol btn btn-outline icon-unfold" data-type="collage" title="链接"></i></li>' +
-                        '<li><i class="uf uf-trash  btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul>';
+                        '<li><i class="uf uf-trash  btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul></div>';
 
                     ui.helper.append(html);
+
                 }
             });
         });
