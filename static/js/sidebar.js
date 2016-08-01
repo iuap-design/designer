@@ -1,7 +1,7 @@
 /**
  * Created by chief on 16/7/15.
  */
-define('sidebar',[],function(){
+define('sidebar',['./widget'],function(widget){
     var init = function (container){
 
         var template =  require('html!../../static/page/sidebar.html');
@@ -105,6 +105,10 @@ define('sidebar',[],function(){
                 helper: helper,
                 start:function(event,ui){
                     ui.helper.css('width',"300px");
+                    if(type=='widget'){
+                        widget.init(ui.helper[0],$(this).attr('widget'));
+                    }
+                    
 
                 },
                 snapMode: "outer",
