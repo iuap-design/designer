@@ -33,20 +33,24 @@ define('sidebar',[],function(){
 
 
 
-                widgetContent.eq(i).find('.panel-body').html(secondWidgetContainer)
+                widgetContent.eq(i).find('.panel-body').html(secondWidgetContainer);
+
                 if(widget === "checkbox" || widget == "radio"){
                     // 如果是checkbox或者radio需要调用样式方法初始化样式
                     u.compMgr.updateComp();
                 }
 
                 var widgetElement = widgetContent.eq(i).find(".u-drag");
+                var defaultElement = widgetContent.eq(i).find('.lay-box');
+                console.log(defaultElement);
+
                 if(type=='layout'){
                     drag(widgetElement,'#container-content .widgetBox','layout');
                 }
                 else if(type=='widget') {
-
                     drag(widgetElement,'.layoutBox .widgetBox','widget');
                 }
+                drag(defaultElement,'#container-content .widgetBox','widget');
             }
             // $("#"+widget+"container").css("left","90px");
             // widgetContainer.show(");
@@ -90,7 +94,8 @@ define('sidebar',[],function(){
 
             var helper = (type=='layout')?'clone':function(event, ui){
                 var i = $(this).index(0)+1;
-                var template = require('html!../../static/page/widget/widget'+i+'.html');
+                var name = $(this).attr('widget');
+                var template = require('html!../../static/page/widget/'+name+'.html');
 
                 return $(template).addClass('u-drag');
             };
