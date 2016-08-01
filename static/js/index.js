@@ -8,6 +8,7 @@ define('index',[],function(){
 
         var template =  require('html!../../static/page/default.html');
 
+        
 
         $(container).html(template);
 
@@ -29,6 +30,18 @@ define('index',[],function(){
             var target = $(e.target);
             if(target.hasClass('icon-cancel02')){
                 target.closest('.widget-menubar').parent().remove();
+            }
+        }).on('click',function(e){
+            var target = $(e.target);
+            
+
+            if(target.hasClass('uf-pencil')){
+                var panel = $(this).find(".u-widget").attr("panelname");
+                var panelTemplate =  require('html!../page/panel/'+panel+'.html');
+
+                $(container).append(panelTemplate);
+                
+                $(".edit-panel").draggable({containment:".drag-overlay"});
             }
         });
 
@@ -109,7 +122,8 @@ define('index',[],function(){
             //}).disableSelection();
         });
     };
-
+    
+   
     return {
         init:init
     }
