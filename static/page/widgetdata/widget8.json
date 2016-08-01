@@ -1,0 +1,50 @@
+[{
+    "backgroudColor": "rgba(86, 61, 124, 0.15)",
+    "newsList":[
+        {
+            "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
+            "backgroudColor": "rgba(86, 61, 124, 0.15)",
+            "title": "班级新闻",
+            "titleColor": "#258FB9",
+            "titleSize": "18px",
+            "context": "恭喜XXX收到新加坡国立大学研究生offer
+
+                      恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
+
+                      恭喜XXX收到新加坡国立大学研究生offer
+
+                      恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？",
+            "buttonText":　"查看更多"
+        },
+        {
+            "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
+            "backgroudColor": "rgba(86, 61, 124, 0.15)",
+            "title": "班级活动",
+            "titleColor": "#DF5157",
+            "titleSize": "18px",
+            "context": "本周六组织爬佘山，大家积极报起名来
+
+                        本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达。
+
+                        本周六组织爬佘山，大家积极报起名来
+
+                        本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达。",
+            "buttonText":　"查看更多"
+        },
+        {
+            "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
+
+            "title": "班级通知",
+            "titleColor": "#D18F2F",
+            "titleSize": "18px",
+            "context": "国庆七天大假，放10月1号~7号
+
+                        国庆七天大假，放10月1号~7号，小伙伴们请安排好时间，回家的同学车票都买好了？
+
+                        国庆七天大假，放10月1号~7号
+
+                        国庆七天大假，放10月1号~7号，小伙伴们请安排好时间，回家的同学车票都买好了？",
+            "buttonText":　"查看更多"
+        }
+    ]
+}]
