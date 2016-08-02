@@ -506,3 +506,10 @@
     z-index: 999;
     top: 0;
 }
+.edit-panel .editcoverstyle{
+    padding: 0;
+    background: none;
+}
+.edit-panel img{
+    width: 100%;
+}

@@ -54,7 +54,7 @@ define('index',[],function(){
                     return false;
                 }
                 var panel = $(this).find(".u-widget").attr("panelname");
-                var panelTemplate =  require('html!../page/panel/'+panel+'.html');
+                var panelTemplate =  require('html!../page/panel/'+panel+'-panel.html');
                 var panelBox =  require('html!../page/panel/panel.html');
 
                 var container = $(target).closest('.u-drag');
@@ -65,6 +65,10 @@ define('index',[],function(){
 
                 container.find(".edit-panel").draggable({containment:"#container-content"});
 
+                
+                var widgetViewModel = require('./viewModel/'+panel+'Model.js');
+                console.log(widgetViewModel);
+                ko.applyBindings(widgetViewModel,$(".edit-panel")[0]); 
 
 
             }

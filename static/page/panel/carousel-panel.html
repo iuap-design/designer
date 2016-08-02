@@ -1,11 +1,18 @@
 <div class="panel-content">
     <p>样式修改</p>
-    <div class="panel-part">
-        <button class="u-button u-button-file u-button-success">
-            上传
-            <i class="icon uf uf-upload" aria-hidden="true"></i>
-            <input type="file" name="" multiple="">
-        </button>
+    <div class="panel-part" data-bind="foreach: carousels">
+        <div class="u-col-md-12 editcoverstyle">
+            <div class="u-col-md-6 editcoverstyle">
+                <img data-bind="attr: { src: carouselImg, alt: carouselName }">
+            </div>
+            <div class="u-col-md-6 editcoverstyle">
+                <button class="u-button u-button-file u-button-success">
+                    上传
+                    <i class="icon uf uf-upload" aria-hidden="true"></i>
+                    <input type="file" name="" multiple="">
+                </button>
+            </div>
+        </div>   
     </div>
     <div class="panel-part">
         <input class="u-input-control" type="color" />

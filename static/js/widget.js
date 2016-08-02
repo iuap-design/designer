@@ -4,24 +4,16 @@
 
 define('widget',[],function(){
     var init = function (el,name){
-        //name = 'widget7';
-        $.getJSON('../page/widgetdata/'+name+'.json',function(widgetViewModel){
-            console.log(widgetViewModel);
+        var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
-            var viewModel = {
-                carousels: ko.observableArray(widgetViewModel)
-            }
-            ko.applyBindings(viewModel,el);  
-            if(name == "widget7"){
-                setTimeout(function(){
-                    $('#carousel-example-generic').carousel();
-                }, 5000 );
-            }
+        ko.applyBindings(widgetViewModel,el); 
+
+        if(name == "widget7"){
+            setTimeout(function(){
+                $('#carousel-example-generic').carousel();
+            }, 5000 );
+        }
             
-        });
-           
-
-       
     };
     return {
         init:init
