@@ -2,7 +2,7 @@
  * Created by chief on 16/7/16.
  */
 
-define('widget',[],function(){
+define('carousel',[],function(){
     var data = [{
         "carouselName": ko.observable("carousel-1"),
         "carouselImg": "http://design.yyuap.com/static/img/carousel-1.jpg",
@@ -22,10 +22,10 @@ define('widget',[],function(){
         "carouselNameSize": "12px"
       }];
 
-    var viewModel = function(data) {
+    var carouselsModel = function(data) {
         this.carousels = ko.observableArray(data);
       
-        this.addCarousel = function() {
+        this.addItem = function() {
             var newCarouselItem = {
                 "carouselName": ko.observable("carousel-4"),
                 "carouselImg": "http://design.yyuap.com/static/img/carousel-2.jpg",
@@ -35,11 +35,11 @@ define('widget',[],function(){
             this.carousels.push(newCarouselItem); 
         }.bind(this); 
 
-        this.deleteCarousel = function(item) {
+        this.deleteItem = function(item) {
             this.carousels.remove(item)
         }.bind(this);  
     };
 
-    return new viewModel(data)
+    return new carouselsModel(data)
     
 });

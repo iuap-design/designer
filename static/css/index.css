@@ -534,6 +534,8 @@
 }
 .edit-panel .category:hover .uf-removesymbol{
     visibility: visible;
+}
+.edit-panel .category .uf-removesymbol:hover{
     color: red;
 }
 .edit-panel .category .uf-removesymbol{

@@ -56,7 +56,7 @@ define('index',[],function(){
 
                     return false;
                 }
-                var panel = $(this).find(".u-widget").attr("panelname");
+                var panel = $(e.target).parents(".u-widget").attr("panelname");
                 var panelTemplate =  require('html!../page/panel/'+panel+'-panel.html');
                 var panelBox =  require('html!../page/panel/panel.html');
 

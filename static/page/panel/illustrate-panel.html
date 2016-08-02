@@ -1,10 +1,10 @@
-<div class="panel-content">
+<div class="panel-content" data-bind="foreach: illustrates">
     <p>样式修改</p>
-    <div class="panel-part" data-bind="foreach: carousels">
+    <div class="panel-part" data-bind="foreach: newslist">
         <div class="u-col-md-12 editcoverstyle category">
-            <i class="uf uf-removesymbol" data-bind = "click:$parent.deleteItem"></i>
+            <i class="uf uf-removesymbol" data-bind = "click:function() { $parent.deleteItem($index)"></i>
             <div class="u-col-md-6 editcoverstyle">
-                <img data-bind="attr: { src: carouselImg, alt: carouselName }">
+                <img data-bind="attr: { src: textImg, alt: title }">
             </div>
             <div class="u-col-md-5 editcoverstyle magintop-7 maginleft-10">
                 <button class="u-button u-button-file u-button-success">
@@ -16,14 +16,14 @@
         </div> 
         <div class="u-col-md-12 editcoverstyle">
             <div class="u-col-md-6 editcoverstyle">
-                <span class="textfont" data-bind="text: carouselName"></span>
+                <span class="textfont" data-bind="text: title"></span>
             </div>
             <div class="u-col-md-6 editcoverstyle magintop-7">
-                <input class="u-form-control" type="text" data-bind="value:carouselName" />
+                <input class="u-form-control" type="text" data-bind="value:title" />
             </div>
         </div>   
     </div>
     <div class="panel-part">
-        <button class="u-col-md-12 u-button raised primary u-button-round" data-bind="click:addItem">添加</button>
+        <button class="u-col-md-12 u-button raised primary u-button-round" data-bind="click:$parent.addItem">添加</button>
     </div>
 </div>
