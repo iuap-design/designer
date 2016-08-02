@@ -4,9 +4,10 @@
 
 define('widget',[],function(){
     var init = function (el,name){
-
+        //name = 'widget7';
         $.getJSON('../page/widgetdata/'+name+'.json',function(widgetViewModel){
             console.log(widgetViewModel);
+
             var viewModel = {
                 carousels: ko.observableArray(widgetViewModel)
             }
