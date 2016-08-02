@@ -1,19 +1,25 @@
 #sidebar-container {
     width:90px;
     position:fixed;
-    height:100% !important;
     z-index:3;
     border-right:1px solid #e7e7e7;
     border-bottom:1px solid #e7e7e7;
     transition: width 0.25s ease 0s, opacity 0.25s ease 0s, transform 0.25s ease 0s;
     top:54px;
+    height: 100% !important;
+    background: #303F9F;
+}
+#widget-panel {
+    height:100%;
+}
+#sidebar-main {
+    background: #303F9F;
+    height: 100%;
+    z-index: 3;
+    position: relative;
 }
 #sidebar-container ul.widget-type {
     padding:5px;
-    z-index: 3;
-    position: relative;
-    float: left;
-    background: #303F9F;
 }
 .widget-type {
     position:relative;

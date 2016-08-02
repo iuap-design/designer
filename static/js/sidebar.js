@@ -42,7 +42,7 @@ define('sidebar',['./widget'],function(widget){
 
                 var widgetElement = widgetContent.eq(i).find(".u-drag");
                 var defaultElement = widgetContent.eq(i).find('.lay-box');
-                console.log(defaultElement);
+
 
                 if(type=='layout'){
                     drag(widgetElement,'#container-content .widgetBox','layout');

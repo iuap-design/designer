@@ -16,6 +16,7 @@
     position:absolute;
     left: 18px;
     top:0;
+    z-index:10;
 }
 .widget-menubar ul {
     padding:0;
