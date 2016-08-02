@@ -1,53 +1,12 @@
-<div class="u-widget">
-	<ul class="u-gallery u-gallery-default">
-	    <li class="u-col-md-4">
+<div class="u-widget" data-bind="foreach: carousels">
+	<ul class="u-gallery u-gallery-default" data-bind="foreach: newslist">
+	    <li class="u-col-md-4"  >
 	        <div class="u-gallery-item">
-	            <a href="http://design.yyuap.com/static/img/desiner3.jpg" class="">
-	                <img src="http://design.yyuap.com/static/img/desiner3.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
-	                <h3 class="u-gallery-title">班级新闻</h3>
-	                <p class="u-gallery-desc">
-	                	恭喜XXX收到新加坡国立大学研究生offer
-	                	<br>
-						恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
-						恭喜XXX收到新加坡国立大学研究生offer
-						<br>
-						恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
-					</p>
-					<button class="u-button u-button-info">button</button>
-	            </a>
-	        </div>
-	    </li>
-	    <li class="u-col-md-4">
-	        <div class="u-gallery-item">
-	            <a href="http://design.yyuap.com/static/img/desiner3.jpg" class="">
-	                <img src="http://design.yyuap.com/static/img/desiner3.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
-	                <h3 class="u-gallery-title">班级新闻</h3>
-	                <p class="u-gallery-desc">
-	                	恭喜XXX收到新加坡国立大学研究生offer
-	                	<br>
-						恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
-						恭喜XXX收到新加坡国立大学研究生offer
-						<br>
-						恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
-					</p>
-					<button class="u-button u-button-info">button</button>
-	            </a>
-	        </div>
-	    </li>
-	    <li class="u-col-md-4">
-	        <div class="u-gallery-item">
-	            <a href="http://design.yyuap.com/static/img/desiner3.jpg" class="">
-	                <img src="http://design.yyuap.com/static/img/desiner3.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
-	                <h3 class="u-gallery-title">班级新闻</h3>
-	                <p class="u-gallery-desc">
-	                	恭喜XXX收到新加坡国立大学研究生offer
-	                	<br>
-						恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
-						恭喜XXX收到新加坡国立大学研究生offer
-						<br>
-						恭喜XXX收到新加坡国立大学研究生offer学霸啊~小伙伴们是否羡慕嫉妒恨？
-					</p>
-					<button class="u-button u-button-info">button</button>
+	            <a data-bind="attr: { href : textImg}">
+	                <img data-bind="attr: { src : textImg, alt : title }"/>
+	                <h3 class="u-gallery-title" data-bind="text : title"></h3>
+	                <p class="u-gallery-desc" data-bind="text : textContext"></p>
+					<button class="u-button u-button-info"  data-bind="text : buttonText"></button>
 	            </a>
 	        </div>
 	    </li>

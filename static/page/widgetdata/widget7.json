@@ -1,5 +1,5 @@
-[
-  {
+
+  [{
     "carouselName": "carousel-1",
     "carouselImg": "http://design.yyuap.com/static/img/carousel-1.jpg",
     "carouselNameColor": "#fff",
@@ -16,5 +16,4 @@
     "carouselImg": "http://design.yyuap.com/static/img/carousel-3.jpg",
     "carouselNameColor": "#fff",
     "carouselNameSize": "12px"
-  }
-]
+  }]
