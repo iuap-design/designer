@@ -45,6 +45,9 @@ define('index',[],function(){
 
                     container.find(".edit-panel").draggable({containment:"#container-content"});
 
+                    var layout =  require('./panel/layout');
+
+                    layout.init(container);
                     return false;
                 }
 
