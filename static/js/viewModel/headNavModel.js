@@ -6,9 +6,9 @@ define('headNav',[],function(){
     var data = [{
           "logoImg": "http://design.yyuap.com/static/img/desinerimg1.png",
           "backgroudColor": "#FD9C9C",
-          "navlist": [
+          "navlist": ko.observableArray([
               {
-                "title": "班级首页",
+                "title": ko.observable("班级首页"),
                 "titleColor": "#fff",
                 "titleSize": "14px"
               },{
@@ -25,7 +25,7 @@ define('headNav',[],function(){
                 "titleColor": "#fff",
                 "titleSize": "14px"
               }
-          ]
+          ])
     }];
 
     var headNavModel = function(data) {

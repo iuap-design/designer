@@ -546,3 +546,9 @@
     color: #D24747;
     visibility: hidden;
 }
+.edit-panel .textarea-part{
+   width: 100%;
+   min-height: 100px;
+   margin-left: 0;
+   border: 1px dashed #aaa;
+}
