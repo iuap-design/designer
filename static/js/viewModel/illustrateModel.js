@@ -3,37 +3,38 @@
  */
 
 define('illustrate',[],function(){
-    var data = [{
+    var data = {
           "backgroudColor": "#FD9C9C",
-          "newslist": ko.observableArray([
+          "newslist": [
               {
                 "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
                 "title": ko.observable("班级新闻"),
                 "titleColor": "#258FB9",
-                "textContext": "恭喜XXX收到新加坡国立大学研究生offer",
+                "textContext": ko.observable("恭喜XXX收到新加坡国立大学研究生offer"),
                 "buttonText" : "查看更多",
                 "titleSize": "18px"
               },{
                 "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
-                "title": "班级活动",
+                "title": ko.observable("班级活动"),
                 "titleColor": "#fff",
-                "textContext": "本周六组织爬佘山，大家积极报起名来",
+                "textContext": ko.observable("本周六组织爬佘山，大家积极报起名来"),
                 "buttonText" : "查看更多",
                 "titleSize": "18px"
               },
               {
                 "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
-                "title": "班级通知",
+                "title": ko.observable("班级通知"),
                 "titleColor": "#DF5157",
-                "textContext": "国庆七天大假，放10月1号~7号",
+                "textContext": ko.observable("国庆七天大假，放10月1号~7号"),
                 "buttonText" : "查看更多",
                 "titleSize": "18px"
               }
-          ])
-        }];
+          ]
+        };
 
     var illustrateModel = function(data) {
-        this.illustrates = ko.observableArray(data);
+        this.illustrates = ko.observable(data);
+        this.newslist = ko.observableArray(data.newslist);
       
         this.addItem = function() {
             var newIllustrateItem = {
@@ -44,12 +45,12 @@ define('illustrate',[],function(){
                 "buttonText" : ko.observable("查看更多"),
                 "titleSize": "18px"
             };
-            this.illustrates.newslist.push(newIllustrateItem); 
+            this.newslist.push(newIllustrateItem); 
         }.bind(this); 
 
         this.deleteItem = function(item) {
-            console.log(item);
-            // this.illustrates.newslist.remove(item)
+            
+            this.newslist.remove(item);
         }.bind(this);  
     };
 
