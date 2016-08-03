@@ -393,8 +393,9 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0;
-    height: 80px;
+    height: 105px;
     color:#fff;
+    padding-top: 22px;
 }
 .headContainer{
     background-color: #FD9C9C;
@@ -551,4 +552,8 @@
    min-height: 100px;
    margin-left: 0;
    border: 1px dashed #aaa;
+}
+.u-button[readonly], .u-button[disabled]{
+    border-color: rgb(241,241,241);
+    background-color: rgb(241,241,241);
 }
