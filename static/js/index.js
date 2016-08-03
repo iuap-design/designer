@@ -68,9 +68,11 @@ define('index',[],function(){
 
                 container.find(".edit-panel").draggable({containment:"#container-content"});
 
-                
+
                 var widgetViewModel = require('./viewModel/'+panel+'Model.js');
-                console.log(widgetViewModel);
+
+
+
                 ko.applyBindings(widgetViewModel,$(".edit-panel")[0]); 
 
 

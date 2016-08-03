@@ -225,3 +225,14 @@
 .layoutDefault-4 .lay-body {
     height:43px;
 }
+.pannel-title {
+    padding:5px;
+    border-bottom:1px solid #979797;
+    margin-bottom:10px;
+}
+.pannel-content {
+    padding:10px;
+}
+.widget-type li a.active {
+    background:#7986cb;
+}
