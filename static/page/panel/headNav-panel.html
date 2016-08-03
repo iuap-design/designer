@@ -1,4 +1,4 @@
-<div class="edit-content" data-bind="foreach: headNavs">
+<!-- <div class="edit-content">
     <p>样式修改</p>
     <div class="panel-part">
         <div class="u-col-md-12 editcoverstyle">
@@ -19,10 +19,38 @@
             <ul class="u-list-group u-list-group-full" id='text-list' data-bind="foreach: navlist">
                 <li class="u-list-group-item category">
                     <i class="uf uf-removesymbol" data-bind = "click:$parent.deleteItem"></i>
-                    <input class="text-part" type="text" name="" data-bind="value:title">
+                    <input class="u-form-control text-part" type="text" name="" data-bind="value:title">
                 </li>
             </ul>
         </div>
-        <button class="u-button raised primary" id='addTextBtn' >增加条目</button>
+        <button class="u-button raised primary" id='addTextBtn' data-bind="click:addItem">增加条目</button>
+    </div>
+</div> -->
+
+<div class="panel-content">
+    <p>样式修改</p>
+    <div class="panel-part">
+        <div class="u-col-md-12 editcoverstyle">
+            <div class="u-col-md-6 editcoverstyle" style="background-color: #777 !important">
+                <img data-bind="attr: { src: logoImg}">
+            </div>
+            <div class="u-col-md-5 editcoverstyle magintop-7 maginleft-10">
+                <button class="u-button u-button-file u-button-success" disabled>
+                    更改
+                    <i class="icon uf uf-upload" aria-hidden="true"></i>
+                    <input type="file" name="" multiple="">
+                </button>
+            </div>
+        </div> 
+        <div data-bind="foreach: navlist">
+            <div class="u-col-md-12 editcoverstyle category">
+                <i class="uf uf-removesymbol" data-bind = "click:$parent.deleteItem"></i>
+                <input class="u-form-control" type="text" data-bind="value:title" />
+            </div>   
+        </div>
+        
+    </div>
+    <div class="panel-part">
+        <button class="u-col-md-8 u-button raised primary u-button-round" data-bind="click:addItem" style="margin-left:20%">添加条目</button>
     </div>
 </div>
