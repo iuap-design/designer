@@ -29,6 +29,7 @@ define('headNav',[],function(){
     }];
 
     var headNavModel = function(data) {
+
         this.headNavs = ko.observableArray(data);
       
         this.addItem = function() {
@@ -37,11 +38,11 @@ define('headNav',[],function(){
                 "titleColor": "#fff",
                 "titleSize": "14px"
               };
-            this.headNavs.push(newheadNavItem); 
+            this.headNavs.navlist.push(newheadNavItem);
         }.bind(this); 
 
         this.deleteItem = function(item) {
-            this.headNavs.remove(item)
+            this.headNavs.navlist.remove(item)
         }.bind(this);  
     };
 

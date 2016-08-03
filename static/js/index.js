@@ -68,7 +68,7 @@ define('index',[],function(){
 
                 container.find(".edit-panel").draggable({containment:"#container-content"});
 
-                alert(panel);
+
                 var widgetViewModel = require('./viewModel/'+panel+'Model.js');
 
 

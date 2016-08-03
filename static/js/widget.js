@@ -9,6 +9,7 @@ define('widget',[],function(){
 
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
+
         ko.applyBindings(widgetViewModel,el); 
 
         if(name == "widget7"){
