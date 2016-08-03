@@ -459,15 +459,16 @@
     border: 1px solid #8B7D7D;
     width: 300px;
     position: absolute;
-    cursor: move;
     z-index: 9999;
     top:30px;
     left:30px;
+    background-color: #fff;
 }
 .eidit-panel-header{
     line-height: 32px;
     background: #3F51B5;
     color: #fff;
+    cursor: move;
     padding: 0 10px;
 }
 .eidit-panel-header .uf-removesymbol{
@@ -506,9 +507,42 @@
     top: 0;
 }
 .edit-panel .editcoverstyle{
-    padding: 0;
-    background: none;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    margin: 2px 0 !important;
 }
 .edit-panel img{
     width: 100%;
+}
+.edit-panel .magintop-7{
+    margin-top: 7px !important;
+}
+.edit-panel .maginleft-10{
+    margin-left: 10px !important;
+}
+.edit-panel .textfont{
+    display: inline-block;
+    margin-top: 12px;
+}
+.edit-panel .category{
+    border: 1px dashed transparent !important;
+    padding: 4px !important;
+}
+.edit-panel .category:hover{
+    border-color: #ddd !important;
+}
+.edit-panel .category:hover .uf-removesymbol{
+    visibility: visible;
+}
+.edit-panel .category .uf-removesymbol:hover{
+    color: red;
+}
+.edit-panel .category .uf-removesymbol{
+    position: absolute;
+    top: 0;
+    right: -11px;
+    margin-top: -10px;
+    color: #D24747;
+    visibility: hidden;
 }
