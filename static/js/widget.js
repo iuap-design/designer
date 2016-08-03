@@ -4,6 +4,9 @@
 
 define('widget',[],function(){
     var init = function (el,name){
+
+        
+
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
         ko.applyBindings(widgetViewModel,el); 

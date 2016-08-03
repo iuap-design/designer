@@ -17,31 +17,41 @@ define('sidebar',['./widget'],function(widget){
     };
 
     var widgetshow = function(container){
-        var widget  = $(container).find('.widget-type li');
+        var widget  = $(container).find('.widget-type');
         var widgetContent =  $(container).find('.sidebar-panels');
         var widgetContainer = $(container).find('.sidebar-panel-container');
 
         widget.on('click',function(e){
-            var i = $(this).index();
+            var target = $(e.target).closest('a');
+
+            var i = target.parent().parent().index();
+
+            var p = target.closest('li').index();
+
+
             widgetContent.hide();
-            widgetContent.eq(i).show();
-            var widget = $(this).attr("widget");
-            var type = $(this).attr("type");
-            if($("#"+widget+"container").length === 0){
-                var template = require('html!../../static/page/widget/'+widget+'.html');
-                var secondWidgetContainer = "<div id='"+widget+"container'>"+template+"</div>";
+            widgetContent.eq(p).show();
+
+            var panel = target.attr("panel");
+            var type = target.attr("type");
+
+            if($("#"+panel+"container").length === 0){
+
+                var template = require('html!../../static/page/sidebarPanel/'+panel+'.html');
+                var secondWidgetContainer = "<div id='"+panel+"container'>"+template+"</div>";
 
 
 
-                widgetContent.eq(i).find('.panel-body').html(secondWidgetContainer);
+                widgetContent.eq(p).find('.panel-body').html(secondWidgetContainer);
 
                 if(widget === "checkbox" || widget == "radio"){
                     // 如果是checkbox或者radio需要调用样式方法初始化样式
                     u.compMgr.updateComp();
                 }
 
-                var widgetElement = widgetContent.eq(i).find(".u-drag");
-                var defaultElement = widgetContent.eq(i).find('.lay-box');
+                var widgetElement = widgetContent.eq(p).find(".u-drag");
+                var defaultElement = widgetContent.eq(p).find('.lay-box');
+
 
 
                 if(type=='layout'){
@@ -56,6 +66,16 @@ define('sidebar',['./widget'],function(widget){
             // widgetContainer.show(");
             // $("#"+widget+"container").show();
             // widgetContainer.removeAttr("style").removeClass('collapse in').show();
+
+            if(!widgetContainer.hasClass("collapse in")){
+                widgetContainer.addClass('collapse in');
+                $('.main-container').addClass('collapse in');
+            }
+            else {
+                //widgetContainer.removeClass('collapse in');
+                //$('.main-container').removeClass('collapse in');
+            }
+
         });
 
     };
@@ -66,7 +86,7 @@ define('sidebar',['./widget'],function(widget){
         var widgetContent = $(".widget-list li");
         var widgetContainer = $("#sidebar-container");
 
-         widgetContent.on('mouseenter',function(){
+         widgetContent.on('mouseenter',function(event){
             $(".second-widget").hide();
             var widget = $(this).attr("widget");
             if($("#"+widget+"container").length === 0){
@@ -79,11 +99,14 @@ define('sidebar',['./widget'],function(widget){
                 }
             }
             $("#"+widget+"container").show();
+
          })
 
          widgetContainer.on('mouseleave',function(){
             // $(".second-widget").css("left":"-170px");
          })
+
+
 
     }
 
@@ -100,16 +123,19 @@ define('sidebar',['./widget'],function(widget){
                 return $(template).addClass('u-drag');
             };
 
+            var mtype = $(elements).attr('type');
+
+            type = mtype?mtype:type;
+
             $(elements).draggable({
                 connectToSortable: place,
                 helper: helper,
                 start:function(event,ui){
                     ui.helper.css('width',"300px");
+
                     if(type=='widget'){
                         widget.init(ui.helper[0],$(this).attr('widget'));
                     }
-                    
-
                 },
                 snapMode: "outer",
                 stop: function (event, ui) {
