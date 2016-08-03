@@ -28,6 +28,8 @@ define('sidebar',['./widget'],function(widget){
 
             var p = target.closest('li').index();
 
+            $(container).find('.widget-type a').removeClass('active');
+            target.addClass('active');
 
             widgetContent.hide();
             widgetContent.eq(p).show();

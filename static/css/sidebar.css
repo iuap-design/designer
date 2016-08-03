@@ -233,3 +233,6 @@
 .pannel-content {
     padding:10px;
 }
+.widget-type li a.active {
+    background:#7986cb;
+}
