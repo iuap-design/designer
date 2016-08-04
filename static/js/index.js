@@ -9,7 +9,7 @@ define('index',[],function(){
         var template =  require('html!../../static/page/default.html');
 
         // 给body添加滚动条优化
-        $("body").mCustomScrollbar({theme:"minimal-dark"});
+        //$("body").mCustomScrollbar({theme:"minimal-dark"});
 
         $(".nav-toggle").on("click",function(){
             $(".nav-menu").toggleClass("toggle-show");

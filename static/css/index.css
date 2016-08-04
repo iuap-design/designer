@@ -578,9 +578,11 @@
 }
 #container-content .u-row {
     transition: background 0.3s ease 0s;
+    background-color:#fff;
 }
 #container-content .u-row:hover {
     background-color:#fff;
+    background-color:rgba(0, 188, 212, 0.05);
 }
 .nav-toggle {
     position: absolute;
