@@ -1,15 +1,14 @@
 #container-content {
-    background:url(http://design.yyuap.com/static/img/designer/bg.png) repeat;
+    /*background:url(http://design.yyuap.com/static/img/designer/bg.png) repeat;*/
 }
 .ui-portlet-placeholder {
-    background:#fff;
+    background-color: #fff;
 }
-.ui-sortable {
-    border:1px dashed #ccc;
-    min-height:100px;
+#container-content > .ui-sortable {
+    background-color:rgba(0, 188, 212, 0.05);
+    min-height:50px;
 }
 .u-row .ui-sortable {
-    background: #f3f3f3;
     position:relative;
 }
 .widget-menubar {
@@ -76,4 +75,13 @@
     0% {opacity: 0;}  
     40% {opacity: 0.5;}  
     100% {opacity: 1;}  
+}
+.layoutBox {
+    height:100%;
+}
+.layoutBox .widgetBox {
+    min-height:30px;
+}
+.layoutBox .edit-panel-body .widgetBox {
+    min-height:inherit;
 }
