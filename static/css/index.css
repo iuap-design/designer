@@ -225,9 +225,7 @@
 .phone-landscape .font-size-40{
     font-size: 35px !important;
 }
-.phone-portrait .carousel{
-    height: 240px;
-}
+
 .phone-portrait .carousel-center-item img{
     height: 240px;
     width: 900px;
@@ -373,11 +371,12 @@
 .headContainer ul{
     list-style: none;
     height: auto;
-    margin: 0;
+    float: right;
+    margin: 0 10px 0 0;
 }
 .headContainer ul li{
     display: table-cell;
-    padding: 5px 19px;
+    padding: 5px 9px;
     height: 100%;
     line-height: 40px;
     cursor: pointer;
@@ -440,11 +439,9 @@
 }
 .footer{
     background: #ededed;
-    height: 50px;
+    min-height: 50px;
     text-align: center;
-}
-.footer  span{
-    line-height: 50px;
+    padding: 10px;
 }
 .togglebutton{
     position: absolute;
@@ -458,7 +455,6 @@
 }
 .edit-panel{
     border: 1px solid #8B7D7D;
-    width: 300px;
     position: absolute;
     z-index: 9999;
     top:30px;
@@ -470,6 +466,8 @@
     background: #3F51B5;
     color: #fff;
     cursor: move;
+    width: 310px;
+    min-width: 200px;
     padding: 0 10px;
 }
 .eidit-panel-header .uf-removesymbol{
@@ -479,7 +477,14 @@
 .edit-panel-body{
     background: #fff;
     padding: 0 10px 10px 10px;
-    min-width:200px;
+    min-width: 200px;
+    position: inherit;
+    max-height: 400px;
+    overflow: auto;
+    min-height: 250px;
+    width: 310px;
+    min-width: 200px;
+    border: 1px solid #ddd;
 }
 .edit-panel-body .u-button-file{
     width: 100%;
@@ -490,6 +495,8 @@
 }
 .edit-panel-body .panel-part{
     margin: 5px 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .edit-panel-body input[type=color]{
     width: 44%;
@@ -574,4 +581,15 @@
 }
 #container-content .u-row:hover {
     background-color:#fff;
+}
+.nav-toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.nav-toggle .uf-alignjustify1{
+    font-size: 20px;
+}
+.toggle-show{
+    display: block;
 }
