@@ -14,44 +14,36 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <a href="/">
+                    <img src="http://design.yyuap.com/static/img/designer/logo.png" />
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#/sidebar" data-toggle="collapse" data-target=".site-menubar" aria-expanded="true">
-                            <i class="uf uf-plusblacksymbol uf-add"></i>
-                        </a>
-                    </li>
-                    <li>
+                    <li class="hide">
                         <a href="#">
                             <i class="uf uf-blankfile"></i>
                             模版名称
                         </a>
                     </li>
-                    <li>
+                    <li class="hide">
                         <a href="#">
                             工具 <i class="uf uf-anglearrowdown"></i>
                         </a>
                     </li>
-                    <li>
+                    <li class="hide">
                         <a href="javascript:;" data-toggle="collapse" data-target="#layout-container" aria-expanded="true">
                             页面设置
                         </a>
                     </li>
                 </ul>
-                <div class="togglebutton">
+                <div class="togglebutton hide">
                     <i class="uf uf-uparrow"></i>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li style="border-right:1px solid #ccc;">
                         <div class="hidden-sm hidden-xs" id="responsive">
                             <a class="active" href="#" id="desktop"><i class="fa fa-desktop"></i></a>
                             <a href="#" id="tablet-landscape" class=""><i class="fa fa-tablet"></i></a>
@@ -65,7 +57,7 @@
                             下载
                         </a>
                     </li>
-                    <li>
+                    <li class="hide">
                         <a href="#">
                             正在编辑
                         </a>

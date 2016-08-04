@@ -5,10 +5,12 @@
     margin:0;
 }
 .navbar-nav li {
-    border-right:1px solid #ccc;
     line-height:54px;
     height:54px;
 }
 #bs-example-navbar-collapse-1 {
     padding:0;
+}
+.navbar-header {
+    line-height:54px;
 }
