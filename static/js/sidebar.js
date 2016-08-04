@@ -62,7 +62,9 @@ define('sidebar',['./widget'],function(widget){
                 else if(type=='widget') {
                     drag(widgetElement,'.layoutBox .widgetBox','widget');
                 }
-                drag(defaultElement,'#container-content .widgetBox','widget');
+                if(defaultElement.length>0){
+                    drag(defaultElement,'#container-content .widgetBox','widget');
+                }
             }
             // $("#"+widget+"container").css("left","90px");
             // widgetContainer.show(");
@@ -113,6 +115,7 @@ define('sidebar',['./widget'],function(widget){
     }
 
     var drag = function(elements,place,type){
+
         require.ensure(['./../trd/jquery-ui/jquery-ui'],function() {
 
             var ui = require('./../trd/jquery-ui/jquery-ui');
@@ -125,10 +128,11 @@ define('sidebar',['./widget'],function(widget){
                 return $(template).addClass('u-drag');
             };
 
+
             var mtype = $(elements).attr('type');
 
             type = mtype?mtype:type;
-
+            console.log(place);
             $(elements).draggable({
                 connectToSortable: place,
                 helper: helper,
