@@ -14,7 +14,7 @@ define('index',[],function(){
         $(".nav-toggle").on("click",function(){
             $(".nav-menu").toggleClass("toggle-show");
         })
-
+        
         $(container).html(template);
 
         var layoutBox = $(container).find('.layoutBox');

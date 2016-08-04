@@ -46,7 +46,7 @@ define('sidebar',['./widget'],function(widget){
 
                 widgetContent.eq(p).find('.panel-body').html(secondWidgetContainer);
 
-                if(widget === "checkbox" || widget == "radio"){
+                if(panel === "checkbox" || panel == "radio"){
                     // 如果是checkbox或者radio需要调用样式方法初始化样式
                     u.compMgr.updateComp();
                 }
