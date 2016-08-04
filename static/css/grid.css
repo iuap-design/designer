@@ -1,0 +1,84 @@
+/*.
+	公用
+	
+*/
+.nav-toggle{
+	display: none
+}
+/*.
+	phone-portrait 手机竖屏
+*/
+
+.phone-portrait .nav-toggle{
+	display: block;
+}
+
+.phone-portrait .xs-hide{
+	visibility: hidden;
+	height: 0;
+	transition: height 400ms
+
+}
+.phone-portrait .xs-show{
+	visibility: visible;
+	height: 400px;
+	transition: height 400ms
+}
+.phone-portrait .u-widget{
+	background: none;
+}
+.phone-portrait .headContainer .u-col-md-3{
+	width: 100%;
+}
+.phone-portrait .headContainer .u-col-md-9{
+	width: 100%;
+}
+.phone-portrait .headContainer ul{
+	padding: 0;
+}
+.phone-portrait .headContainer ul li{
+	display: block;
+}
+.phone-portrait .carousel-indicators{
+	bottom: -7px;
+}
+.phone-portrait .carousel-caption{
+	padding-bottom: 0;
+}
+.phone-portrait .u-gallery .u-col-md-4{
+	width: 100%;
+}
+
+/*.
+	phone-portrait 手机横屏
+*/
+.phone-landscape .nav-toggle{
+	display: block;
+}
+
+.phone-landscape .xs-hide{
+	visibility: hidden;
+	height: 0;
+	transition: height 400ms
+
+}
+.phone-landscape .xs-show{
+	visibility: visible;
+	height: 400px;
+	transition: height 400ms
+}
+.phone-landscape .u-widget{
+	background: none;
+}
+.phone-landscape .headContainer .u-col-md-3{
+	width: 100%;
+}
+.phone-landscape .headContainer .u-col-md-9{
+	width: 100%;
+}
+.phone-landscape .headContainer ul{
+	padding: 0;
+}
+.phone-landscape .headContainer ul li{
+	display: block;
+}

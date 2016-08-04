@@ -11,7 +11,12 @@ define('widget',[],function(){
 
 
         ko.applyBindings(widgetViewModel,el); 
-
+        // 导航条 当手机屏幕 icon触发导航条显示
+        $(".nav-toggle").bind("click",function(){
+            $(".xs-hide").toggleClass("xs-show");
+        })
+        
+        
         if(name == "widget7"){
             setTimeout(function(){
                 $('#carousel-example-generic').carousel();
@@ -19,6 +24,7 @@ define('widget',[],function(){
         }
             
     };
+
     return {
         init:init
     }

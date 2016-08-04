@@ -8,7 +8,12 @@ define('index',[],function(){
 
         var template =  require('html!../../static/page/default.html');
 
-        
+        // 给body添加滚动条优化
+        $("body").mCustomScrollbar({theme:"minimal-dark"});
+
+        $(".nav-toggle").on("click",function(){
+            $(".nav-menu").toggleClass("toggle-show");
+        })
 
         $(container).html(template);
 
@@ -67,7 +72,9 @@ define('index',[],function(){
                 container.find('.edit-panel-body').append(panelTemplate);
 
                 container.find(".edit-panel").draggable({containment:"#container-content"});
-
+     
+                // 滚动条优化
+                $(".edit-panel-body").mCustomScrollbar({theme:"minimal-dark"});
 
                 var widgetViewModel = require('./viewModel/'+panel+'Model.js');
 
