@@ -1,5 +1,10 @@
 <div class="u-widget" panelname="footer">
 	<div class="footer" data-bind="foreach: footers">
-		<span data-bind="text:footerInfo"></span>
+		<div class="footer-text">
+			<span data-bind="text:footerInfo"></span>
+		</div>
+		<div class="footer-img">
+			<img data-bind="attr: { src: footerImg}">
+		</div>
 	</div>			
 </div>					
