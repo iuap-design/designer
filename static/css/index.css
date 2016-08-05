@@ -376,34 +376,30 @@
 }
 .headContainer ul li{
     display: table-cell;
-    padding: 5px 9px;
+    padding: 5px 19px;
     height: 100%;
     line-height: 40px;
     cursor: pointer;
+    color: #8e8e8e;
+    border-top: 2px solid transparent;
 }
 .headContainer ul li:hover{
-    background-color: #F48889;
+    border-color: #696969;
+    color: #696969;
 }
 .header-wrapper{
-    /*padding-top: 2%;*/
-    background-color: #f9f1b5;
     width: 100%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0;
-    height: 105px;
-    color:#fff;
-    padding-top: 22px;
 }
 .headContainer{
-    background-color: #FD9C9C;
     position: relative;
-    width: 80%;
+    width: 100%;
     display: inline-block;
-    margin-left: 10%;
-    margin-right: 10%;
-}
+ }
+
 .headContainer .headerlogo{
     display: inline-block;
     /*margin-top: 19px;*/
@@ -584,11 +580,11 @@
     background-color:#fff;
     background-color:rgba(0, 188, 212, 0.05);
 }
-.nav-toggle {
+/*.nav-toggle {
     position: absolute;
     right: 0;
     bottom: 0;
-}
+}*/
 .nav-toggle .uf-alignjustify1{
     font-size: 20px;
 }
@@ -613,4 +609,22 @@
 }
 #container-content .u-drag-area{
     border: none;
+}
+.carousel-control{
+    width: 5%;
+}
+.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right{
+    font-size: 15px;
+    border-radius: 17px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+}
+.carousel-control .glyphicon-chevron-left:hover{
+    background: #00c0ff;
+}
+.carousel-control .glyphicon-chevron-right:hover{
+    background: #00c0ff;
 }

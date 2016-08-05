@@ -5,6 +5,9 @@
 .nav-toggle{
 	display: none
 }
+.phone-landscape .headContainer ul,.phone-portrait .headContainer ul{
+	float: left;
+}
 /*.
 	phone-portrait 手机竖屏
 */
@@ -15,14 +18,16 @@
 
 .phone-portrait .xs-hide{
 	visibility: hidden;
-	height: 0;
-	transition: height 400ms
+	max-height: 0;
+	opacity: 0;
+	transition: all 400ms;
 
 }
 .phone-portrait .xs-show{
 	visibility: visible;
-	height: 400px;
-	transition: height 400ms
+	opacity: 1;
+	max-height: 400px;
+	transition: all 400ms;
 }
 .phone-portrait .u-widget{
 	background: none;

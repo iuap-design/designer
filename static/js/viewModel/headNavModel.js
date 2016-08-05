@@ -4,7 +4,7 @@
 
 define('headNav',[],function(){
     var data = {
-          "logoImg": "http://design.yyuap.com/static/img/desinerimg1.png",
+          "logoImg": "http://design.yyuap.com/static/img/sprite-ui.png",
           "backgroudColor": "#FD9C9C",
           "navlist": [
               {
