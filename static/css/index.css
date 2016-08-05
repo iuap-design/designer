@@ -611,3 +611,6 @@
 .margin-bottom-0{
     margin-bottom: 0;
 }
+#container-content .u-drag-area{
+    border: none;
+}

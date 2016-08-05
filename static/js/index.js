@@ -5,7 +5,6 @@
 
 define('index',[],function(){
     var init = function (container){
-
         var template =  require('html!../../static/page/default.html');
 
         // 给body添加滚动条优化
@@ -14,7 +13,7 @@ define('index',[],function(){
         $(".nav-toggle").on("click",function(){
             $(".nav-menu").toggleClass("toggle-show");
         })
-
+        var i = 0;
         $(container).html(template);
 
         var layoutBox = $(container).find('.layoutBox');
@@ -33,10 +32,20 @@ define('index',[],function(){
             $(container).find('.widget-menubar').hide();
         }).on('click',function(e){
             var target = $(e.target);
+
             if(target.hasClass('icon-cancel02')){
                 target.closest('.widget-menubar').parent().remove();
             }
             if(target.hasClass('uf-pencil')){
+
+                $(e.target).attr("count",function(){
+                    var i = $(e.target).attr("count");
+                    i++;
+                    return i;
+                });
+                if($(e.target).attr("count") > 1){
+                    return;
+                }
                 //layout
                 if(target.closest('.u-drag').hasClass('u-row')){
                     if($(target).closest('.u-drag').find('.drag-overlay').length>0){
@@ -46,7 +55,7 @@ define('index',[],function(){
                     var panelBox =  require('html!../page/panel/panel.html');
                     var container = $(target).closest('.u-drag');
                     container.append(panelBox);
-                    container.find('.edit-panel-body').append(layout);
+                    container.find('.edit-panel-body').html(layout);
 
                     container.find(".edit-panel").draggable({containment:"#container-content"});
 
@@ -55,7 +64,6 @@ define('index',[],function(){
                     layout.init(container);
                     return false;
                 }
-
                 //widget
                 if($(target).closest('.u-drag').find('.u-widget').length>0){
 
@@ -69,7 +77,7 @@ define('index',[],function(){
 
 
                 container.append(panelBox);
-                container.find('.edit-panel-body').append(panelTemplate);
+                container.find('.edit-panel-body').html(panelTemplate);
 
                 container.find(".edit-panel").draggable({containment:"#container-content"});
      
@@ -79,12 +87,16 @@ define('index',[],function(){
                 var widgetViewModel = require('./viewModel/'+panel+'Model.js');
 
 
-
-                ko.applyBindings(widgetViewModel,$(".edit-panel")[0]); 
+                // console.log( $(e.target).parents(".widget-menubar").closest(".drag-overlay"));
+                var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
+                // var editPanel = $(".edit-panel")[0];
+                console.log(editPanel);
+                ko.applyBindings(widgetViewModel,editPanel); 
 
 
             }
             if($(target).hasClass("uf-removesymbol")){
+                $(e.target).parents(".drag-overlay").siblings(".widget-menubar").find(".uf-pencil").attr("count","0");
                 $(target).closest('.drag-overlay').remove();
             }
         });
