@@ -15,6 +15,51 @@ app.use(koaBody({
   formLimit: '50mb'
 }));
 
+
+router.post('/download', function (next) {
+  // this.request.body;
+  //console.log(this.request.body.html_code);
+  var styles = this.request.body.css_code;
+  //var htmls = this.request.body.html_code;
+  var scripts = this.request.body.script_code;
+  var htmls = this.request.body.files;
+  //console.log(htmls);
+
+  var tpl = [
+    '<!DOCTYPE html>',
+    '<html lang="en">',
+    '<head>',
+    '<meta charset="UTF-8">',
+    '<title>Title</title>',
+    '<link rel="stylesheet" href="http://design.yyuap.com/designer/trd/bootstrap/css/bootstrap.css">',
+    '<link rel="stylesheet" href="http://design.yyuap.com/designer/fonts/designfont/iconfont.css">',
+    '<link rel="stylesheet" href="http://design.yyuap.com/designer/trd/uui/assets/fonts/font-awesome/css/font-awesome.css">',
+    '<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u.css">',
+    '<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u-extend.css">',
+    '<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/designer/main.6b9e334d.css">',
+    '</head>',
+    '<body>',
+    htmls,
+    '<script src="http://design.yyuap.com/designer/trd/jquery/jquery-1.11.2.min.js"></script>',
+    '<script src="http://design.yyuap.com/designer/trd/knockout/knockout-3.2.0.debug.js"></script>',
+    '<script src="http://design.yyuap.com/designer/trd/bootstrap/js/bootstrap.min.js"></script>',
+    '<script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>',
+    '<script src="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>',
+    '<script src="http://design.yyuap.com/designer/bundle.js"></script>',
+    '</body>',
+    '</html>'
+  ]
+  //fs.writeFile('files.html', tpl.join(""), function (err) {
+  //  if (err) throw err;
+  //  console.log('It\'s saved!');
+  //});
+
+
+  this.body = tpl.join("");
+
+
+});
+
 app.use(router.routes())
   .use(router.allowedMethods());
 

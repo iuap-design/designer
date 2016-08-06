@@ -134,6 +134,22 @@ define('index',[],function(){
             sortable(layoutBox);
 
 
+            $('#downLoad').on('click',function(){
+                $('.files').val($('.layoutBox').html());
+                $('.downLoadFiles').submit();
+                //$.ajax({
+                //    url:'/download',
+                //    type:'post',
+                //    dataType:'json',
+                //    data:{
+                //        content:$('.layoutBox').html()
+                //    },
+                //    success:function(res){
+                //        console.log(res);
+                //    }
+                //});
+            });
+
             //$(elements).sortable({
             //    placeholder: "ui-portlet-placeholder",
             //    connectWith: '.widgetBox',
