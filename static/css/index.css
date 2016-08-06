@@ -574,6 +574,12 @@ body{
     margin:5px 0;
     border: 1px dashed rgba(86, 61, 124, 0.2);
 }
+#container-content .u-widget .u-row [class^="u-col-"] {
+    border:none;
+}
+#container-content .u-widget .row [class^="u-col-"] {
+    border:none;
+}
 #container-content .u-row {
     transition: background 0.3s ease 0s;
     background-color:#fff;
