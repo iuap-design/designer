@@ -36,7 +36,7 @@ router.post('/download', function (next) {
     '<link rel="stylesheet" href="http://design.yyuap.com/designer/trd/uui/assets/fonts/font-awesome/css/font-awesome.css">',
     '<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u.css">',
     '<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u-extend.css">',
-    '<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/designer/main.6b9e334d.css">',
+    '<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/designer/main.705c6d31.css">',
     '</head>',
     '<body>',
     htmls,
@@ -49,14 +49,16 @@ router.post('/download', function (next) {
     '</body>',
     '</html>'
   ]
+
+  //var self = this;
   //fs.writeFile('files.html', tpl.join(""), function (err) {
   //  if (err) throw err;
   //  console.log('It\'s saved!');
   //});
-
+  //
+  //var data = fs.createReadStream('files.html');
 
   this.body = tpl.join("");
-
 
 });
 
