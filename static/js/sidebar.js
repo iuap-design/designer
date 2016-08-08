@@ -132,7 +132,7 @@ define('sidebar',['./widget'],function(widget){
             var mtype = $(elements).attr('type');
 
             type = mtype?mtype:type;
-            
+
             $(elements).draggable({
                 connectToSortable: place,
                 helper: helper,
