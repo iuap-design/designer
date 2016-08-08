@@ -36,7 +36,7 @@ router.post('/download', function (next) {
     '<link rel="stylesheet" href="http://design.yyuap.com/designer/trd/uui/assets/fonts/font-awesome/css/font-awesome.css">',
     '<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u.css">',
     '<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/u-extend.css">',
-    '<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/designer/main.05e4f8bc.css">',
+    '<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/designer/main.705c6d31.css">',
     '</head>',
     '<body>',
     htmls,
