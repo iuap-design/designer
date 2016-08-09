@@ -661,3 +661,6 @@ body{
 #yunwei .u-widget {
     border:1px solid #f3f3f3;
 }
+#container-content .footer {
+    background:none;
+}
