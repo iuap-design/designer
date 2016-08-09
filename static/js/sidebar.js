@@ -142,7 +142,7 @@ define('sidebar',['./widget'],function(widget){
                     if(type=='widget'){
                         widget.init(ui.helper[0],$(this).attr('widget'));
                     }
-                    ui.helper.css('width',"300px");
+                    //ui.helper.css('width',"300px");
                 },
                 snapMode: "outer",
                 stop: function (event, ui) {
