@@ -138,7 +138,7 @@ define('index',[],function(){
 
 
             $('#downLoad').on('click',function(){
-                var html = $('.page-container').html()||$('.layoutBox').html();
+                var html = $('#container-content').html()||$('.layoutBox').html();
                 $('.files').val(html);
                 $('.downLoadFiles').submit();
                 //$.ajax({
