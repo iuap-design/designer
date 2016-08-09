@@ -71,7 +71,11 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin(htmlConfig),
-        new ExtractTextPlugin("main.[hash:8].css", {
+        //new ExtractTextPlugin("main.[hash:8].css", {
+        //    allChunks: true,
+        //    disable: false
+        //})
+        new ExtractTextPlugin("main.css", {
             allChunks: true,
             disable: false
         })
