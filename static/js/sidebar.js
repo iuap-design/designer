@@ -21,8 +21,9 @@ define('sidebar',['./widget'],function(widget){
         var widgetContent =  $(container).find('.sidebar-panels');
         var widgetContainer = $(container).find('.sidebar-panel-container');
 
-        widget.on('click',function(e){
-            var target = $(e.target).closest('a');
+        widget.on('click',pannelShow);
+        function pannelShow(e){
+            var target = typeof e!='undefined'?$(e.target).closest('a'):$('.widget-type a').eq(0);
 
             var i = target.parent().parent().index();
 
@@ -80,7 +81,8 @@ define('sidebar',['./widget'],function(widget){
                 //$('.main-container').removeClass('collapse in');
             }
 
-        });
+        }
+        pannelShow();
 
     };
     /*
