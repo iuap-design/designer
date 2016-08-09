@@ -655,3 +655,9 @@ body{
 .tablet-portrait .select-server{
     width: auto;
 }
+#yunwei .u-row .ui-sortable {
+    min-height:100px;
+}
+#yunwei .u-widget {
+    border:1px solid #ccc;
+}
