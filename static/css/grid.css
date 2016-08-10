@@ -53,10 +53,74 @@
 .phone-portrait .u-gallery .u-col-md-4{
 	width: 100%;
 }
-
+.phone-portrait .u-media.u-col-md-3{
+	width: 100%;
+}
+.phone-portrait #tab-panel-2 .product-bottom{
+    min-height: 797px;
+    background-repeat: repeat;
+}
+.phone-portrait #tab-panel-3{
+    padding-top: 135%;
+}
+.phone-portrait .idea{
+	width: 50%;
+}
+.phone-portrait .footers .contact .u-col-md-7{
+	width: 100%;
+}
+.phone-portrait .footers .contact .u-col-md-6{
+	width: 100%;
+}
+.phone-portrait .footers .contact .u-col-md-5{
+	width: 100%;
+}
+.phone-portrait .headContaineryy .u-col-md-9{
+	width: 100%
+}
+.phone-portrait .info h1{
+	font-size: 30px;
+}
+.phone-portrait .info h3{
+	font-size: 16px;
+}
+.phone-portrait .banner-content .info{
+	margin-top: 60px;
+}
+.phone-portrait .product-nav .u-col-md-2{
+	width: 32%;
+}
+.phone-portrait .contact-ways{
+	margin-left: 30px;
+}
 /*.
 	phone-portrait 手机横屏
 */
+.phone-landscape .footers .contact .u-col-md-7{
+	width: 100%;
+}
+.phone-landscape .footers .contact .u-col-md-6{
+	width: 100%;
+}
+.phone-landscape .footers .contact .u-col-md-5{
+	width: 100%;
+}
+.phone-landscape .idea{
+	width: 50%;
+}
+.phone-landscape .u-media.u-col-md-3{
+	width: 50%;
+}
+.phone-landscape #tab-panel-2 .product-bottom{
+    min-height: 470px;
+    background-repeat: repeat;
+}
+.phone-landscape #tab-panel-3{
+    padding-top: 23%;
+}
+.phone-landscape .product-nav .u-col-md-2{
+	width: 18%;
+}
 .phone-landscape .nav-toggle{
 	display: block;
 }
@@ -86,4 +150,30 @@
 }
 .phone-landscape .headContainer ul li{
 	display: block;
+}
+/*tablet-portrait*/
+.tablet-portrait .info h1{
+	font-size: 40px;
+}
+.tablet-portrait .info h3{
+	font-size: 20px;
+}
+.tablet-portrait .u-media.u-col-md-3{
+	width: 50%;
+}
+.tablet-portrait #tab-panel-2 .product-bottom{
+    min-height: 470px;
+    background-repeat: repeat;
+}
+.tablet-portrait #tab-panel-3{
+    padding-top: 20%;
+}
+.tablet-portrait .footers .contact .u-col-md-7{
+	width: 100%;
+}
+.tablet-portrait .footers .contact .u-col-md-6{
+	width: 100%;
+}
+.tablet-portrait .footers .contact .u-col-md-5{
+	width: 100%;
 }
