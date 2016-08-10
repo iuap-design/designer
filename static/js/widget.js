@@ -9,7 +9,7 @@ define('widget',[],function(){
 
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
-
+        console.log(widgetViewModel);
         ko.applyBindings(widgetViewModel,el); 
         // 导航条 当手机屏幕 icon触发导航条显示
         $(".nav-toggle").unbind("click").bind("click",function(){
