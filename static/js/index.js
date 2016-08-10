@@ -66,14 +66,16 @@ define('index',[],function(){
                     return false;
                 }
                 //widget
-                //if($(target).closest('.u-drag').find('.u-widget').length>0){
-                //
-                //    return false;
-                //}
+                if($(target).closest('.u-drag').find('.u-widget').length>0){
+
+                    return false;
+                }
+
+                var panel = $(e.target).parents(".u-widget").attr("panelname");
+
                 if(typeof  panel=='undefined'){
                     return false;
                 }
-                var panel = $(e.target).parents(".u-widget").attr("panelname");
                 var panelTemplate =  require('html!../page/panel/'+panel+'-panel.html');
                 var panelBox =  require('html!../page/panel/panel.html');
 
