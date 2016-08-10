@@ -2,7 +2,7 @@
  * Created by chief on 16/7/15.
  */
 
-define('template', [], function (a) {
+define('template', ['./widget'], function (widget) {
 
     var template = function (options) {
         var self = this;
@@ -21,6 +21,12 @@ define('template', [], function (a) {
                 $(container).html(content);
                 self.drag('.widgetBox');
                 self.edit(options.id);
+                if(options.id=='liyue'){
+                    var elements = $(container).find('u-widget');
+                    $.each(elements,function(i,item){
+                        widget.init(item[0],item.attr('widget'));
+                    });
+                }
             }
         });
 
