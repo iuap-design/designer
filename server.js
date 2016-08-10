@@ -16,7 +16,7 @@ app.use(koaBody({
 }));
 
 
-router.post('/download', function (next) {
+router.post('/preview', function (next) {
   // this.request.body;
   //console.log(this.request.body.html_code);
   var styles = this.request.body.css_code;
@@ -30,7 +30,7 @@ router.post('/download', function (next) {
     '<html lang="en">',
     '<head>',
     '<meta charset="UTF-8">',
-    '<title>Title</title>',
+    '<title></title>',
     '<link rel="stylesheet" href="http://design.yyuap.com/designer/trd/bootstrap/css/bootstrap.css">',
     '<link rel="stylesheet" href="http://design.yyuap.com/designer/fonts/designfont/iconfont.css">',
     '<link rel="stylesheet" href="http://design.yyuap.com/designer/trd/uui/assets/fonts/font-awesome/css/font-awesome.css">',
