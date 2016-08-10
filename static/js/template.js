@@ -71,15 +71,15 @@ define('template', [], function (a) {
                     $(_this).append($(html).show());
                 }
             });
-            $(container).on('mouseleave','.u-widget',function(){
-                $(this).find('.widget-menubar').hide().remove();
-            });
-            $(container).on('click',function(e){
-                var target = $(e.target);
-                if(target.hasClass('icon-cancel02')){
-                    target.closest('.u-widget').remove();
-                }
-            })
+            //$(container).on('mouseleave','.u-widget',function(){
+            //    $(this).find('.widget-menubar').hide().remove();
+            //});
+            //$(container).on('click',function(e){
+            //    var target = $(e.target);
+            //    if(target.hasClass('icon-cancel02')){
+            //        target.closest('.u-widget').remove();
+            //    }
+            //})
         }
     };
 
