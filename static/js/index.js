@@ -22,6 +22,7 @@ define('index',[],function(){
             var target = $(event.target);
             $(container).find('.widget-menubar').hide();
             var parent = target.closest('.u-drag')||target.closest('.widgetBox');
+
             if(parent.length>0){
                 parent.find('>.widget-menubar').eq(0).show();
             }
@@ -38,14 +39,14 @@ define('index',[],function(){
             }
             if(target.hasClass('uf-pencil')){
 
-                $(e.target).attr("count",function(){
-                    var i = $(e.target).attr("count");
-                    i++;
-                    return i;
-                });
-                if($(e.target).attr("count") > 1){
-                    return;
-                }
+                //$(e.target).attr("count",function(){
+                //    var i = $(e.target).attr("count");
+                //    i++;
+                //    return i;
+                //});
+                //if($(e.target).attr("count") > 1){
+                //    return;
+                //}
                 //layout
                 if(target.closest('.u-drag').hasClass('u-row')){
                     if($(target).closest('.u-drag').find('.drag-overlay').length>0){
@@ -93,7 +94,7 @@ define('index',[],function(){
                 // console.log( $(e.target).parents(".widget-menubar").closest(".drag-overlay"));
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
-                
+
                 ko.applyBindings(widgetViewModel,editPanel); 
 
 
