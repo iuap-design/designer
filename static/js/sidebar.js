@@ -38,6 +38,9 @@ define('sidebar',['./widget'],function(widget){
             var panel = target.attr("panel");
             var type = target.attr("type");
 
+            if(typeof panel=='undefined'){
+                return false;
+            }
             if($("#"+panel+"container").length === 0){
 
                 var template = require('html!../../static/page/sidebarPanel/'+panel+'.html');
@@ -142,7 +145,7 @@ define('sidebar',['./widget'],function(widget){
                     if(type=='widget'){
                         widget.init(ui.helper[0],$(this).attr('widget'));
                     }
-                    //ui.helper.css('width',"300px");
+                    ui.helper.css('width',"100%");
                 },
                 snapMode: "outer",
                 stop: function (event, ui) {
