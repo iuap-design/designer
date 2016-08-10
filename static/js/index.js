@@ -66,10 +66,10 @@ define('index',[],function(){
                     return false;
                 }
                 //widget
-                if($(target).closest('.u-drag').find('.u-widget').length>0){
-
-                    return false;
-                }
+                //if($(target).closest('.u-drag').find('.u-widget').length>0){
+                //
+                //    return false;
+                //}
                 if(typeof  panel=='undefined'){
                     return false;
                 }
