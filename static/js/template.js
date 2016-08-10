@@ -24,8 +24,9 @@ define('template', ['./widget'], function (widget) {
                 if(options.id=='liyue'){
                     var elements = $(container).find('.u-widget');
                     $.each(elements,function(i,item){
-                        console.log(elements);
-                        widget.init(item[0],$(item).attr('panelname'));
+                        console.log(item[0]);
+                        console.log($(item).attr('panelname'));
+                        //widget.init(item[0],$(item).attr('panelname'));
                     });
                 }
             }
