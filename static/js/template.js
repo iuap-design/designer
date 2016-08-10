@@ -64,13 +64,13 @@ define('template', [], function (a) {
                 '<li class="hide"><i class="uf uf-linksymbol btn btn-outline icon-unfold" data-type="collage" title="链接"></i></li>' +
                 '<li><i class="uf uf-trash  btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul></div>';
 
-            $(container).on('mouseover','.u-widget',function(e){
-                e.stopPropagation();
-                var _this = this;
-                if($(_this).find('.widget-menubar').length==0&&$(_this).find('.ui-sortable-helper').length==0){
-                    $(_this).append($(html).show());
-                }
-            });
+            //$(container).on('mouseover','.u-widget',function(e){
+            //    e.stopPropagation();
+            //    var _this = this;
+            //    if($(_this).find('.widget-menubar').length==0&&$(_this).find('.ui-sortable-helper').length==0){
+            //        $(_this).append($(html).show());
+            //    }
+            //});
             //$(container).on('mouseleave','.u-widget',function(){
             //    $(this).find('.widget-menubar').hide().remove();
             //});
