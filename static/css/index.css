@@ -1,6 +1,3 @@
-body{
-    overflow: hidden;
-}
 .navbar-default {
     margin-bottom:0;
     z-index: 10;
@@ -654,4 +651,13 @@ body{
 }
 .tablet-portrait .select-server{
     width: auto;
+}
+#yunwei .u-row .ui-sortable {
+    min-height:100px;
+}
+#yunwei .u-widget {
+    border:1px solid #f3f3f3;
+}
+#container-content .footer {
+    background:none;
 }

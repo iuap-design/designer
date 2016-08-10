@@ -22,6 +22,7 @@ define('index',[],function(){
             var target = $(event.target);
             $(container).find('.widget-menubar').hide();
             var parent = target.closest('.u-drag')||target.closest('.widgetBox');
+
             if(parent.length>0){
                 parent.find('>.widget-menubar').eq(0).show();
             }
@@ -69,7 +70,12 @@ define('index',[],function(){
 
                     return false;
                 }
+
                 var panel = $(e.target).parents(".u-widget").attr("panelname");
+
+                if(typeof  panel=='undefined'){
+                    return false;
+                }
                 var panelTemplate =  require('html!../page/panel/'+panel+'-panel.html');
                 var panelBox =  require('html!../page/panel/panel.html');
 
@@ -90,7 +96,7 @@ define('index',[],function(){
                 // console.log( $(e.target).parents(".widget-menubar").closest(".drag-overlay"));
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
-                console.log(editPanel);
+
                 ko.applyBindings(widgetViewModel,editPanel); 
 
 
@@ -135,7 +141,8 @@ define('index',[],function(){
 
 
             $('#downLoad').on('click',function(){
-                $('.files').val($('.layoutBox').html());
+                var html = $('#container-content').html()||$('.layoutBox').html();
+                $('.files').val(html);
                 $('.downLoadFiles').submit();
                 //$.ajax({
                 //    url:'/download',

@@ -21,8 +21,9 @@ define('sidebar',['./widget'],function(widget){
         var widgetContent =  $(container).find('.sidebar-panels');
         var widgetContainer = $(container).find('.sidebar-panel-container');
 
-        widget.on('click',function(e){
-            var target = $(e.target).closest('a');
+        widget.on('click',pannelShow);
+        function pannelShow(e){
+            var target = typeof e!='undefined'?$(e.target).closest('a'):$('.widget-type a').eq(0);
 
             var i = target.parent().parent().index();
 
@@ -37,6 +38,9 @@ define('sidebar',['./widget'],function(widget){
             var panel = target.attr("panel");
             var type = target.attr("type");
 
+            if(typeof panel=='undefined'){
+                return false;
+            }
             if($("#"+panel+"container").length === 0){
 
                 var template = require('html!../../static/page/sidebarPanel/'+panel+'.html');
@@ -80,7 +84,8 @@ define('sidebar',['./widget'],function(widget){
                 //$('.main-container').removeClass('collapse in');
             }
 
-        });
+        }
+        pannelShow();
 
     };
     /*
@@ -140,7 +145,7 @@ define('sidebar',['./widget'],function(widget){
                     if(type=='widget'){
                         widget.init(ui.helper[0],$(this).attr('widget'));
                     }
-                    ui.helper.css('width',"300px");
+                    ui.helper.css('width',"100%");
                 },
                 snapMode: "outer",
                 stop: function (event, ui) {

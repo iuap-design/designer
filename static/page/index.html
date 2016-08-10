@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/u-extend.css">
     <link rel="stylesheet" href="http://design.yyuap.com/templates/website/tenxcloud/css/console/main.526.css?rev=0.1.0">
     <link rel="stylesheet" href="http://design.yyuap.com/templates/website/talentHome/css/index.css"/>
-    <link rel="stylesheet" href="http://design.yyuap.com/templates/website/e-commerce/css/e-commerce.css"/>
     <link rel="stylesheet" href="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.css">
 </head>
 <body>
@@ -58,7 +57,7 @@
                     </li>
                     <li>
                         <a href="javascript:;" id="downLoad">下载</a>
-                        <form action="/designer/downLoad" class="downLoadFiles" method="post" target="_blank" >
+                        <form action="downLoad" class="downLoadFiles" method="post" target="_blank" >
                             <input type="hidden" class="files" name="files" />
                         </form>
                     </li>
@@ -74,7 +73,7 @@
     </nav>
 
     <div id="sidebar-container" class="site-menubar collapse.in collapse"></div>
-    <div class="main-container">
+    <div class="main-container collapse in">
         <!--<div class="container-header"></div>-->
         <div class="container-left"></div>
         <div class="container-right"></div>
