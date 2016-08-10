@@ -23,6 +23,7 @@ define('carousel',[],function(){
       }];
 
     var carouselsModel = function(data) {
+        console.log(ko.observableArray(data));
         this.carousels = ko.observableArray(data);
       
         this.addItem = function() {
