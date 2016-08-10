@@ -39,14 +39,14 @@ define('index',[],function(){
             }
             if(target.hasClass('uf-pencil')){
 
-                //$(e.target).attr("count",function(){
-                //    var i = $(e.target).attr("count");
-                //    i++;
-                //    return i;
-                //});
-                //if($(e.target).attr("count") > 1){
-                //    return;
-                //}
+                $(e.target).attr("count",function(){
+                    var i = $(e.target).attr("count");
+                    i++;
+                    return i;
+                });
+                if($(e.target).attr("count") > 1){
+                    return;
+                }
                 //layout
                 if(target.closest('.u-drag').hasClass('u-row')){
                     if($(target).closest('.u-drag').find('.drag-overlay').length>0){

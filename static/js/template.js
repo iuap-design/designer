@@ -22,7 +22,7 @@ define('template', ['./widget'], function (widget) {
                 self.drag('.widgetBox');
                 self.edit(options.id);
                 if(options.id=='liyue'){
-                    var elements = $(container).find('u-widget');
+                    var elements = $(container).find('.u-widget');
                     $.each(elements,function(i,item){
                         widget.init(item[0],item.attr('widget'));
                     });
