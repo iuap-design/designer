@@ -93,7 +93,7 @@ define('index',[],function(){
                 // console.log( $(e.target).parents(".widget-menubar").closest(".drag-overlay"));
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
-                console.log(editPanel);
+                
                 ko.applyBindings(widgetViewModel,editPanel); 
 
 
