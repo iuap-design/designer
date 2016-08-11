@@ -380,7 +380,7 @@
     height: 100%;
     line-height: 40px;
     cursor: pointer;
-    color: #8e8e8e;
+    /*color: #8e8e8e;*/
     border-top: 2px solid transparent;
 }
 .headContainer ul li:hover{
@@ -660,4 +660,28 @@
 }
 #container-content .footer {
     background:none;
+}
+.navdefault{
+    background-color: #fff;
+    color: #8e8e8e;
+}
+.navsuccess{
+    background-color: rgb(76,175,80);
+    color: #fff;
+}
+.navinfo{
+    background-color: rgb(0,188,212);
+    color: #fff;
+}
+.navwarning{
+    background-color: rgb(255,152,0);
+    color: #fff;
+}
+.navdanger{
+    background-color: rgb(244,67,54);
+    color: #fff;
+}
+.navdark{
+    background-color: rgb(97,97,97);
+    color: #fff;
 }

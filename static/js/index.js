@@ -81,6 +81,7 @@ define('index',[],function(){
 
                 var container = $(target).closest('.u-drag');
 
+                
 
                 container.append(panelBox);
                 container.find('.edit-panel-body').html(panelTemplate);
@@ -98,7 +99,7 @@ define('index',[],function(){
                 // var editPanel = $(".edit-panel")[0];
 
                 ko.applyBindings(widgetViewModel,editPanel); 
-
+                u.compMgr.updateComp();
 
             }
             if($(target).hasClass("uf-removesymbol")){

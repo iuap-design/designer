@@ -5,7 +5,6 @@
 define('headNav',[],function(){
     var data = {
           "logoImg": "http://design.yyuap.com/static/img/sprite-ui.png",
-          "backgroudColor": "#FD9C9C",
           "navlist": [
               {
                 "title": ko.observable("赛事日程"),
@@ -33,6 +32,9 @@ define('headNav',[],function(){
         this.headNavs = ko.observable(data);
         this.navlist = ko.observableArray(data.navlist);
         this.logoImg = ko.observable(data.logoImg);
+        // this.background_Color = ko.observable(data.background_Color);
+        this.background_Colors = ko.observableArray(['navdefault','navsuccess','navinfo','navwarning','navdark','navdanger']);
+        this.selectedbackground_Color = ko.observable('navdefault');
 
         this.addItem = function() {
             var newheadNavItem =  {
@@ -46,6 +48,14 @@ define('headNav',[],function(){
         this.deleteItem = function(item) {
             this.navlist.remove(item)
         }.bind(this);  
+
+        this.toggleBg = function(){
+            var colorValue = $(event.target).parents(".u-radio").attr("bgcolor");
+            console.log(this.background_Color);
+            this.background_Color = ko.observable(colorValue);
+            console.log(this.background_Color);
+            
+        }
     };
 
     return new headNavModel(data)

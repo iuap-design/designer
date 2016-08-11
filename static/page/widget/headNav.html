@@ -1,23 +1,24 @@
 <div class="u-widget" panelname="headNav">
-	<div class="nav-toggle">
-		<i class="uf uf-alignjustify1"></i>
-	</div>
-	<div class="header-wrapper xs-hide">
-		<div class="headContainer"> 
-			<div class="row">
-				<div class="u-col-md-3">
-					<span class="headerlogo">
-						<img data-bind="attr: { src: logoImg}" >
-					</span>
-				</div>
-				<div class="u-col-md-9">
-					<ul class="nav-menu" data-bind="foreach: navlist">
-						<li data-bind="text: title"></li>
-					</ul>
+	<div  data-bind="css:selectedbackground_Color">
+		<div class="nav-toggle">
+			<i class="uf uf-alignjustify1"></i>
+		</div>
+		<div class="header-wrapper xs-hide">
+			<div class="headContainer"> 
+				<div class="row">
+					<div class="u-col-md-3">
+						<span class="headerlogo">
+							<img data-bind="attr: { src: logoImg}" >
+						</span>
+					</div>
+					<div class="u-col-md-9">
+						<ul class="nav-menu" data-bind="foreach: navlist">
+							<li data-bind="text: title"></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
 </div>
  
