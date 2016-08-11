@@ -141,10 +141,10 @@ define('index',[],function(){
             sortable(layoutBox);
 
 
-            $('#downLoad').on('click',function(){
+            $('#preview').on('click',function(){
                 var html = $('#container-content').html()||$('.layoutBox').html();
                 $('.files').val(html);
-                $('.downLoadFiles').submit();
+                $('.previewFiles').submit();
                 //$.ajax({
                 //    url:'/download',
                 //    type:'post',

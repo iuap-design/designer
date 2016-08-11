@@ -17,7 +17,7 @@ router.on('/edit',function(){
 router.on('/preview/:id',function(id){
     var template =  require('../../static/js/template');
     new template.init({
-        container:'#container-content',
+        container:'#container-content .layoutBox',
         id:id
     });
 });

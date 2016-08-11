@@ -17,11 +17,12 @@ define('sidebar',['./widget'],function(widget){
     };
 
     var widgetshow = function(container){
-        var widget  = $(container).find('.widget-type');
+        var widget  = $(container).find('.widget-type a');
         var widgetContent =  $(container).find('.sidebar-panels');
         var widgetContainer = $(container).find('.sidebar-panel-container');
 
         widget.on('click',pannelShow);
+
         function pannelShow(e){
             var target = typeof e!='undefined'?$(e.target).closest('a'):$('.widget-type a').eq(0);
 

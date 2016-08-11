@@ -233,3 +233,9 @@
 .widget-type li a.active {
     background:#7986cb;
 }
+.widget-type li label {
+    color:#9b9b9b;
+    font-weight: normal;
+    padding:5px 19px;
+    font-size:12px;
+}
