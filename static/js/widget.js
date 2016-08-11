@@ -16,6 +16,7 @@ define('widget',[],function(){
             $(".xs-hide").toggleClass("xs-show");
         })
         
+        // u.compMgr.updateComp();
         
         if(name == "widget7"){
             setTimeout(function(){

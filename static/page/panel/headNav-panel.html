@@ -2,6 +2,43 @@
     <p>样式修改</p>
     <div class="panel-part">
         <div class="u-col-md-12 editcoverstyle">
+            <div class="u-col-md-2 editcoverstyle">
+                <span style="padding-top: 10px;display: inline-block;">背景色:</span>
+                
+            </div>
+            <div class="u-col-md-9 editcoverstyle magintop-7 maginleft-10">
+                <select class="form-control" data-bind="options: background_Colors,
+                       value: selectedbackground_Color,
+                       valueAllowUnset: true"></select>
+            </div>
+        </div>
+        <div class="u-col-md-12 editcoverstyle">
+           <!--  <div class="u-col-md-9 editcoverstyle magintop-7 maginleft-10">
+                <label class="u-radio u-radio-default" bgcolor="navdefult" data-bind="click:toggleBg()">
+                    <input type="radio" class="u-radio-button" name="navBg" checked>
+                    <span class="u-radio-label">default</span>
+                </label>
+                <label class="u-radio u-radio-success" bgcolor="navsuccess" data-bind="click: toggleBg()">
+                    <input type="radio" class="u-radio-button" name="navBg">
+                    <span class="u-radio-label">success</span>
+                </label>
+                <label class="u-radio u-radio-info" bgcolor="navinfo" data-bind="click:toggleBg()">
+                    <input type="radio" class="u-radio-button" name="navBg">
+                    <span class="u-radio-label">info</span>
+                </label>
+                <label class="u-radio u-radio-warning" bgcolor="navwarning" data-bind="click:toggleBg()">
+                    <input type="radio" class="u-radio-button" name="navBg">
+                    <span class="u-radio-label">warning</span>
+                </label>
+                <label class="u-radio u-radio-danger" bgcolor="navdanger" data-bind="click:toggleBg()">
+                    <input type="radio" class="u-radio-button" name="navBg">
+                    <span class="u-radio-label">danger</span>
+                </label>
+                <label class="u-radio u-radio-dark" bgcolor="navdark" data-bind="click:toggleBg()">
+                    <input type="radio" class="u-radio-button" name="navBg">
+                    <span class="u-radio-label">dark</span>
+                </label>
+            </div> -->
             <div class="u-col-md-6 editcoverstyle" style="background-color: #777 !important">
                 <img data-bind="attr: { src: logoImg}">
             </div>
