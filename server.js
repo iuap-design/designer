@@ -58,17 +58,18 @@ router.post('/download', function (next) {
 
   var self = this;
 
+  var templateName = 'build/template.html';
 
-  fs.writeFileSync('files.html', tpl.join(""),{},function (err) {
+  fs.writeFileSync(templateName, tpl.join(""),{},function (err) {
     if (err) throw err;
     console.log('It\'s saved!');
   });
 
 
-  var data = fs.createReadStream('files.html');
+  var data = fs.createReadStream(templateName);
 
   gulp.task('zip',function(){
-    return gulp.src('files.html').pipe(zip('template.zip')).pipe(gulp.dest('build'));
+    return gulp.src(templateName).pipe(zip('template.zip')).pipe(gulp.dest('build'));
   });
 
   gulp.run('zip');
