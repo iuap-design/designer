@@ -27,6 +27,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
     "gulp-webpack": "^1.5.0",
+    "gulp-zip": "^3.2.0",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.22.0",
     "jshint": "^2.9.2",

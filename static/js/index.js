@@ -144,17 +144,12 @@ define('index',[],function(){
                 var html = $('#container-content').html()||$('.layoutBox').html();
                 $('.files').val(html);
                 $('.previewFiles').submit();
-                //$.ajax({
-                //    url:'/download',
-                //    type:'post',
-                //    dataType:'json',
-                //    data:{
-                //        content:$('.layoutBox').html()
-                //    },
-                //    success:function(res){
-                //        console.log(res);
-                //    }
-                //});
+            });
+
+            $('#downLoad').on('click',function(){
+                var html = $('#container-content').html()||$('.layoutBox').html();
+                $('.files').val(html);
+                $('.downloadFiles').submit();
             });
 
             //$(elements).sortable({

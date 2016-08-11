@@ -55,9 +55,15 @@
                             <a href="#" id="phone-portrait" class=""><i class="fa fa-mobile"></i></a>
                         </div>
                     </li>
-                    <li>
+                    <li style="border-right:1px solid #ccc;">
                         <a href="javascript:;" id="preview">预览</a>
                         <form action="preview" class="previewFiles" method="post" target="_blank" >
+                            <input type="hidden" class="files" name="files" />
+                        </form>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="downLoad">下载</a>
+                        <form action="download" class="downloadFiles" method="post" target="_blank" >
                             <input type="hidden" class="files" name="files" />
                         </form>
                     </li>
