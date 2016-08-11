@@ -612,7 +612,7 @@
 .margin-bottom-0{
     margin-bottom: 0;
 }
-#container-content .u-drag-area{
+#container-content .u-drag-area, .designer-preview .u-drag-area{
     border: none;
 }
 .carousel-control{
