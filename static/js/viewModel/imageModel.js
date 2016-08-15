@@ -3,23 +3,31 @@
  */
 
 define('image',[],function(){
-    var data = {
-            "imageUrl":"http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg",
-            "borderWidth": "1px",
-            "borderColor": "#000",
-            "borderRadius": "0px",
-            "borderStyle": "solid"
-        };
+    var data = [{
+            "imageUrl":ko.observable("http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg"),
+            "borderWidth": ko.observable("1px"),
+            "borderColor": ko.observable("#000"),
+            "borderRadius": ko.observable("0px"),
+            "borderStyle": ko.observable("solid")
+        },{
+            "imageUrl":ko.observable("http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg"),
+            "borderWidth": ko.observable("1px"),
+            "borderColor": ko.observable("#fff"),
+            "borderRadius": ko.observable("10px"),
+            "borderStyle": ko.observable("solid")
+        }];
 
     var imageModel = function(data) {
-        this.image = ko.observable(data);
-        this.imageUrl = ko.observable(data.imageUrl);
-        this.borderWidth = ko.observable(data.borderWidth);
-        this.borderColor = ko.observable(data.borderColor);
-        this.borderRadius = ko.observable(data.borderRadius);
-        this.borderStyle = ko.observable(data.borderStyle);
+        this.image = ko.observableArray(data);
+        // this.imageUrl = ko.observable(data.imageUrl);
+        // this.borderWidth = ko.observable(data.borderWidth);
+        // this.borderColor = ko.observable(data.borderColor);
+        // this.borderRadius = ko.observableArray(data.borderRadius);
+        // this.borderStyle = ko.observable(data.borderStyle);
     };
 
-    return new imageModel(data)
+    return new imageModel(data);
+
+
     
 });
