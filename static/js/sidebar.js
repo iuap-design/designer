@@ -143,7 +143,7 @@ define('sidebar',['./widget'],function(widget){
                 connectToSortable: place,
                 helper: helper,
                 start:function(event,ui){
-                    if(type=='widget'){
+                    if(type =='widget'){
                         widget.init(ui.helper[0],$(this).attr('widget'));
                     }
                     ui.helper.css('width',"100%");

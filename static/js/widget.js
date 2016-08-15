@@ -5,10 +5,10 @@
 define('widget',[],function(){
     var init = function (el,name){
 
-        
-
+         
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
+        
 
         ko.applyBindings(widgetViewModel,el); 
         // 导航条 当手机屏幕 icon触发导航条显示

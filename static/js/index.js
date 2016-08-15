@@ -71,7 +71,7 @@ define('index',[],function(){
                     return false;
                 }
 
-                var panel = $(e.target).parents(".u-widget").attr("panelname");
+                var panel = $(e.target).parents("div[panelname]").attr("panelname");
 
                 if(typeof  panel=='undefined'){
                     return false;
