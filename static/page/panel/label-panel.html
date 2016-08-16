@@ -1,0 +1,38 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part"  data-bind="foreach: label">
+        <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index}">
+            
+           
+           
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >标签大小</div>
+                <div>
+                    <span class="btn btn-default u-button-sm margin-5" data-bind="click: $parent.changeSize.bind(event,'12px')">小标签</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeSize.bind(event,'14px')">缺省</span>
+                    <span class="btn btn-default u-button-lg margin-5" data-bind="click: $parent.changeSize.bind(event,'16px')">大标签</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >标签圆角</div>
+                <div>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'4px')" style="border-radius: 4px;">标签</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'8px')" style="border-radius: 8px;">标签</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'16px')" style="border-radius: 16px;">标签</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >更换背景色</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:bgColor"></input>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >文本颜色</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:fontColor"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

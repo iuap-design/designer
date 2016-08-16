@@ -703,3 +703,14 @@
 .padding-none{
     padding: 0 !important;
 }
+.u-tag.u-tag-outline {
+    background-color: transparent !important;
+    border-color: #eeeeee; 
+}
+.edit-panel-body{
+    cursor: auto;
+}
+.margin-5{
+    margin-left: 5px;
+    margin-right: 5px;
+}

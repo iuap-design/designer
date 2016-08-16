@@ -2,9 +2,9 @@
  * Created by chief on 16/7/16.
  */
 
-define('image',[],function(){
+define('badge',[],function(){
     var data = [{
-            "imageUrl":ko.observable("http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg"),
+            "bgColor":ko.observable(""),
             "borderWidth": ko.observable("1px"),
             "borderColor": ko.observable("#000"),
             "borderRadius": ko.observable("0px"),
@@ -17,11 +17,11 @@ define('image',[],function(){
             "borderStyle": ko.observable("solid")
         }];
 
-    var imageModel = function(data) {
+    var badgeModel = function(data) {
         this.image = ko.observableArray(data);
     };
 
-    return new imageModel(data);
+    return new badgeModel(data);
 
 
     
