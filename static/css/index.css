@@ -585,6 +585,10 @@
     background-color:#fff;
     background-color:rgba(0, 188, 212, 0.05);
 }
+
+#container-content .u-row:hover > [class^="u-col-"] {
+    border:1px solid rgb(0, 188, 212);
+}
 /*.nav-toggle {
     position: absolute;
     right: 0;
