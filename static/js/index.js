@@ -14,6 +14,7 @@ define('index',[],function(){
             $(".nav-menu").toggleClass("toggle-show");
         })
         var i = 0;
+
         $(container).html(template);
 
         var layoutBox = $(container).find('.layoutBox');
