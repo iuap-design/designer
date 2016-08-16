@@ -19,7 +19,7 @@ define('template', ['./widget'], function (widget) {
                 var html = $(data);
                 var content = html.find('.page-container');
                 $(container).html(content);
-                self.drag('.widgetBox');
+                self.drag('.layoutBox .widgetBox');
                 self.edit(options.id);
                 if(options.id=='liyue'){
                     var elements = $(container).find('.u-widget');
