@@ -1,28 +1,3 @@
-
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised">BUTTON</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised accent">BUTTON</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary">BUTTON</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary u-button-round">圆形按钮</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary u-button-squared">圆形按钮</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary u-button-xg">特大尺寸</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary u-button-lg">大尺寸</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary">默认尺寸</a>
-</div>
-<div class="button-drag-area drag-area">
-	<a href="javascript:;" class="u-button raised primary u-button-sm">小尺寸</a>
+<div class="u-drag-area u-drag" panelname="button" data-bind="foreach: buttonData">
+	<span widgetname="button" class="u-button raised " data-bind="style:{'border-radius':borderRadius,'background-color':bgColor,'color':fontColor,'font-size':fontSize,'padding':padding},css:{'u-tag-outline':outLine},text:text,attr:{index:$index}," ></span>
 </div>

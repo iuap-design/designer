@@ -1,0 +1,43 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part"  data-bind="foreach: buttonData">
+        <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index}">
+            
+           
+           
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >背景</div>
+                <div>
+                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeBgColor.bind(event,'transparent')">缺省色</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $parent.changeBgColor.bind(event,'rgb(63,81,181)')">基础色</span>
+                    <span class="u-button raised u-button-success margin-5" data-bind="click: $parent.changeBgColor.bind(event,'#4caf50')">成功色</span>
+                    <span class="u-button raised u-button-info margin-5" data-bind="click: $parent.changeBgColor.bind(event,'#00bcd4')">信息色</span>
+                    <span class="u-button raised u-button-warning margin-5" data-bind="click: $parent.changeBgColor.bind(event,'#ff9800')">警告色</span>
+                    <span class="u-button raised u-button-danger margin-5" data-bind="click: $parent.changeBgColor.bind(event,'#f44336')">危险色</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >圆角</div>
+                <div>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'0')" style="border-radius: 4px;">直角</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'4px')" style="border-radius: 8px;">圆角</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'16px')" style="border-radius: 16px;">圆形</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >尺寸</div>
+                <div>
+                    <span class="btn btn-default u-button-primary btn-xs margin-5" data-bind="click: $parent.changeSize.bind(event,'1px 5px','12px')">小按钮</span>
+                    <span class="btn btn-default u-button-primary margin-5" data-bind="click: $parent.changeSize.bind(event,'6px 12px','14px')">默认</span>
+                    <span class="btn btn-default u-button-primary btn-lg margin-5" data-bind="click: $parent.changeSize.bind(event,'10px 16px','18px')">大按钮</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >文本颜色</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:fontColor"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

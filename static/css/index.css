@@ -718,3 +718,8 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+.u-button-border{
+    border: 1px solid #ddd;
+    background: transparent;
+    color: rgb(51,51,51);
+}
