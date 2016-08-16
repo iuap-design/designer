@@ -723,3 +723,11 @@
     background: transparent;
     color: rgb(51,51,51);
 }
+#badgecontainer .u-badge{
+    min-width: 25px;
+}
+.u-badge-transparent.u-badge[data-badge]:after {
+    color: #3A3535;
+    background-color: #fff;
+    border: 1px solid #aaa;
+}

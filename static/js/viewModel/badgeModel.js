@@ -4,21 +4,45 @@
 
 define('badge',[],function(){
     var data = [{
-            "bgColor":ko.observable(""),
-            "borderWidth": ko.observable("1px"),
-            "borderColor": ko.observable("#000"),
-            "borderRadius": ko.observable("0px"),
-            "borderStyle": ko.observable("solid")
+            "bgColor":ko.observable("transparent"),
+            "bgClass":ko.observable("u-badge u-badge-success"),
+            "text": ko.observable("14")
         },{
-            "imageUrl":ko.observable("http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg"),
-            "borderWidth": ko.observable("1px"),
-            "borderColor": ko.observable("#fff"),
-            "borderRadius": ko.observable("10px"),
-            "borderStyle": ko.observable("solid")
+            "bgColor":ko.observable("rgb(63,81,181)"),
+            "bgClass":ko.observable("u-badge u-badge-primary"),
+            "text": ko.observable("91")
+        },{
+            "bgColor":ko.observable("rgb(63,81,181)"),
+            "bgClass":ko.observable("u-badge u-badge-info"),
+            "text": ko.observable("58")
+        },{
+            "bgColor":ko.observable("rgb(63,81,181)"),
+            "bgClass":ko.observable("u-badge u-badge-danger"),
+            "text": ko.observable("20")
+        },{
+            "bgColor":ko.observable("rgb(63,81,181)"),
+            "bgClass":ko.observable("u-badge u-badge-warning"),
+            "text": ko.observable("99")
         }];
-
     var badgeModel = function(data) {
-        this.image = ko.observableArray(data);
+        this.badge = ko.observableArray(data);
+        this.changeBgColor = function(bgClass){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.badge()[index].bgClass(bgClass);
+        }.bind(this);
+        this.changeSize = function(padding,fontSize){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.badge()[index].padding(padding);
+            this.badge()[index].fontSize(fontSize);
+        }.bind(this);
+        
+        this.changeBorderRadius = function(size){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.badge()[index].borderRadius(size);
+        }.bind(this); 
+
+       
+
     };
 
     return new badgeModel(data);
