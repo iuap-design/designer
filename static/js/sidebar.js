@@ -148,11 +148,13 @@ define('sidebar',['./widget'],function(widgetKO){
                         //widgetKO.init(widgetContent.eq(p).find('.panel-body').find("div[elements]")[0],widgetContent.eq(p).find('.panel-body').find("div[elements]").attr("elements"));
                         widgetKO.init(ui.helper[0],$(this).attr('widget'));
                     }
+
                     // 如果是基础元素 则抽取拖拽的那个元素
                     if($(event.target).attr('index')){
                         var index = $(event.target).attr('index');
+                        var widgetname = $(event.target).attr("widget")
                         // ui.helper.find("img").not(ui.helper.find("img")[index]).hide();
-                        ui.helper.html(ui.helper.find("img")[index]);
+                        ui.helper.html(ui.helper.find("[widgetname]")[index]);
                     }
                     
                     ui.helper.css('width',"100%");
