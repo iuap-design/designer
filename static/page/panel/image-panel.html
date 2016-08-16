@@ -1,0 +1,30 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part"  data-bind="foreach: image">
+        <div class="u-col-md-12 editcoverstyle category" data-bind="attr:{index:$index}">
+            
+           
+           
+            <div class="u-col-md-12 editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">更换图片</span>
+                <input class="u-form-control" type="text" data-bind="value : imageUrl" placeholder="http://" style="width: 70%"/>
+            </div>
+            <div class="u-col-md-12 editcoverstyle">
+                <span class="col-md-3 lineheight20">圆角</span>
+                <input class="u-form-control" type="text" data-bind="value : borderRadius" placeholder="1px" style="width: 70%"/>
+            </div>
+            <div class="u-col-md-12 editcoverstyle">
+            	<span class="col-md-3 lineheight20">边线</span>
+                <input class="u-form-control" type="text" data-bind="value : borderWidth" placeholder="1px" style="width: 70%"/>
+            </div>
+            <div class="u-col-md-12 editcoverstyle">
+            	<span class="col-md-3 lineheight20">颜色</span>
+                <input class="u-form-control" type="text" data-bind="value : borderColor"  placeholder="#fff34f" style="width: 70%"/>
+            </div>
+            <div class="u-col-md-12 editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">边框样式</span>
+                <input class="u-form-control" type="text" data-bind="value : borderStyle"  placeholder="solid" style="width: 70%"/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -65,13 +65,31 @@ define('index',[],function(){
                     layout.init(container);
                     return false;
                 }
+                //elements
+                if(target.closest('.u-drag').hasClass('u-elements')){
+                    if($(target).closest('.u-drag').find('.drag-overlay').length>0){
+                        return false;
+                    }
+                    var layout =  require('html!../page/panel/layout.html');
+                    var panelBox =  require('html!../page/panel/panel.html');
+                    var container = $(target).closest('.u-drag');
+                    container.append(panelBox);
+                    container.find('.edit-panel-body').html(layout);
+
+                    container.find(".edit-panel").draggable({containment:"#container-content"});
+
+                    var layout =  require('./panel/layout');
+
+                    layout.init(container);
+                    return false;
+                }
                 //widget
                 if($(target).closest('.u-drag').find('.u-widget').length>0){
 
                     return false;
                 }
 
-                var panel = $(e.target).parents(".u-widget").attr("panelname");
+                var panel = $(e.target).parents("div[panelname]").attr("panelname");
 
                 if(typeof  panel=='undefined'){
                     return false;
@@ -80,7 +98,7 @@ define('index',[],function(){
                 var panelBox =  require('html!../page/panel/panel.html');
 
                 var container = $(target).closest('.u-drag');
-
+                var index = container.find("[index]").attr("index");
                 
 
                 container.append(panelBox);
@@ -98,7 +116,10 @@ define('index',[],function(){
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
 
+
                 ko.applyBindings(widgetViewModel,editPanel); 
+                $(editPanel).find("[index]").not($(editPanel).find("[index]")[index]).hide();
+                // $($(editPanel).find("[index]")[index]).addClass("active")
                 u.compMgr.updateComp();
 
             }

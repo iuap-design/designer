@@ -612,7 +612,7 @@
 .margin-bottom-0{
     margin-bottom: 0;
 }
-#container-content .u-drag-area{
+#container-content .u-drag-area, .designer-preview .u-drag-area{
     border: none;
 }
 .carousel-control{
@@ -684,4 +684,22 @@
 .navdark{
     background-color: rgb(97,97,97);
     color: #fff;
+}
+.image-roundtype{
+    margin: 10px 0;
+}
+.round-1 img{
+    border-radius: 5px;
+}
+.round-2 img{
+    border-radius: 35px;
+}
+.round-3 img{
+    border-radius: 50%;
+}
+.lineheight20{
+    line-height: 30px;
+}
+.padding-none{
+    padding: 0 !important;
 }

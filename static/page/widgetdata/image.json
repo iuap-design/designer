@@ -1,0 +1,13 @@
+[{
+    "imageUrl":"http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg",
+    "borderWidth": "1px",
+    "borderColor": "#000",
+    "borderRadius": "0px",
+    "borderStyle": "solid"
+},{
+    "imageUrl":"http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg",
+    "borderWidth": "1px",
+    "borderColor": "#fff",
+    "borderRadius": "10px",
+    "borderStyle": "solid"
+}]

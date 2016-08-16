@@ -1,7 +1,7 @@
 /**
  * Created by chief on 16/7/15.
  */
-define('sidebar',['./widget'],function(widget){
+define('sidebar',['./widget'],function(widgetKO){
     var init = function (container){
 
         var template =  require('html!../../static/page/sidebar.html');
@@ -67,6 +67,7 @@ define('sidebar',['./widget'],function(widget){
                 else if(type=='widget') {
                     drag(widgetElement,'.layoutBox .widgetBox','widget');
                 }
+               
                 if(defaultElement.length>0){
                     drag(defaultElement,'#container-content .widgetBox','widget');
                 }
@@ -126,7 +127,7 @@ define('sidebar',['./widget'],function(widget){
 
             var ui = require('./../trd/jquery-ui/jquery-ui');
 
-            var helper = (type=='layout')?'clone':function(event, ui){
+            var helper = (type=='layout' || type=="elements")?'clone':function(event, ui){
                 var i = $(this).index(0)+1;
                 var name = $(this).attr('widget');
                 var template = require('html!../../static/page/widget/'+name+'.html');
@@ -143,13 +144,22 @@ define('sidebar',['./widget'],function(widget){
                 connectToSortable: place,
                 helper: helper,
                 start:function(event,ui){
-                    if(type=='widget'){
-                        widget.init(ui.helper[0],$(this).attr('widget'));
+                    if(type =='widget'){
+                        //widgetKO.init(widgetContent.eq(p).find('.panel-body').find("div[elements]")[0],widgetContent.eq(p).find('.panel-body').find("div[elements]").attr("elements"));
+                        widgetKO.init(ui.helper[0],$(this).attr('widget'));
                     }
+                    // 如果是基础元素 则抽取拖拽的那个元素
+                    if($(event.target).attr('index')){
+                        var index = $(event.target).attr('index');
+                        // ui.helper.find("img").not(ui.helper.find("img")[index]).hide();
+                        ui.helper.html(ui.helper.find("img")[index]);
+                    }
+                    
                     ui.helper.css('width',"100%");
                 },
                 snapMode: "outer",
                 stop: function (event, ui) {
+
                     ui.helper.removeAttr("style");
                     var target = $(event.target);
                     var html =
