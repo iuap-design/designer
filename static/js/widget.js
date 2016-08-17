@@ -5,7 +5,10 @@
 define('widget',[],function(){
     var init = function (el,name){
 
-         
+
+        if(typeof name=='undefined'){
+            return false;
+        }
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
         
