@@ -1,6 +1,6 @@
 <div class="panel-content elements-panel">
     <p>样式修改</p>
-    <div class="panel-part"  data-bind="foreach: buttonData">
+    <div class="panel-part"  data-bind="foreach: badge">
         <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index}">
             
            
@@ -36,6 +36,12 @@
                 <div class="lineheight20 padding-none" >文本颜色</div>
                 <div>
                     <input type="text" class="form-control" data-bind="value:fontColor"></input>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >文本</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:text"></input>
                 </div>
             </div>
         </div>
