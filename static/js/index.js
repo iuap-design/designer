@@ -3,12 +3,14 @@
  */
 
 
-define('index',[],function(){
+define('index',['./viewModel/pageSettingModel'],function(model){
     var init = function (container){
         var template =  require('html!../../static/page/default.html');
 
         // 给body添加滚动条优化
         // $("body").mCustomScrollbar({theme:"minimal-dark"});
+
+
 
         $(".nav-toggle").on("click",function(){
             $(".nav-menu").toggleClass("toggle-show");
@@ -18,6 +20,8 @@ define('index',[],function(){
         $(container).html(template);
 
         var layoutBox = $(container).find('.layoutBox');
+
+        ko.applyBindings(model,layoutBox[0]);
 
         $(container).on('mouseover',function(event){
             var target = $(event.target);
@@ -32,7 +36,8 @@ define('index',[],function(){
             }
         }).on('mouseleave',function(event){
             $(container).find('.widget-menubar').hide();
-        }).on('click',function(e){
+        })
+        $('body').on('click',function(e){
             var target = $(e.target);
 
             if(target.hasClass('icon-cancel02')){

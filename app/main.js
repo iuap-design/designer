@@ -23,6 +23,12 @@ require('../static/js/header.js');
     new index.init('#container-content');
 })();
 
+//页面设置
+;(function(){
+    var page =  require('../static/js/page/page');
+    new page.init('body');
+})();
+
 
 //侧边栏
 ;(function(){

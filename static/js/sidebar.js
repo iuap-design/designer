@@ -143,6 +143,7 @@ define('sidebar',['./widget'],function(widgetKO){
             $(elements).draggable({
                 connectToSortable: place,
                 helper: helper,
+                appendTo:'body',
                 start:function(event,ui){
                     if(type =='widget'){
                         //widgetKO.init(widgetContent.eq(p).find('.panel-body').find("div[elements]")[0],widgetContent.eq(p).find('.panel-body').find("div[elements]").attr("elements"));
@@ -156,8 +157,10 @@ define('sidebar',['./widget'],function(widgetKO){
                         // ui.helper.find("img").not(ui.helper.find("img")[index]).hide();
                         ui.helper.html(ui.helper.find("[widgetname]")[index]);
                     }
-                    
-                    ui.helper.css('width',"100%");
+                    else {
+                        ui.helper.css({'width':'100%','transform':'scale(0.5,0.5)','transform-origin':'0 0'});
+                    }
+
                 },
                 snapMode: "outer",
                 stop: function (event, ui) {

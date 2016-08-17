@@ -42,7 +42,7 @@ define('button',[],function(){
 
     var buttonModel = function(data) {
         this.buttonData = ko.observableArray(data);
-        console.log(this.buttonData);
+
         this.changeBgColor = function(bgColor){
             var index = $(event.target).parents("[index]").attr("index");
             this.buttonData()[index].bgColor(bgColor);
