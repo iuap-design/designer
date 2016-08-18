@@ -3,6 +3,7 @@
 }
 .ui-portlet-placeholder {
     background-color: #FCE2B8;
+    min-height:30px;
 }
 #container-content > .ui-sortable {
     background-color:rgba(0, 188, 212, 0.05);

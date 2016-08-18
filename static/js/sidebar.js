@@ -64,12 +64,15 @@ define('sidebar',['./widget'],function(widgetKO){
                 if(type=='layout'){
                     drag(widgetElement,'#container-content .widgetBox','layout');
                 }
+                else if(type=='element') {
+                    drag(widgetElement,'.layoutBox .widgetBox','element');
+                }
                 else if(type=='widget') {
                     drag(widgetElement,'.layoutBox .widgetBox','widget');
                 }
                
                 if(defaultElement.length>0){
-                    drag(defaultElement,'#container-content .widgetBox','widget');
+                    drag(defaultElement,'#container-content .widgetBox','defaultLayout');
                 }
             }
             // $("#"+widget+"container").css("left","90px");
@@ -101,6 +104,7 @@ define('sidebar',['./widget'],function(widgetKO){
             $(".second-widget").hide();
             var widget = $(this).attr("widget");
             if($("#"+widget+"container").length === 0){
+
                 var template = require('html!../../static/page/widget/'+widget+'.html');
                 var secondWidgetContainer = "<div id='"+widget+"container' class='second-widget'>"+template+"</div>";
                 $(this).after(secondWidgetContainer);
@@ -127,58 +131,80 @@ define('sidebar',['./widget'],function(widgetKO){
 
             var ui = require('./../trd/jquery-ui/jquery-ui');
 
-            var helper = (type=='layout' || type=="elements")?'clone':function(event, ui){
-                var i = $(this).index(0)+1;
-                var name = $(this).attr('widget');
-                var template = require('html!../../static/page/widget/'+name+'.html');
-
-                return $(template).addClass('u-drag');
-            };
 
 
-            var mtype = $(elements).attr('type');
+            $.each(elements,function(i,item){
+                var widget = $(item).attr("widget");
 
-            type = mtype?mtype:type;
+                var helper = (typeof widget=='undefined')?"clone":function(event, ui){
 
-            $(elements).draggable({
-                connectToSortable: place,
-                helper: helper,
-                appendTo:'body',
-                start:function(event,ui){
-                    if(type =='widget'){
-                        //widgetKO.init(widgetContent.eq(p).find('.panel-body').find("div[elements]")[0],widgetContent.eq(p).find('.panel-body').find("div[elements]").attr("elements"));
-                        widgetKO.init(ui.helper[0],$(this).attr('widget'));
+                    var i = $(this).index(0)+1;
+
+
+                    var template = require('html!../../static/page/widget/'+widget+'.html');
+
+                    return $(template).addClass('u-drag');
+                };
+
+                var mtype = $(item).attr('type');
+
+                type = mtype?mtype:type;
+
+                $(item).draggable({
+                    connectToSortable: place,
+                    helper: helper,
+                    appendTo:'body',
+                    start:function(event,ui){
+
+                        if(type =='element'||type=='widget'){
+                            //widgetKO.init(widgetContent.eq(p).find('.panel-body').find("div[elements]")[0],widgetContent.eq(p).find('.panel-body').find("div[elements]").attr("elements"));
+                            widgetKO.init(ui.helper[0],$(this).attr('widget'));
+                        }
+
+                        // 如果是基础元素 则抽取拖拽的那个元素
+
+                        if($(event.target).attr('index')){
+                            var index = $(event.target).attr('index');
+                            var widgetname = $(event.target).attr("widget")
+                            // ui.helper.find("img").not(ui.helper.find("img")[index]).hide();
+                            ui.helper.html(ui.helper.find("[widgetname]")[index]);
+                        }
+
+
+
+                        if(helper!='clone'&&type=="widget"){
+                            ui.helper.css({'width':'100%','transform':'scale(0.5,0.5)','transform-origin':'0 0'});
+                        }
+                        if(type=='layout'||type=='default-layout'){
+                            ui.helper.css({width:'100%'});
+                        }
+
+                    },
+                    snapMode: "outer",
+                    stop: function (event, ui) {
+
+                        ui.helper.removeAttr("style");
+                        var target = $(event.target);
+                        var html =
+                            '<div class="widget-menubar"><ul>'+
+                            '<li class="hide"><i class="uf uf-reply btn btn-outline btn-pill-right icon-max" data-type="window" title="回退"></i></li>'+
+                            '<li class="hide"><i class="uf btn btn-outline btn-pill-right icon-max" data-type="window" title="回退" style="font-size:15px;">T</i></li>'+
+                            '<li><i count="0" class="uf uf-pencil  btn btn-outline btn-pill-left icon-pencil" data-type="edit"  data-toggle="modal" data-target="#modalBlue" title="编辑"></i></li>' +
+                            '<li class="hide"><i class="uf uf-linksymbol btn btn-outline icon-unfold" data-type="collage" title="链接"></i></li>' +
+                            '<li><i class="uf uf-trash  btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul></div>';
+
+                        ui.helper.append(html);
+
                     }
-
-                    // 如果是基础元素 则抽取拖拽的那个元素
-                    if($(event.target).attr('index')){
-                        var index = $(event.target).attr('index');
-                        var widgetname = $(event.target).attr("widget")
-                        // ui.helper.find("img").not(ui.helper.find("img")[index]).hide();
-                        ui.helper.html(ui.helper.find("[widgetname]")[index]);
-                    }
-                    else {
-                        ui.helper.css({'width':'100%','transform':'scale(0.5,0.5)','transform-origin':'0 0'});
-                    }
-
-                },
-                snapMode: "outer",
-                stop: function (event, ui) {
-
-                    ui.helper.removeAttr("style");
-                    var target = $(event.target);
-                    var html =
-                        '<div class="widget-menubar"><ul>'+
-                        '<li class="hide"><i class="uf uf-reply btn btn-outline btn-pill-right icon-max" data-type="window" title="回退"></i></li>'+
-                        '<li class="hide"><i class="uf btn btn-outline btn-pill-right icon-max" data-type="window" title="回退" style="font-size:15px;">T</i></li>'+
-                        '<li><i count="0" class="uf uf-pencil  btn btn-outline btn-pill-left icon-pencil" data-type="edit"  data-toggle="modal" data-target="#modalBlue" title="编辑"></i></li>' +
-                        '<li class="hide"><i class="uf uf-linksymbol btn btn-outline icon-unfold" data-type="collage" title="链接"></i></li>' +
-                        '<li><i class="uf uf-trash  btn btn-outline icon-cancel02" data-type="del" title="删除"></i></a></li></ul></div>';
-
-                    ui.helper.append(html);
-
-                }
+                });
             });
+
+
+
+
+
+
+
         });
     };
     return {
