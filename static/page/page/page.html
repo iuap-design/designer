@@ -2,13 +2,13 @@
     <div class="pannel-content">
         <div class="setting-item">
             <div class="pannel-title">背景色</div>
-            <input type="text" value="#00bcd4" data-bind="{value:bgColor}" />
+            <input type="color" id="bgColor" data-bind="{value:bgColor}" />
         </div>
         <div class="setting-item">
             <div class="pannel-title">背景图</div>
             <input type="text" placeholder="http://" data-bind="{value:bgGround}" />
             <div>
-                <input type="radio" name="bgRepeat" /> 满铺 <input type="radio" name="bgRepeat" />重复
+                <input type="radio" data-bind="checked:bgSize?true:false" name="bgRepeat" value="none" />重复 <input type="radio" name="bgRepeat" data-bind="checked:bgSize" value="100%" /> 满铺
             </div>
         </div>
     </div>
