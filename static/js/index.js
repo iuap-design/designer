@@ -106,6 +106,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                 var container = $(target).closest('.u-drag');
                 var index = container.find("[index]").attr("index");
                 
+                
 
                 container.append(panelBox);
                 container.find('.edit-panel-body').html(panelTemplate);

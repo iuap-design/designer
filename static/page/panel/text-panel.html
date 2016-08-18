@@ -1,0 +1,25 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part"  data-bind="foreach: text">
+        <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index}">
+            
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >颜色</div>
+                <div>
+                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changefontColor.bind(event,'#000')">缺省色</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $parent.changefontColor.bind(event,'rgb(63,81,181)')">基础色</span>
+                    <span class="u-button raised u-button-success margin-5" data-bind="click: $parent.changefontColor.bind(event,'#4caf50')">成功色</span>
+                    <span class="u-button raised u-button-info margin-5" data-bind="click: $parent.changefontColor.bind(event,'#00bcd4')">信息色</span>
+                    <span class="u-button raised u-button-warning margin-5" data-bind="click: $parent.changefontColor.bind(event,'#ff9800')">警告色</span>
+                    <span class="u-button raised u-button-danger margin-5" data-bind="click: $parent.changefontColor.bind(event,'#f44336')">危险色</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >文本</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:text"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
