@@ -32,6 +32,10 @@ define('text',[],function(){
             var index = $(event.target).parents("[index]").attr("index");
             this.text()[index].fontSize(fontSize);
         }.bind(this);
+        this.changeAlign = function(align){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.text()[index].align(align);
+        }.bind(this);
         
        
 

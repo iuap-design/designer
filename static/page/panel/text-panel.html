@@ -20,6 +20,14 @@
                     <input type="text" class="form-control" data-bind="value:text"></input>
                 </div>
             </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >对齐</div>
+                <div>
+                    <span class="uf uf-alignjustify" data-bind="click: $parent.changeAlign.bind(event,'center')"></span>
+                    <span class="uf uf-aligntoleft" data-bind="click: $parent.changeAlign.bind(event,'left')"></span>
+                    <span class="uf uf-aligntoright" data-bind="click: $parent.changeAlign.bind(event,'right')"></span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
