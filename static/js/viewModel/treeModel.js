@@ -88,6 +88,13 @@ define('tree',[],function(){
               model: viewModel
       })
       viewModel.dataTable.setData(data);
+
+      var treeObj = $(el).find(".ztree")[0]['u-meta'].tree;
+      if(treeObj && treeObj.length>0){
+        var nodes = treeObj.getNodes();
+        treeObj.editName(nodes[0]);
+      }
+      
   }
     
   return {
