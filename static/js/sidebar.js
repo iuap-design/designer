@@ -142,7 +142,9 @@ define('sidebar',['./widget'],function(widgetKO){
 
 
                     var template = require('html!../../static/page/widget/'+widget+'.html');
+                    
 
+                    
                     return $(template).addClass('u-drag');
                 };
 
@@ -158,9 +160,10 @@ define('sidebar',['./widget'],function(widgetKO){
 
                         if(type =='element'||type=='widget'){
                             //widgetKO.init(widgetContent.eq(p).find('.panel-body').find("div[elements]")[0],widgetContent.eq(p).find('.panel-body').find("div[elements]").attr("elements"));
-                            widgetKO.init(ui.helper[0],$(this).attr('widget'));
+                            widgetKO.init(ui.helper[0],$(this).attr('widget'),$(this).attr('jswidget'));
                         }
-
+              
+              
                         // 如果是基础元素 则抽取拖拽的那个元素
 
                         if($(event.target).attr('index')){

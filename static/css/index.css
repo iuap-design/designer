@@ -737,3 +737,27 @@ body > .drag-overlay {
     background-color: #fff;
     border: 1px solid #aaa;
 }
+
+.layoutTemplate .header{
+    background:#FDE4BB;
+    min-height:50px;
+    position:relative;
+}
+.layoutTemplate .footer{
+    background:#D4D8EE;
+    min-height:30px;
+    margin: 0;
+    position:relative;
+}
+.layoutTemplate .content{
+    height:100%;
+}
+.layoutTemplate .siderbar{
+    background:#AAB2D8;
+    position:relative;
+    height: 100%;
+}
+.layoutTemplate .right-content{
+    background:#AAB2D8;
+    position:relative;
+}

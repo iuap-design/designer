@@ -3,17 +3,22 @@
  */
 
 define('widget',[],function(){
-    var init = function (el,name){
+    var init = function (el,name,jswidget){
 
-
+        
         if(typeof name=='undefined'){
             return false;
         }
+        
+          
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
+        if(jswidget=="true"){
+             widgetViewModel.init(el);
+        }else{
+            ko.applyBindings(widgetViewModel,el); 
+        }
         
-
-        ko.applyBindings(widgetViewModel,el); 
         // 导航条 当手机屏幕 icon触发导航条显示
         $(".nav-toggle").unbind("click").bind("click",function(){
             $(".xs-hide").toggleClass("xs-show");
