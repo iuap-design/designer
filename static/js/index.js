@@ -71,6 +71,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                     layout.init(container);
                     return false;
                 }
+
                 //elements
                 if(target.closest('.u-drag').hasClass('u-elements')){
                     if($(target).closest('.u-drag').find('.drag-overlay').length>0){
@@ -96,6 +97,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                 }
 
                 var panel = $(e.target).parents("div[panelname]").attr("panelname");
+
 
                 if(typeof  panel=='undefined'){
                     return false;
@@ -123,8 +125,9 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
 
+                ko.applyBindings(widgetViewModel,editPanel);
 
-                ko.applyBindings(widgetViewModel,editPanel); 
+
                 $(editPanel).find("[index]").not($(editPanel).find("[index]")[index]).hide();
                 // $($(editPanel).find("[index]")[index]).addClass("active")
                 u.compMgr.updateComp();
