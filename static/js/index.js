@@ -127,11 +127,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
 
                 // widgetKO.init(editPanel,$(this).attr('widget'),$(this).attr('jswidget'));
                 // if(editPanel)
-                if($(editPanel).find("[jswidget]").attr("jswidget")=="true"){
-                    widgetViewModel.init(editPanel);
-                }else{
-                    ko.applyBindings(widgetViewModel,editPanel); 
-                }
+                ko.applyBindings(widgetViewModel,editPanel); 
 
 
                 $(editPanel).find("[index]").not($(editPanel).find("[index]")[index]).hide();

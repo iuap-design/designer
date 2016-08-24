@@ -13,18 +13,17 @@ define('widget',[],function(){
           
         var widgetViewModel = require('./viewModel/'+name+'Model.js');
 
-        if(jswidget=="true"){
-             widgetViewModel.init(el);
-        }else{
-            ko.applyBindings(widgetViewModel,el); 
-        }
+        
+        ko.applyBindings(widgetViewModel,el); 
         
         // 导航条 当手机屏幕 icon触发导航条显示
         $(".nav-toggle").unbind("click").bind("click",function(){
             $(".xs-hide").toggleClass("xs-show");
         })
+        if(name=="checkbox" || name=="radio"){
+            u.compMgr.updateComp();
+        }
         
-        u.compMgr.updateComp();
         
         if(name == "widget7"){
             setTimeout(function(){

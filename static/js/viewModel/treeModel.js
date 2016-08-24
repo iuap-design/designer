@@ -3,101 +3,46 @@
  */
 
 define('tree',[],function(){
-  var init = function(el){
+    var data = [{
+            "align":ko.observable("left"),
+            "fontColor":ko.observable("#000"),
+            "fontWeight": ko.observable("600"),
+            "text": ko.observable("我是标题"),
+            "fontSize": ko.observable("14")
+        },{
+            "align":ko.observable("middle"),
+            "fontColor":ko.observable("#000"),
+            "fontWeight": ko.observable("400"),
+            "text": ko.observable("基于20多年企业开发经验，总结了企业应用领域中遇到的常见场景，并提供相应的解决方案。企业级应用开发不再困难"),
+            "fontSize": ko.observable("14")
+        },{
+            "align":ko.observable("right"),
+            "fontColor":ko.observable("#000"),
+            "fontWeight": ko.observable("800"),
+            "text": ko.observable("label"),
+            "fontSize": ko.observable("14")
+        }];
+    var treeModel = function(data) {
+        this.tree = ko.observableArray(data);
+        this.changefontColor = function(fontColor){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.tree()[index].fontColor(fontColor);
+        }.bind(this);
+        this.changeSize = function(fontSize){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.tree()[index].fontSize(fontSize);
+        }.bind(this);
+        this.changeAlign = function(align){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.tree()[index].align(align);
+        }.bind(this);
+        
+       
 
-    var data = {
-          "pageIndex": 1,
-          "pageSize": 10,
-          "rows": [
-            {
-              "status": "nrm",
-              "data": {
-                "id": "01",
-                "pid": "root",
-                "title": "Parent1"
-              }
-            },
-            {
-              "status": "nrm",
-              "data": {
-                "id": "02",
-                "pid": "root",
-                "title": "Parent2"
-              }
-            },
-            {
-              "status": "nrm",
-              "data": {
-                "id": "101",
-                "pid": "01",
-                "title": "Child11"
-              }
-            },
-            {
-              "status": "nrm",
-              "data": {
-                "id": "102",
-                "pid": "01",
-                "title": "mChild12"
-              }
-            },
-            {
-              "status": "nrm",
-              "data": {
-                "id": "201",
-                "pid": "02",
-                "title": "Child21"
-              }
-            }
-          ]
-        }
-      var viewModel = {
-          treeSetting:{
-              view:{
-                  showLine:false,
-                  selectedMulti:false
-              },
-              callback:{
-                  onClick:function(e,id,node){
-                      // alert(id)
-                      // alert(node)
-                      var rightInfo = node.name + '被选中';
-                      u.showMessage({msg:rightInfo,position:"top"})
+    };
+
+    return new treeModel(data);
 
 
-                  }
-              }
-          },
-          dataTable: new u.DataTable({
-              meta: {
-                  'id': {
-                      'value':""
-                  },
-                  'pid': {
-                      'value':""
-                  },
-                  'title':{
-                      'value':""
-                  }
-              }
-          })
-      };
-      ko.cleanNode(el);
-      var app = u.createApp({
-              el: el,
-              model: viewModel
-      })
-      viewModel.dataTable.setData(data);
-
-      var treeObj = $(el).find(".ztree")[0]['u-meta'].tree;
-      if(treeObj && treeObj.length>0){
-        var nodes = treeObj.getNodes();
-        treeObj.editName(nodes[0]);
-      }
-      
-  }
     
-  return {
-        init:init
-    }
 });
