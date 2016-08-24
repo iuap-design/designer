@@ -1,5 +1,28 @@
-<div class="u-widget" panelname="tree">
-	<div id="treewidgetKo">
-		<div id="treeTest2" class="ztree" u-meta='{"id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
-	</div>
+<div class="u-widget" panelname="tree" data-bind="foreach: tree">
+		<!-- <div index="0" id="treeTest2" class="ztree" u-meta='{"id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div> -->
+	<ul index="0" id="tree2" class="ztree" style="overflow: hidden;">
+		<li id="tree2_1" class="level0" tabindex="0" hidefocus="true" treenode="">
+			<span class="button level0 switch noline_open" treenode_switch=""></span>
+			<a class="level0 curSelectedNode" treenode_a="" onclick="" target="_blank" style="padding-left:30px;margin-left:-30px;min-width:calc(100% + 18px );" title="Parent1">
+				<span id="tree2_1_ico" title="" treenode_ico="" class="button ico_open" style=""></span>
+				<span id="tree2_1_span">Parent1</span>
+			</a>
+			<ul id="tree2_1_ul" class="level0 ">
+				<li id="tree2_2" class="level1" tabindex="0" hidefocus="true" treenode="">
+					<span id="tree2_2_switch" title="" class="button level1 switch noline_docu" treenode_switch=""></span>
+					<a  class="level1"  style="padding-left:51px;margin-left:-51px;min-width:calc(100% + 36px );" title="Child11">
+						<span id="tree2_2_ico" title="" treenode_ico="" class="button ico_docu" style=""></span>
+						<span id="tree2_2_span">Child11</span>
+					</a>
+				</li>
+				<li class="level1" tabindex="0" hidefocus="true" treenode="">
+					<span id="tree2_3_switch" title="" class="button level1 switch noline_docu" treenode_switch=""></span>
+					<a id="tree2_3_a" class="level1" treenode_a="" onclick="" target="_blank" style="padding-left:51px;margin-left:-51px;min-width:calc(100% + 36px );" title="mChild12">
+						<span id="tree2_3_ico" title="" treenode_ico="" class="button ico_docu" style=""></span>
+						<span id="tree2_3_span">mChild12</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
 </div>

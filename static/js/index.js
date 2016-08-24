@@ -125,7 +125,6 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
 
-
                 ko.applyBindings(widgetViewModel,editPanel);
 
 

@@ -1,15 +1,7 @@
-<div class="input-drag-area drag-area">
-	<div class="u-text">
-	    <input class="u-input"/>
-	    <label class="u-label">这是一个文本框</label>
-	</div>
-</div>
-<div class="input-drag-area drag-area">
-	<div class="u-form-group">
-	    <div class="u-input-group u-has-feedback must-in">
-	        <div class="u-input-group-before " style="color: red;">*</div>
-	        <input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
-	        <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
-	    </div>
+<div class="u-drag-area u-drag" panelname="input" data-bind="foreach: input">
+	
+	<div class="u-input-group u-has-feedback" widgetname="input" data-bind="attr:{index:$index}">
+	    <input type="email" class="u-form-control" data-bind="attr:{'palceholder':text},value:text,style:{'color':fontColor}">
+	    <span class="u-form-control-feedback uf uf-magnifyingglass" data-bind="visible:hasIcon"> </span>
 	</div>
 </div>
