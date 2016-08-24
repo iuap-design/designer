@@ -3,10 +3,34 @@
     <div class="panel-part" >
         <div class="u-col-md-12 editcoverstyle" index="0">
             
-            <div class="editcoverstyle">
-                <div>
-                    <div id="treeTest3" class="ztree" u-meta='{"id":"tree3","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
-                </div>
+            <div class="editcoverstyle" >
+                <ul  class="ztree" style="overflow: hidden;" data-bind="foreach: tree">
+                    <li  class="level0" tabindex="0" hidefocus="true" treenode="">
+                        <span class="button level0 switch noline_open" data-bind="click:$parent.colTree" treenode_switch=""></span>
+                        <a class="level0 curSelectedNode" treenode_a="" style="padding-left:30px;margin-left:-30px;min-width:calc(100% + 18px );" title="Parent1">
+                            <span  title="" treenode_ico="" class="button ico_open" style=""></span>
+                            
+                            <input type="text" data-bind="value:title">
+                            <span style="float: right;">
+                                
+                                <span class="uf uf-addsquarebutton"  data-bind="click:$parent.addChild,attr:{childindex:$index}"></span>
+                            </span>
+                            
+                        </a>
+                        <ul  class="level0 childrenItem" data-bind="foreach: children">
+                            <li  class="level1" tabindex="0" hidefocus="true">
+                                <span  title="" class="button level1 switch noline_docu" treenode_switch=""></span>
+                                <a  class="level1"  style="padding-left:51px;margin-left:-51px;min-width:calc(100% + 36px );" title="Child11">
+                                    <span  title="" treenode_ico="" class="button ico_docu" style=""></span>
+                                    <input type="text" data-bind="value:title">
+                                    <span style="float: right;">
+                                        <span class="uf uf-removebutton" data-bind="click:$parent.addChild,attr:{childindex:$index}"></span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             
         </div>

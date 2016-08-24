@@ -3,38 +3,62 @@
  */
 
 define('tree',[],function(){
-    var data = [{
-            "align":ko.observable("left"),
-            "fontColor":ko.observable("#000"),
-            "fontWeight": ko.observable("600"),
-            "text": ko.observable("我是标题"),
-            "fontSize": ko.observable("14")
-        },{
-            "align":ko.observable("middle"),
-            "fontColor":ko.observable("#000"),
-            "fontWeight": ko.observable("400"),
-            "text": ko.observable("基于20多年企业开发经验，总结了企业应用领域中遇到的常见场景，并提供相应的解决方案。企业级应用开发不再困难"),
-            "fontSize": ko.observable("14")
-        },{
-            "align":ko.observable("right"),
-            "fontColor":ko.observable("#000"),
-            "fontWeight": ko.observable("800"),
-            "text": ko.observable("label"),
-            "fontSize": ko.observable("14")
-        }];
+    // var data = [{
+    //         "parent":ko.observable("parent1"),
+    //         "child":ko.observableArray(['child1','child2','child3']),
+    //     },{
+    //         "parent":ko.observable("parent1"),
+    //         "child":ko.observableArray(['child1','child2','child3']),
+    //     },{
+    //         "parent":ko.observable("parent1"),
+    //         "child":ko.observableArray(['child1','child2','child3']),
+    //     }];
+    var data =[
+            {
+                "id": "01",
+                "pid": "root",
+                "title": "Parent1",
+                "editFlag": ko.observable(false),
+                "children":ko.observableArray([{
+                    "id": "101",
+                    "title": "Child11"
+                    },{
+                        "id": "102",
+                        "title": "Child12"
+                    }])
+            },{
+                "id": "02",
+                "pid": "root",
+                "title": "Parent2",
+                "editFlag": ko.observable(false),
+                "children": ko.observableArray([{
+                    "id": "201",
+                    "title": "Child21"
+                    },{
+                        "id": "202",
+                        "title": "Child22"
+                    }])
+            }
+            
+        ]
+    
     var treeModel = function(data) {
         this.tree = ko.observableArray(data);
-        this.changefontColor = function(fontColor){
-            var index = $(event.target).parents("[index]").attr("index");
-            this.tree()[index].fontColor(fontColor);
+        this.editFlag = ko.observable(false);
+
+        this.colTree = function(){
+            $(event.target).toggleClass("noline_close");
+            $(event.target).toggleClass("noline_open");
+            $(event.target).nextAll(".childrenItem").toggleClass("hideChild");
         }.bind(this);
-        this.changeSize = function(fontSize){
-            var index = $(event.target).parents("[index]").attr("index");
-            this.tree()[index].fontSize(fontSize);
+        this.addChild = function(){
+            var index = $(event.target).attr("childindex");
+            this.tree()[index].children().push({"id": "201", "title": "Child23" });
         }.bind(this);
-        this.changeAlign = function(align){
-            var index = $(event.target).parents("[index]").attr("index");
-            this.tree()[index].align(align);
+        this.deleteChild = function(){
+            alert("remove");
+            var index = $(event.target).attr("childindex");
+            this.tree()[index].children().splice(index,1);
         }.bind(this);
         
        
