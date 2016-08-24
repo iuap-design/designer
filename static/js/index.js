@@ -96,7 +96,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                     return false;
                 }
 
-                var panel = $(e.target).parents("div[panelname]").attr("panelname");
+                var panel = $(e.target).closest(".u-widget").attr("panelname");
 
 
                 if(typeof  panel=='undefined'){
@@ -125,9 +125,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                 var editPanel = $(e.target).parents(".widget-menubar").siblings(".drag-overlay").find(".edit-panel")[0];
                 // var editPanel = $(".edit-panel")[0];
 
-                // widgetKO.init(editPanel,$(this).attr('widget'),$(this).attr('jswidget'));
-                // if(editPanel)
-                ko.applyBindings(widgetViewModel,editPanel); 
+                ko.applyBindings(widgetViewModel,editPanel);
 
 
                 $(editPanel).find("[index]").not($(editPanel).find("[index]")[index]).hide();

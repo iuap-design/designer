@@ -1,1 +1,26 @@
- <div id="pagination" class="paging u-pagination u-widget " panelname="paging"></div>
+<div panelname="paging" class="paging u-pagination u-widget  u-drag" id="pagination" data-bind="attr:{class:paging}">
+    <li class="disabled" role="prev"><a rel="prev"><i class="uf uf-anglepointingtoleft"></i></a></li>
+    <li class="active" role="page"><a>1</a></li>
+    <li role="page"><a rel="next">2</a></li>
+    <li role="page"><a>3</a></li>
+    <li role="page"><a>4</a></li>
+    <li role="page"><a>5</a></li>
+    <li class="disabled" role="gap"><a href="#">···</a></li>
+    <li role="page"><a>100</a></li>
+    <li role="next"><a rel="next"><i class="uf uf-anglearrowpointingtoright"></i></a></li>
+    <div class="pagination-state">共&nbsp;200&nbsp;条</div>
+    <div class="pagination-state">
+        显示
+        <select class="page_z">
+            <option>5</option>
+            <option>10</option>
+            <option selected="">20</option>
+            <option>50</option>
+            <option>100</option>
+        </select>
+        条
+    </div>
+    <div class="pagination-state">
+        到<input value="1" class="page_j">页<input type="button" value="确定" class="pagination-jump">
+    </div>
+</div>

@@ -13,23 +13,19 @@ define('paging',[],function(){
 
 
 
-    //var pagingModel = function(el) {
-    //    this.paging = ko.observableArray(data);
-    //
-    //    var comp = new u.pagination({el:el,jumppage:true});
-    //    comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
-    //};
-
-    var init = function(el){
-        var comp = new u.pagination({el:el,jumppage:true});
-        comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
-
-        //ko.applyBindings(data,el);
+    var pagingModel = function(data) {
+        var paging = "paging u-pagination u-widget  u-drag";
+        this.isBorder = ko.observable('');
+        this.paging = ko.observable(paging);
+        this.size = ko.observable('');
+        this.gap = ko.observable('');
+        this.changeAttr = function(){
+            var str = paging+" "+this.isBorder()+" "+this.size()+" "+this.gap();
+            this.paging(str);
+        }
     };
 
 
-    return {
-        init:init
-    }
+    return new pagingModel(data);
 
 });
