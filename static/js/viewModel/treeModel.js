@@ -53,12 +53,11 @@ define('tree',[],function(){
         }.bind(this);
         this.addChild = function(){
             var index = $(event.target).attr("childindex");
-            this.tree()[index].children().push({"id": "201", "title": "Child23" });
+            this.tree()[index].children.push({"id": "201", "title": "Child23" });
         }.bind(this);
-        this.deleteChild = function(){
-            alert("remove");
+        this.delChild = function(){
             var index = $(event.target).attr("childindex");
-            this.tree()[index].children().splice(index,1);
+            this.tree()[index].children.splice(index,1);
         }.bind(this);
         
        
