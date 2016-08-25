@@ -13,18 +13,18 @@
                             <input type="text" data-bind="value:title">
                             <span style="float: right;">
                                 
-                                <span class="uf uf-addsquarebutton"  data-bind="click:$parent.addChild,attr:{childindex:$index}"></span>
+                                <span class="uf uf-addsquarebutton"  data-bind="click:$parent.addChild,attr:{parentindex:$index}"></span>
                             </span>
                             
                         </a>
-                        <ul  class="level0 childrenItem" data-bind="foreach: children">
+                        <ul  class="level0 childrenItem" data-bind="foreach: children,attr:{parentindex:$index}">
                             <li  class="level1" tabindex="0" hidefocus="true">
                                 <span  title="" class="button level1 switch noline_docu" treenode_switch=""></span>
                                 <a  class="level1"  style="padding-left:51px;margin-left:-51px;min-width:calc(100% + 36px );" title="Child11">
                                     <span  title="" treenode_ico="" class="button ico_docu" style=""></span>
                                     <input type="text" data-bind="value:title">
-                                    <span style="float: right;">
-                                        <label class="uf uf-removebutton" data-bind="click:$root.delChild,attr:{childindex:$index}"></label>
+                                    <span style="float: right;" >
+                                        <span class="uf uf-removebutton" data-bind="click:$root.deleteChild,attr:{childindex:$index}"></span>
                                     </span>
                                 </a>
                             </li>

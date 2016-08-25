@@ -17,14 +17,14 @@ define('tree',[],function(){
             {
                 "id": "01",
                 "pid": "root",
-                "title": "Parent1",
+                "title": ko.observable("Parent1"),
                 "editFlag": ko.observable(false),
                 "children":ko.observableArray([{
                     "id": "101",
-                    "title": "Child11"
+                    "title": ko.observable("Child11")
                     },{
                         "id": "102",
-                        "title": "Child12"
+                        "title": ko.observable("Child12")
                     }])
             },{
                 "id": "02",
@@ -33,10 +33,10 @@ define('tree',[],function(){
                 "editFlag": ko.observable(false),
                 "children": ko.observableArray([{
                     "id": "201",
-                    "title": "Child21"
+                    "title": ko.observable("Child21")
                     },{
                         "id": "202",
-                        "title": "Child22"
+                        "title": ko.observable("Child22")
                     }])
             }
             
@@ -53,15 +53,14 @@ define('tree',[],function(){
         }.bind(this);
         this.addChild = function(){
             var index = $(event.target).attr("childindex");
-            this.tree()[index].children.push({"id": "201", "title": "Child23" });
+            this.tree()[index].children().push({"id": "201", "title": "Child23" });
         }.bind(this);
-        this.delChild = function(){
-            var index = $(event.target).attr("childindex");
-            this.tree()[index].children.splice(index,1);
+        this.deleteChild = function(){
+            var childindex = $(event.target).attr("childindex");
+            var parentindex = $(event.target).parents("[parentindex]").attr("parentindex");
+            this.tree()[parentindex].children.splice(childindex,1);
         }.bind(this);
-        
        
-
     };
 
     return new treeModel(data);

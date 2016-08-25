@@ -1,0 +1,24 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+            <div class="panel-part">文本
+                <span style="float: right;" >
+                    <span class="uf uf-addsquarebutton" data-bind="click:$root.addbread"></span>
+                </span>
+            </div>
+            <div>
+                <div data-bind="foreach: breadData">
+                    
+                    <input type="text" data-bind="value:title"></input>
+                    <span style="float: right;" >
+                        <span class="uf uf-removebutton" data-bind="click:$root.deletebread,attr:{breadindex:$index}"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="u-col-md-12 editcoverstyle">
+                <div class="lineheight20 padding-none" >分隔符</div>
+                <span class="u-button raised primary margin-5" data-bind="click: toggleseparator.bind(event,'u-breadcrumb')">/</span>
+                <span class="u-button raised primary margin-5" data-bind="click:toggleseparator.bind(event,'u-breadcrumb u-breadcrumb-arrow')">>></span>
+            </div>
+        </div>
+    </div>
+</div>
