@@ -13,12 +13,20 @@
                 </div>
             </div>
             <div class="editcoverstyle">
-                <div class="lineheight20 padding-none" >文本</div>
-                    <ul class="u-list-group u-list-group-full" data-bind="foreach:listData">
-                        <li class="u-list-group-item">
-                            <input type="text" data-bind="value:$data"> </input>
-                        </li>
-                    </ul>
+                <div class="lineheight20 padding-none" >文本
+                    <span style="float: right;">
+                                
+                        <span class="uf uf-addsquarebutton"  data-bind="click:$root.addlist"></span>
+                    </span>
+                </div>
+                <ul class="u-list-group u-list-group-full" data-bind="foreach:listData">
+                    <li class="u-list-group-item">
+                        <input type="text" data-bind="value:title"> </input>
+                        <span style="float: right;" >
+                            <span class="uf uf-removebutton" data-bind="click:$root.deletelist,attr:{listindex:$index}"></span>
+                        </span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
