@@ -54,16 +54,13 @@ define('tree',[],function(){
         this.addChild = function(){
             var index = $(event.target).attr("childindex");
             this.tree()[index].children().push({"id": "201", "title": "Child23" });
-            this.tree = ko.observableArray();
         }.bind(this);
         this.deleteChild = function(){
             var childindex = $(event.target).attr("childindex");
-            var parentindex = $(event.target).attr("parentindex");
+            var parentindex = $(event.target).parents("[parentindex]").attr("parentindex");
             this.tree()[parentindex].children.splice(childindex,1);
         }.bind(this);
-        
        
-
     };
 
     return new treeModel(data);
