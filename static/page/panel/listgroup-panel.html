@@ -1,0 +1,25 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part">
+        <div class="u-col-md-12 editcoverstyle" index="0">
+            
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >背景</div>
+                <div>
+                    <span class="btn btn-default u-button-border margin-5" data-bind="click: changelistGroupStyle.bind(event,'u-list-group u-list-group-full')">缺省</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: changelistGroupStyle.bind(event,'u-list-group u-list-group-bordered')">带边框</span>
+                    <span class="u-button raised u-button-success margin-5" data-bind="click: changelistGroupStyle.bind(event,'u-list-group u-list-group-full u-list-group-divider')">带分割线</span>
+                    
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >文本</div>
+                    <ul class="u-list-group u-list-group-full" data-bind="foreach:listData">
+                        <li class="u-list-group-item">
+                            <input type="text" data-bind="value:$data"> </input>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
