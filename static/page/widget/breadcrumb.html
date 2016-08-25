@@ -1,14 +1,5 @@
-<div class="label-drag-area drag-area ">
-	<ol class="u-breadcrumb breadcrumb-arrow">
-	    <li><a class="icon md-home u-link" href="javascript:void(0)">Home</a></li>
-	    <li><a class="u-link" href="javascript:void(0)">Library</a></li>
-	    <li class="active">Data</li>
-	</ol>
-</div>
-<div class="label-drag-area drag-area ">
-	<ol class="u-breadcrumb u-breadcrumb-arrow">
-	    <li><a class="u-link" href="javascript:void(0)">Home</a></li>
-	    <li><a class="u-link" href="javascript:void(0)">Library</a></li>
-	    <li class="active">Data</li>
+<div class="u-widget" panelname="breadcrumb" >
+	<ol widgetname="breadcrumb" class="u-breadcrumb" index="0" data-bind="foreach: breadData,attr:{class:separator}">
+	    <li><a class="u-link" href="javascript:void(0)" data-bind="text:title"></a></li>
 	</ol>
 </div>
