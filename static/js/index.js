@@ -59,7 +59,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                         return false;
                     }
                     var layout =  require('html!../page/panel/layout.html');
-                    var panelBox =  require('html!../page/panel/panel.html');
+                    var panelBox =  require('html!../page/panel/panel-container.html');
                     var container = $(target).closest('.u-drag');
                     container.append(panelBox);
                     container.find('.edit-panel-body').html(layout);
