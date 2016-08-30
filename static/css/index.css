@@ -541,12 +541,17 @@
     color: red;
 }
 .edit-panel .category .uf-removesymbol{
-    position: absolute;
+    /*position: absolute;
     top: 0;
     right: -11px;
     margin-top: -10px;
-    color: #D24747;
+    color: #D24747;*/
     visibility: hidden;
+    position: relative;
+    color: #D24747;
+    float: right;
+    line-height: 0;
+    margin-right: -13px;
 }
 .edit-panel .textarea-part{
    width: 100%;
@@ -768,4 +773,7 @@ body > .drag-overlay {
 .hideChild{
     display: none;
     transition: all 2s;
+}
+.u-ribbon + p{
+    margin-top: 45px;
 }

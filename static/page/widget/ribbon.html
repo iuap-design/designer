@@ -1,0 +1,10 @@
+<div class="u-widget" panelname="ribbon" data-bind="foreach: ribbon">
+	<div widgetname="ribbon" class="u-widget-body"  data-bind="attr:{index:$index}">
+		<div class="example">
+			<div class="u-ribbon" data-bind="attr:{class:bgColor},css:{'u-ribbon-reverse':right,'u-ribbon-bottom':bottom}">
+				<span class="u-ribbon-inner" data-bind="html:title"></span>
+			</div>
+			<p data-bind="text:content"> </p>
+		</div>
+    </div>
+</div>

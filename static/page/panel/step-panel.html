@@ -1,0 +1,36 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part"  data-bind="foreach: step">
+        <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index},foreach: stepdata">
+            <div class="category">
+                <i class="uf uf-removesymbol"></i>
+                <div class="lineheight20 padding-none" >修改标题</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:title"></input>
+                </div>
+                <!-- ko if: info.length>0 -->
+                <div class="lineheight20 padding-none" >修改详细</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:info"></input>
+                </div>
+                <!-- /ko -->
+                <div class="lineheight20 padding-none" >修改背景</div>
+                <div>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeStatus.bind(event,'current',$index)">current</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeStatus.bind(event,'done',$index)">done</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeStatus.bind(event,'error',$index)">error</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeStatus.bind(event,'',$index)">undo</span>
+                </div>
+                <!-- ko if: $parent.icon -->
+                <div class="lineheight20 padding-none" >修改大小</div>
+                <div>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeSize.bind(event,'pearls-xs u-steps-xs')">xs</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeSize.bind(event,'pearls-sm u-steps-sm')">sm</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeSize.bind(event,'')">default</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeSize.bind(event,'pearls-lg u-steps-lg')">lg</span>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>
