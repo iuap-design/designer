@@ -21,7 +21,9 @@ define('layout',[],function(){
 			var layoutBox = $(container).children().filter('[class*=u-col-md-]');
 
 			var html = $(this).children().clone();
-
+			if($(container).children().filter('[class*=u-col-md-]').find('.widgetBox').html()!==""){
+				return false;
+			}
 			layoutBox.remove();
 
 			$(container).append(html);
