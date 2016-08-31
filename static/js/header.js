@@ -22,25 +22,47 @@ define('desigener',[],function(){
                 this.bindEevent();
             },
             bindEevent:function(){
+                var that = this;
                 var desktop = $("#desktop"),
                     tabletLandscape = $("#tablet-landscape"),
                     tabletPortrait = $("#tablet-portrait"),
                     phoneLandscape = $("#phone-landscape"),
-                    phonePortrait = $("#phone-portrait");
+                    phonePortrait = $("#phone-portrait"),
                     container = $("#container-content");
+                    
 
-                desktop.bind("click",function(){
+                //var iframe = document.createElement('iframe'); 
+
+                // console.log($(iframe).contents().find("head"));
+                desktop.bind("click",function(){ 
+                    var tempHTML = "";
+                    if(container.find("iframe").length !== 0){
+                        tempHTML = $("iframe").contents().find("body").html();
+                    }else{
+                        tempHTML = container.html();
+                    }
+
+                    container.html(tempHTML);
                     container.removeClass();
-                    container.css({"height":"100%","width":"100%","margin-top":"0"});
+                    // container.css({"height":"100%","width":"100%","margin-top":"0"});
                 });
                 tabletLandscape.bind("click",function(){
-                    container.removeClass().addClass("tablet-landscape");
-                    container.css({"height":"auto","width":"1024px","margin-top":"0"});
+                    if(container.find("iframe").length !== 0){
+                        container.removeClass().addClass("tablet-landscape");
+                    }else{
+                        that.appendIframe();
+                        container.removeClass().addClass("tablet-landscape");
+                    }
 
                 });
                 tabletPortrait.bind("click",function(){
-                    container.removeClass().addClass("tablet-portrait");
-                    container.css({"height":"auto","width":"768px","margin-top":"0"});
+                    if(container.find("iframe").length !== 0){
+                        container.removeClass().addClass("tablet-portrait");
+                    }else{
+                        that.appendIframe();
+                        container.removeClass().addClass("tablet-portrait");
+                    }
+
                 });
                 phoneLandscape.bind("click",function(){
                     container.removeClass().addClass("phone-landscape");
@@ -50,6 +72,26 @@ define('desigener',[],function(){
                     container.removeClass().addClass("phone-portrait");
                     container.css({"height":"760px","width":"392px","margin-top":"60px"});
                 })
+            },
+            appendIframe:function(){
+                var that = this;
+                var desktop = $("#desktop"),
+                    tabletLandscape = $("#tablet-landscape"),
+                    tabletPortrait = $("#tablet-portrait"),
+                    phoneLandscape = $("#phone-landscape"),
+                    phonePortrait = $("#phone-portrait"),
+                    container = $("#container-content"),
+                    tempHTML = $("#container-content").html(),
+                    iframe = document.createElement('iframe'); 
+
+
+                container.html("");
+                container.append(iframe);
+                $(iframe).contents().find("body").html(tempHTML);
+                $(iframe).contents().find("head").append('<link rel="stylesheet" href="trd/bootstrap/css/bootstrap.css">');
+                $(iframe).contents().find("head").append('<link rel="stylesheet" href="http://127.0.0.1:9000/main.css">');
+
+                
             }
         }
 

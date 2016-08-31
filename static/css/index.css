@@ -796,3 +796,20 @@ body > .drag-overlay {
 .drag-overlay .widgetBox{
     padding: 0
 }
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#container-content.tablet-portrait{
+    width: 768px;
+}
+#container-content.tablet-landscape{
+    width: 1024px;
+}
+#container-content.phone-portrait{
+    width: 320px;
+}
+#container-content.phone-landscape{
+    width: 480px;
+}

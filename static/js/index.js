@@ -27,7 +27,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
             var target = $(event.target);
             $(container).find('.widget-menubar').hide();
             var parent = target.closest('.u-drag')||target.closest('.widgetBox');
-
+           
             if(parent.length>0){
                 parent.find('>.widget-menubar').eq(0).show();
             }
