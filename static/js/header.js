@@ -28,7 +28,8 @@ define('desigener',[],function(){
                     tabletPortrait = $("#tablet-portrait"),
                     phoneLandscape = $("#phone-landscape"),
                     phonePortrait = $("#phone-portrait"),
-                    container = $("#container-content");
+                    container = $("#container-content"),
+                    containerLayout = $("#container-content .layoutBox");
                     
 
                 //var iframe = document.createElement('iframe'); 
@@ -36,13 +37,13 @@ define('desigener',[],function(){
                 // console.log($(iframe).contents().find("head"));
                 desktop.bind("click",function(){ 
                     var tempHTML = "";
-                    if(container.find("iframe").length !== 0){
+                    if($("#container-content .layoutBox").find("iframe").length !== 0){
                         tempHTML = $("iframe").contents().find("body").html();
                     }else{
-                        tempHTML = container.html();
+                        tempHTML = $("#container-content .layoutBox").html();
                     }
 
-                    container.html(tempHTML);
+                    $("#container-content .layoutBox").html(tempHTML);
                     container.removeClass();
                     // container.css({"height":"100%","width":"100%","margin-top":"0"});
                 });
@@ -81,12 +82,13 @@ define('desigener',[],function(){
                     phoneLandscape = $("#phone-landscape"),
                     phonePortrait = $("#phone-portrait"),
                     container = $("#container-content"),
-                    tempHTML = $("#container-content").html(),
+                    tempHTML = $("#container-content .layoutBox").html(),
+                    containerLayout = $("#container-content .layoutBox"),
                     iframe = document.createElement('iframe'); 
 
 
-                container.html("");
-                container.append(iframe);
+                containerLayout.html("");
+                containerLayout.append(iframe);
                 $(iframe).contents().find("body").html(tempHTML);
                 $(iframe).contents().find("head").append('<link rel="stylesheet" href="trd/bootstrap/css/bootstrap.css">');
                 $(iframe).contents().find("head").append('<link rel="stylesheet" href="http://127.0.0.1:9000/main.css">');
