@@ -82,7 +82,9 @@
 }
 .layoutBox .widgetBox {
     min-height:30px;
+    padding:10px;
 }
 .layoutBox .edit-panel-body .widgetBox {
     min-height:inherit;
+    padding:0;
 }
