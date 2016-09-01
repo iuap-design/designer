@@ -16,6 +16,7 @@ define('layout',[],function(){
 		var editBackgroundImg = panel.find("input[backgroundImg=true]");
 		var editBackgroundColor = panel.find("input[backgroundColor=true]");
 		var editTextAlign = panel.find("[textAlign]");
+		var checkBackgroundColor = panel.find("input[backgroundChecked=true]");
 
 		rows.click(function(){
 			var layoutBox = $(container).children().filter('[class*=u-col-md-]');
@@ -47,6 +48,9 @@ define('layout',[],function(){
 			}).disableSelection();
 		});
 
+		checkBackgroundColor.change(function(){
+			widgetbox.toggleClass("BgTransparent")
+		});
 		editPadding.keyup(function(){
 			var paddingValue = $(this).val() + 'px';
 			if(paddingValue !== ''){

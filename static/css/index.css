@@ -813,3 +813,6 @@ iframe{
 #container-content.phone-landscape{
     width: 480px;
 }
+.BgTransparent{
+    background-color: transparent !important;
+}
