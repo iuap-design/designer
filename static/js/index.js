@@ -151,7 +151,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                     connectWith: p,
                     forcePlaceholderSize: true,
                     start:function(i,ui){
-
+                 
                     },
                     stop: function (i,ui) {
                         var target = $(ui.item);
@@ -162,6 +162,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                         else {
                             sortable(target.find('.widgetBox'),'.widgetBox');
                         }
+                        //$(ui.helper).removeAttr("style");
                     },
                     over: function () {
 

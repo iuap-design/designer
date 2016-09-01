@@ -179,7 +179,7 @@ define('sidebar',['./widget'],function(widgetKO){
                             ui.helper.css({'width':'100%','transform':'scale(0.5,0.5)','transform-origin':'0 0'});
                         }
                         if(type=='layout'||type=='default-layout'){
-                            ui.helper.css({width:'100%'});
+                            ui.helper.css({width:'100px'});
                         }
 
                     },
