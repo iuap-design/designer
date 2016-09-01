@@ -1,0 +1,42 @@
+<div class="u-widget" panelname="step" data-bind="foreach: step" style="width: 100%;">
+	<!-- ko if: !stepType && icon -->
+	<div widgetname="step" class="pearls  u-col-md-12" index="0" data-bind="foreach: stepdata">
+        <div class="pearl col-xs-4" data-bind="attr:{class:bgClass}">
+          <span class="pearl-number" data-bind="text:$index"></span>
+          <span class="pearl-title" data-bind="text:title"></span>
+        </div>
+     </div>
+    <!-- /ko -->
+    <!-- ko if: !stepType && icon -->
+	<div widgetname="step" class="pearls  u-col-md-12" index="1" data-bind="foreach: stepdata">
+        <div class="pearl col-xs-4" data-bind="attr:{class:bgClass}">
+          <div class="pearl-icon"><i class="" data-bind="attr:{class:iconClass}"></i></div>
+          <span class="pearl-title" data-bind="text:title"></span>
+        </div>
+     </div>
+     <!-- /ko -->
+     <!-- ko if: stepType && icon -->
+     <div widgetname="step" class="u-steps u-col-md-12" index="2" data-bind="foreach: stepdata">
+        <div class="u-step u-col-md-4" data-bind="attr:{class:bgClass}">
+            <span class="u-step-number" data-bind="text:$index">1</span>
+            <div class="u-step-desc">
+                <span class="u-step-title" data-bind="text:title"></span>
+                <p data-bind="text:info"></p>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: stepType && icon -->
+     <div widgetname="step" class="u-steps u-col-md-12" index="3" data-bind="foreach: stepdata">
+        <div class="u-step u-col-md-4" data-bind="attr:{class:bgClass}">
+            <span class="" data-bind="attr:{'class': iconClass}"></span>
+            <div class="u-step-desc">
+                <span class="u-step-title" data-bind="text:title"></span>
+                <p data-bind="text:info"></p>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+    
+     
+</div>

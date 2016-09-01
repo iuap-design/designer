@@ -1,0 +1,32 @@
+<div class="panel-content elements-panel">
+    <p>样式修改</p>
+    <div class="panel-part"  data-bind="foreach: ribbon">
+        <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index}">
+            <div class="category">
+                <i class="uf uf-removesymbol"></i>
+                <div class="lineheight20 padding-none" >修改title</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:title"></input>
+                </div>
+                <div class="lineheight20 padding-none" >修改正文</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:content"></input>
+                </div>
+                <div class="lineheight20 padding-none" >修改标题颜色</div>
+                <div>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeTitleColor.bind(event,'u-ribbon')">default</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeTitleColor.bind(event,'u-ribbon u-ribbon-primary')">primary</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeTitleColor.bind(event,'u-ribbon u-ribbon-danger')">danger</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changeTitleColor.bind(event,'u-ribbon u-ribbon-success')">success</span>
+                </div>
+                <div class="lineheight20 padding-none" >修改位置</div>
+                <div>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changePosition.bind(event,null,null)">left-top</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changePosition.bind(event,null,true)">left-bottom</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changePosition.bind(event,true,null)">right-top</span>
+                    <span class="u-button raised primary margin-5" data-bind="click: $root.changePosition.bind(event,true,true)">right-bottom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
