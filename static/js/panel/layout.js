@@ -85,6 +85,7 @@ define('layout',[],function(){
 			var bgImgValue = $(this).val();
 			if(bgImgValue !== ''){
 				widgetbox.css("background-image",'url('+bgImgValue+')');
+				widgetbox.css("background-repeat",'no-repeat');
 			}
 		});
 		editTextAlign.click(function(){
