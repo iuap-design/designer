@@ -28,6 +28,17 @@
                     <span class="uf uf-aligntoright" data-bind="click: $parent.changeAlign.bind(event,'right')"></span>
                 </div>
             </div>
+            <!-- ko if: linkurl -->
+            <div class="editcoverstyle">
+                <div class="lineheight20 padding-none" >
+                    <input type="checkbox" class="u-checkbox-input" linkChecked="true">
+                    添加链接
+                </div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:linkurl" />
+                </div>
+            </div>
+            <!-- /ko -->
         </div>
     </div>
 </div>

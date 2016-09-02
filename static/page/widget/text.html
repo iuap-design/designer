@@ -1,3 +1,10 @@
 <div class="u-drag-area u-drag u-elements" panelname="text" data-bind="foreach: text">
+	<!-- ko if: !linkurl -->
 	<span widgetname="text" data-bind="text:text,style:{'text-align':align,'color':fontColor,'font-weight':'fontWeight','font-size':fontSize},attr:{index:$index}"></span>
+	<!-- /ko -->
+	<!-- ko if: linkurl -->
+	<a data-bind="attr:{'href':linkurl}">
+		<span widgetname="text" data-bind="text:text,style:{'text-align':align,'color':fontColor,'font-weight':'fontWeight','font-size':fontSize},attr:{index:$index}"></span>
+	</a>
+	<!-- /ko -->
 </div>
