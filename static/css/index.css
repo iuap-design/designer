@@ -777,12 +777,12 @@ body > .drag-overlay {
 .u-ribbon + p{
     margin-top: 45px;
 }
-.edit-panel-container .eidit-panel-header{
+/*.edit-panel-container .eidit-panel-header{
     width: 620px;
 }
 .edit-panel-container .edit-panel-body{
     width: 620px;   
-}
+}*/
 .panel-inline{
     display: inline-block;
 }

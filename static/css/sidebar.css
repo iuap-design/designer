@@ -177,9 +177,12 @@
 
 .layout-panel .u-row {
     border:1px dashed #979797;
-    padding:0 3px;
+    padding: 10px;
     margin-bottom:10px;
-    cursor: pointer;
+    
+}
+.layout-panel .u-row textarea{
+    height: 33px;
 }
 .layout-panel .u-row [class^="u-col-"] {
     background:#EEEEEE;
@@ -238,4 +241,9 @@
     font-weight: normal;
     padding:5px 19px;
     font-size:12px;
+}
+.u-row{
+    margin: 0;
+
+    width: 100%;
 }

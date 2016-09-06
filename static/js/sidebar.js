@@ -9,8 +9,6 @@ define('sidebar',['./widget'],function(widgetKO){
         $(container).html(template);
 
 
-
-
         widgetshow(container);
 
         //widgetContentShow();
@@ -177,9 +175,18 @@ define('sidebar',['./widget'],function(widgetKO){
 
                         if(helper!='clone'&&type=="widget"){
                             ui.helper.css({'width':'100%','transform':'scale(0.5,0.5)','transform-origin':'0 0'});
-                        }
+                        }   
                         if(type=='layout'||type=='default-layout'){
-                            ui.helper.css({width:'100px'});
+                            var layoutArrays = ui.helper.find("input").val();
+                            if(layoutArrays !== ""){
+                                layoutArrays = layoutArrays.split(" ");
+                                var layoutTemp = "";
+                                for(var i in layoutArrays){
+                                   layoutTemp += "<div class='u-col-md-"+layoutArrays[i]+"'><div class='widgetBox'></div></div>";
+                                }
+                            }
+                            ui.helper.html(layoutTemp);
+                            ui.helper.css({width:'100%'});
                         }
 
                     },
