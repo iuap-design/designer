@@ -1,7 +1,44 @@
-<div class="u-drag-area u-drag u-elements" panelname="input" data-bind="foreach: input">
-	
-	<div class="u-input-group u-has-feedback" widgetname="input" data-bind="attr:{index:$index}">
-	    <input type="email" class="u-form-control" data-bind="attr:{'palceholder':text},value:text,style:{'color':fontColor}">
-	    <span class="u-form-control-feedback uf uf-magnifyingglass" data-bind="visible:hasIcon"> </span>
+<div class="u-drag-area u-drag u-elements" panelname="input" data-bind="foreach:inputData">
+	<div data-bind="if: index()==0">
+		<div class="" widgetname="input" index="0" data-bind="attr:{class:sizeClass}">
+			<span class="red-must-in" data-bind="visible: !mustEnter">*</span><input type="text" data-bind="value:value" class="u-form-control" id="exampleInput3">
+		</div>
+	</div>
+	<div data-bind="if: index()==1">
+		<div class="u-form-group" widgetname="input" index="1" data-bind="attr:{class:sizeClass}">
+		    <input type="text" class="u-form-control" data-bind="value:value">
+		    <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+		</div>
+	</div>
+	<div data-bind="if: index()==2">
+		<div class="u-form-group" widgetname="input" index="2" data-bind="attr:{class:sizeClass}">
+	        <label class="u-col-md-3 padding-none u-form-label label-left" data-bind="style:{'text-align':align}">left:<span class="red-must-in" data-bind="visible:!mustEnter">*</span></label>
+	        <div class="u-col-md-9 padding-none">
+	            <input type="text" class="u-form-control" data-bind="value:value" />
+	        </div>
+	    </div>
+	</div>
+	<div data-bind="if: index()==3">
+		<div class="u-form-group" widgetname="input" index="3" data-bind="attr:{class:sizeClass}">
+	        <label class="u-col-md-3 padding-none u-form-label label-left" data-bind="style:{'text-align':align}">right:<span class="red-must-in" data-bind="visible:!mustEnter">*</span></label>
+	        <div class="u-input-group u-has-feedback">
+			    <input type="text" class="u-form-control" data-bind="value:value">
+			    <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+			</div>
+	     </div>
+	</div>
+	<div data-bind="if: index()==4">
+		<div class="u-form-group"  widgetname="input" index="4" data-bind="attr:{class:sizeClass}">
+	        <label class="u-col-md-3 padding-none u-form-label label-left" data-bind="style:{'text-align':align}">left:<span class="red-must-in" data-bind="visible:!mustEnter">*</span></label>
+	        <div class="u-col-md-9 padding-none">
+	            <input type="text" class="u-form-control" data-bind="value:value" />
+	        </div>
+	    </div>
+	</div>
+	<div data-bind="if: index()==5">
+		<div class="u-form-group" widgetname="input" index="5" data-bind="attr:{class:sizeClass}">
+	            <span class="red-must-in" data-bind="visible:!mustEnter">*</span><textarea class="u-form-control" data-bind="text:value"></textarea>
+	        </div>
+	     </div>
 	</div>
 </div>

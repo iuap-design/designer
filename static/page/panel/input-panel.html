@@ -1,51 +1,41 @@
 <div class="panel-content elements-panel">
     <p>样式修改</p>
-    <div class="panel-part"  data-bind="foreach: input">
+    <div class="panel-part"  data-bind="foreach: inputData">
         <div class="u-col-md-12 editcoverstyle" data-bind="attr:{index:$index}">
-            <!-- <div class="editcoverstyle">
-                <div class="lineheight20 padding-none" >对齐</div>
-                <div>
-                    <span class="uf uf-alignjustify" data-bind="click: $parent.changeAlign.bind(event,'center')"></span>
-                    <span class="uf uf-aligntoleft" data-bind="click: $parent.changeAlign.bind(event,'left')"></span>
-                    <span class="uf uf-aligntoright" data-bind="click: $parent.changeAlign.bind(event,'right')"></span>
-                </div>
-            </div>
-            <div class="editcoverstyle">
-                <div class="lineheight20 padding-none" >大小</div>
-                <div>
-                    <span class="btn btn-default u-button-border margin-5 u-button-sm" data-bind="click: $parent.changeSize.bind(event,'u-input u-input-transparent')">小</span>
-                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeSize.bind(event,'u-input u-input-transparent')">基础</span>
-                    <span class="btn btn-default u-button-border margin-5 u-button-lg" data-bind="click: $parent.changeSize.bind(event,'u-input u-input-transparent')">大</span>
-                </div>
-            </div>
-            <div class="editcoverstyle">
-                <div class="lineheight20 padding-none" >圆角</div>
-                <div>
-                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'u-input u-input-transparent')">直角</span>
-                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'u-input u-input-transparent')">圆角</span>
-                    <span class="btn btn-default u-button-border margin-5 u-button-lg" data-bind="click: $parent.changeBorderRadius.bind(event,'u-input u-input-transparent')">圆形</span>
-                </div>
-            </div> -->
             <div class="editcoverstyle">
                 <div class="lineheight20 padding-none" >标签大小</div>
                 <div>
-                    <span class="btn btn-default u-button-sm margin-5" data-bind="click: $parent.changeSize.bind(event,'12px')">小号</span>
-                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeSize.bind(event,'14px')">缺省</span>
-                    <span class="btn btn-default u-button-lg margin-5" data-bind="click: $parent.changeSize.bind(event,'16px')">大号</span>
+                    <span class="btn btn-default u-button-sm margin-5" data-bind="click: $parent.changeSize.bind(event,'u-form-group u-form-group-sm')">小号</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeSize.bind(event,'u-form-group')">缺省</span>
+                    <span class="btn btn-default u-button-lg margin-5" data-bind="click: $parent.changeSize.bind(event,'u-form-group u-form-group-lg')">大号</span>
+                </div>
+            </div>
+            <div class="editcoverstyle" data-bind="if: labelText">
+                <div class="lineheight20 padding-none" >label对齐</div>
+                <div>
+                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeAlign.bind(event,'left')"><span class="uf uf-aligntoleft"></span></span>
+                    <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeAlign.bind(event,'right')"><span class="uf uf-aligntoright"></span></span>
+                    <!-- <span class="btn btn-default u-button-border margin-5" data-bind="click: $parent.changeAlign.bind(event,'top')"><span class="uf uf-alignjustify"></span></span> -->
+                </div>
+            </div>
+            <div class="editcoverstyle" data-bind="if: labelText">
+                <div class="lineheight20 padding-none" >lable文本</div>
+                <div>
+                    <input type="text" class="form-control" data-bind="value:labelText" />
                 </div>
             </div>
             <div class="editcoverstyle">
                 <div class="lineheight20 padding-none" >文本</div>
                 <div>
-                    <input type="text" class="form-control" data-bind="value:text"></input>
+                    <input type="text" class="form-control" data-bind="value:value" />
                 </div>
             </div>
-            <div class="editcoverstyle">
-                <div class="lineheight20 padding-none" >文本颜色</div>
-                <div>
-                    <input type="text" class="form-control" data-bind="value:fontColor"></input>
-                </div>
-            </div>
+           <!--  <div class="editcoverstyle">
+                <label class="u-checkbox u-checkbox-info panel-inline">
+                    <input type="checkbox" class="u-checkbox-input" >
+                    <span class="u-checkbox-label">必输</span>
+                </label>
+            </div> -->
         </div>
     </div>
 </div>

@@ -3,38 +3,67 @@
  */
 
 define('input',[],function(){
-    var data = [{
-            "align":ko.observable("left"),
-            "borderRadius":ko.observable("0"),
-            "fontColor":ko.observable("#000"),
-            "borderColor": ko.observable("#000"),
-            "fontWeight": ko.observable("600"),
-            "hasText": ko.observable("左对齐"),
-            "hasText": ko.observable(false),
-            "hasIcon": ko.observable(false),
-            "text": ko.observable("我是标题"),
-            "fontSize": ko.observable("14")
+    var data = [
+        {
+            "labelText": ko.observable(null),
+            "index": ko.observable("0"),
+            "sizeClass": ko.observable("u-form-group"),
+            "value": ko.observable("111"),
+            "mustEnter": ko.observable(null)
+
         },{
-            "align":ko.observable("middle"),
-            "borderRadius":ko.observable("0"),
-            "borderColor": ko.observable("#000"),
-            "fontColor":ko.observable("#000"),
-            "fontWeight": ko.observable("400"),
-            "hasText": ko.observable(false),
-            "hasIcon": ko.observable(true),
-            "text": ko.observable("我是标题"),
-            "fontSize": ko.observable("14")
+            
+            "labelText": ko.observable(null),
+            "index": ko.observable("1"),
+            "sizeClass": ko.observable("u-form-group"),
+            "value": ko.observable(""),
+            "rightIcon":ko.observable("uf uf-magnifyingglass"),
+            "mustEnter": ko.observable(null)
+        },{
+            
+            "labelText": ko.observable("left"),
+            "index": ko.observable("2"),
+            "sizeClass": ko.observable("u-form-group"),
+            "value": ko.observable(""),
+            "align": ko.observable("left"),
+            "mustEnter": ko.observable(null)
+        },{
+            
+            "labelText": ko.observable("left"),
+            "index": ko.observable("0"),
+            "sizeClass": ko.observable("u-form-group"),
+            "value": ko.observable(""),
+            "align": ko.observable("left"),
+            "rightIcon":ko.observable("uf uf-magnifyingglass"),
+            "mustEnter": ko.observable(null)
+        },{
+            
+            "labelText": ko.observable("左对齐"),
+            "index": ko.observable("0"),
+            "sizeClass": ko.observable("u-form-group"),
+            "value": ko.observable(""),
+            "align": ko.observable("left"),
+            "mustEnter": ko.observable(true)
+        },{
+            "labelText":ko.observable(null),
+            "index": ko.observable("0"),
+            "sizeClass": ko.observable("u-form-group"),
+            "value": ko.observable(""),
+            "mustEnter": ko.observable(null),
+            "textarea": ko.observable("yes")
         }];
     var inputModel = function(data) {
-        this.input = ko.observableArray(data);
-        this.changefontColor = function(fontColor){
+        this.inputData = ko.observableArray(data);
+        console.log(this.inputData);
+        this.changeSize = function(size){
             var index = $(event.target).parents("[index]").attr("index");
-            this.input()[index].fontColor(fontColor);
+            this.inputData()[index].sizeClass(size);
+            console.log(this.inputData()[index].sizeClass());
         }.bind(this);
-        this.changeSize = function(fontSize){
+        this.changeAlign = function(align){
             var index = $(event.target).parents("[index]").attr("index");
-            this.input()[index].fontSize(fontSize);
-        }.bind(this);
+            this.inputData()[index].align(align);
+        }.bind(this)
         
        
 

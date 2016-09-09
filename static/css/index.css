@@ -816,3 +816,24 @@ iframe{
 .BgTransparent{
     background-color: transparent !important;
 }
+.u-form-group .label-left{
+    text-align: left;
+}
+.u-form-group .label-right{
+    text-align: right;
+}
+.u-form-group .label-top{
+    width: 100% !important;
+}
+.u-form-group .u-form-label {
+    color: rgb(102,102,102);
+    margin-bottom: 5px;
+    line-height: 35px;
+}
+.pannel-content .u-form-group{
+    margin-right: 0;
+}
+.red-must-in{
+    color: red;
+    display: none;
+}
