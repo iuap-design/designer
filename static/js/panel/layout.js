@@ -55,7 +55,7 @@ define('layout',[],function(){
 		checkBackgroundColor.change(function(){
 			widgetbox.toggleClass("BgTransparent")
 		});
-		editPadding.change(function(){
+		editPadding.keyup(function(){
 			var paddingtop = panel.find("input[padding=true]")[0].value + 'px';
 			var paddingright = panel.find("input[padding=true]")[1].value + 'px';
 			var paddingbottom = panel.find("input[padding=true]")[2].value + 'px';
@@ -66,10 +66,6 @@ define('layout',[],function(){
 			widgetbox.css("padding-bottom",paddingbottom);
 		});
 		editMargin.keyup(function(){
-			// var marginValue = $(this).val() + 'px';
-			// if(marginValue !== ''){
-			// 	widgetbox.css("margin",marginValue);
-			// }
 
 			var margintop = panel.find("input[margin=true]")[0].value + 'px';
 			var marginright = panel.find("input[margin=true]")[1].value + 'px';
@@ -91,12 +87,7 @@ define('layout',[],function(){
 				widgetbox.css("background-color",bgColorValue);
 			}
 		});
-		// editBackgroundImg.keyup(function(){
-		// 	var bgImgValue = $(this).val();
-		// 	if(bgImgValue !== ''){
-		// 		widgetbox.css("background-image","url{'"+bgImgValue+"'}");
-		// 	}
-		// });
+		
 		editBackgroundImg.keyup(function(){
 			var bgImgValue = $(this).val();
 			if(bgImgValue !== ''){
@@ -124,19 +115,24 @@ define('layout',[],function(){
 				var mdColVal = $(this).siblings().find("input[colattr=md]").value;
 				var smColVal = $(this).siblings().find("input[colattr=sm]").value;
 				var lgColVal = $(this).siblings().find("input[colattr=lg]").value;
-				if(mdColVal !==""){
-					mdClass = "col-md-" + mdColVal;
-					widgetbox.parent().addClass(mdClass);
+				if(mdColVal == ""){
+					mdClass="";
+				}else{
+					mdClass = "u-col-md-" + mdColVal;
 				}
-				if(smColVal !==""){
-					smClass = "col-sm-" + smColVal;
-					widgetbox.parent().addClass(smClass);
+				if(smColVal == ""){
+					smClass="";
+				}else{
+					smClass = "u-col-sm-" + smColVal;
 				}
-				if(lgColVal !==""){
-					lgClass = "col-lg-" + lgColVal;
-					widgetbox.parent().addClass(lgClass);
+				if(lgColVal == ""){
+					lgClass="";
+				}else{
+					lgClass = "u-col-lg-" + lgColVal;
 				}
 				
+				widgetbox.parent().removeClass().addClass("u-col-md-").addClass(mdClass).addClass(smClass).addClass(lgClass);
+			
 			}
 			if(colWidthType === "fix"){
 				$("input[colWidth=fix]").siblings().find("select").removeAttr("disabled");
@@ -144,20 +140,39 @@ define('layout',[],function(){
 				$("input[colWidth=free]").siblings().find("input")[1].disabled = true;
 				$("input[colWidth=free]").siblings().find("input")[2].disabled = true;
 				var fixColVal = $(this).siblings().find("select option:selected").val();
-				widgetbox.parent().addClass(fixColVal);
+				widgetbox.parent().removeClass().addClass("u-col-md-").addClass(fixColVal);
 			}
 
 		});
 
 		fixWidthSelet.change(function(){
 			var fixColVal = $(this).find("option:selected").val();
-			widgetbox.parent().addClass(fixColVal);
+			widgetbox.parent().removeClass().addClass("u-col-md-").addClass(fixColVal);
 		});
 		
 		colWdithInput.change(function(){
-			var freeColVal = "col-" + $(this).attr("colattr")+ "-"+ $(this).val();
-			widgetbox.parent().addClass(freeColVal);
+			var mdColVal = $(this).parents(".u-radio-label").find("input[colattr=md]").val();
+			var smColVal = $(this).parents(".u-radio-label").find("input[colattr=sm]").val();
+			var lgColVal = $(this).parents(".u-radio-label").find("input[colattr=lg]").val();
+			if(mdColVal == ""){
+				mdClass="";
+			}else{
+				mdClass = "u-col-md-" + mdColVal;
+			}
+			if(smColVal == ""){
+				smClass="";
+			}else{
+				smClass = "u-col-sm-" + smColVal;
+			}
+			if(lgColVal == ""){
+				lgClass="";
+			}else{
+				lgClass = "u-col-lg-" + lgColVal;
+			}
+
+			widgetbox.parent().removeClass().addClass("u-col-md-").addClass(lgClass).addClass(mdClass).addClass(smClass);
 		})
+
 
 	};
 
