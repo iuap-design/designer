@@ -788,6 +788,7 @@ body > .drag-overlay {
 }
 .layout-panel-block{
     padding: 8px 0;
+    text-align: left;
 }
 /*定制*/
 .padding-right-5{
@@ -836,4 +837,7 @@ iframe{
 .red-must-in{
     color: red;
     display: none;
+}
+.margin-none{
+    margin: 0;
 }

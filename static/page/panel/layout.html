@@ -3,65 +3,114 @@
         容器布局
     </div>
     <div class="layout-body container-fluid layout-panel u-col-md-12">
-        <!-- <div class="u-row u-drag">
-            <div class="u-col-md-12">
-                <div class="widgetBox"></div>
-            </div>
-        </div>
-        <div class="u-row u-drag">
-            <div class="u-col-md-6">
-                <div class="widgetBox"></div>
-            </div>
-            <div class="u-col-md-6">
-                <div class="widgetBox"></div>
-            </div>
-        </div>
-        <div class="u-row u-drag">
-            <div class="u-col-md-4">
-                <div class="widgetBox"></div>
-            </div>
-            <div class="u-col-md-8">
-                <div class="widgetBox"></div>
-            </div>
-        </div>
-        <div class="u-row u-drag">
-            <div class="u-col-md-8">
-                <div class="widgetBox"></div>
-            </div>
-            <div class="u-col-md-4">
-                <div class="widgetBox"></div>
-            </div>
-        </div>
-        <div class="u-row u-drag">
-            <div class="u-col-md-4">
-                <div class="widgetBox"></div>
-            </div>
-            <div class="u-col-md-4">
-                <div class="widgetBox"></div>
-            </div>
-            <div class="u-col-md-4">
-                <div class="widgetBox"></div>
-            </div>
-        </div>
-        <div class="u-row u-drag">
-            <div class="u-col-md-3">
-                <div class="widgetBox"></div>
-            </div>
-            <div class="u-col-md-9">
-                <div class="widgetBox"></div>
-            </div>
-        </div> -->
-
         <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">背景色:</label>
             <label  class="u-checkbox u-checkbox-info panel-inline" style="width: 20px;line-height: 30px;">
                 <input type="checkbox" class="u-checkbox-input" backgroundChecked="true" checked="">
             </label>
-            <label class="u-form-label padding-right-5">背景色:</label>
-            <input backgroundColor="true" value="rgb(255, 255, 255)" type="color" class="form-control panel-inline"></input>
+            <input backgroundColor="true" value="rgb(255, 255, 255)" type="color" class="form-control panel-inline" style="width: 62%;"></input>
         </div>
-        
-    </div>
-    <div class="layout-body container-fluid layout-panel u-col-md-12">
+
+        <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">背景图:</label>
+            <input backgroundImg="true" type="text" placeholder="http://" class="form-control panel-inline" style="width: 73%;"></input>
+            <div class="bgRepeat">
+                <label class="u-radio u-radio-success">
+                    <input type="radio" class="u-radio-button" checked name="bgRepeat" repeat="no-repeat">
+                    <span class="u-radio-label">满铺</span>
+                </label>
+                <label class="u-radio u-radio-success">
+                    <input type="radio" class="u-radio-button" name="bgRepeat" repeat="repeat">
+                    <span class="u-radio-label">重复</span>
+                </label>
+            </div>
+        </div>
+        <hr class="margin-none" />
+
+        <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">列宽度:</label>
+            <label class="u-radio u-radio-success panel-inline">
+                <input type="radio" class="u-radio-button" name="colWidth" colWidth="free" checked="">
+                <span class="u-radio-label">
+                    <span class="md-width">
+                        <span>md-</span>
+                        <input colattr="md" type="text" class="form-control panel-inline" style="width: 10%;padding: 0" value="12"></input>
+                    </span>
+                    <span class="sm-width">
+                        <span>sm-</span>
+                        <input colattr="sm" type="text" class="form-control panel-inline" style="width: 10%;padding: 0"></input>
+                    </span>
+                    <span class="lg-width">
+                        <span>lg-</span>
+                        <input colattr="lg" type="text" class="form-control panel-inline" style="width: 10%;padding: 0"></input>
+                    </span>
+                    <span>px</span>
+                </span>
+            </label>
+            
+        </div>
+        <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">固定宽度:</label>
+            <label class="u-radio u-radio-success">
+                <input type="radio" class="u-radio-button" name="colWidth" colWidth="fix">
+                <span class="u-radio-label">
+                    <select disabled width="true" class="form-control panel-inline" style="width: 88%;">
+                        <option value="width-50">width-50</option>
+                        <option value="width-100">width-100</option>
+                        <option value="width-150">width-150</option>
+                        <option value="width-200">width-200</option>
+                        <option value="width-250">width-250</option>
+                        <option value="width-300">width-300</option>
+                        <option value="width-350">width-350</option>
+                        <option value="width-400">width-400</option>
+                        <option value="width-450">width-450</option>
+                        <option value="width-500">width-500</option>
+                        <option value="width-auto">width-auto</option>
+                        <option value="width-full">width-full</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+
+        <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">高度:</label>
+            <select height="true" class="form-control panel-inline" >
+                <option value="height-50">height-50</option>
+                <option value="height-100">height-100</option>
+                <option value="height-150">height-150</option>
+                <option value="height-200">height-200</option>
+                <option value="height-250">height-250</option>
+                <option value="height-300">height-300</option>
+                <option value="height-350">height-350</option>
+                <option value="height-400">height-400</option>
+                <option value="height-450">height-450</option>
+                <option value="height-500">height-500</option>
+                <option value="height-auto">height-auto</option>
+                <option value="height-full">height-full</option>
+            </select>
+        </div>
+
+        <hr class="margin-none" />
+
+        <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">内边距:</label>
+            <input padding="true" type="text" value="10" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <input padding="true" type="text" value="10" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <input padding="true" type="text" value="10" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <input padding="true" type="text" value="10" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <span>px</span>
+        </div>
+        <div class="layout-panel-block">
+            <label class="u-form-label padding-right-5">外边距:</label>
+            <input margin="true" type="text" value="0" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <input margin="true" type="text" value="0" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <input margin="true" type="text" value="0" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <input margin="true" type="text" value="0" class="form-control panel-inline" style="width: 10%;padding: 0;"></input>
+            <span>px</span>
+        </div>
+
+        <hr class="margin-none" />
+
         <div class="layout-panel-block">
                 <label class="u-form-label padding-right-5">对齐:</label>
                 <span class="btn btn-default u-button-border margin-5" textAlign="left">
@@ -74,22 +123,7 @@
                     <span class="glyphicon glyphicon-align-right"></span>
                 </span>
         </div>
-        <div class="layout-panel-block">
-            <label class="u-form-label padding-right-5">内边距:</label>
-            <input padding="true" type="number" placeholder="2" class="form-control panel-inline" style="width: 77%;"></input>
-        </div>
-        <div class="layout-panel-block">
-            <label class="u-form-label padding-right-5">外边距:</label>
-            <input margin="true" type="number" placeholder="2" class="form-control panel-inline" style="width: 77%;"></input>
-        </div>
-        <div class="layout-panel-block">
-            <label class="u-form-label padding-right-5">列高度:</label>
-            <input height="true" type="number" placeholder="px" class="form-control panel-inline" style="width: 77%;"></input>
-        </div>
-        <div class="layout-panel-block">
-            <label class="u-form-label padding-right-5">背景图:</label>
-            <input backgroundImg="true" type="text" placeholder="http://" class="form-control panel-inline" style="width: 77%;"></input>
-        </div>
+       
     </div>
 
 </div>

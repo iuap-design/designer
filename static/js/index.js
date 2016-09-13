@@ -118,7 +118,8 @@ define('index',['./viewModel/pageSettingModel'],function(model){
                 // 滚动条优化
                 $(".edit-panel-body").mCustomScrollbar({theme:"minimal-dark"});
 
-                var widgetViewModel = require('./viewModel/'+panel+'Model.js');
+                //var widgetViewModel = require('./viewModel/'+panel+'Model.js');
+                var widgetViewModel = $(e.target).closest(".u-widget").data("model") || $(e.target).closest(".u-elements").data("model");
 
 
                 // console.log( $(e.target).parents(".widget-menubar").closest(".drag-overlay"));
