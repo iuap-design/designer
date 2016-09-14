@@ -811,6 +811,7 @@ body > .drag-overlay {
 }
 .layout-panel-block{
     padding: 8px 0;
+    text-align: left;
 }
 /*定制*/
 .padding-right-5{
@@ -860,6 +861,7 @@ iframe{
     color: red;
     display: none;
 }
+<<<<<<< HEAD
 .u-select-content{
     display: inline-block;
     width: 70%;
@@ -872,4 +874,8 @@ iframe{
 }
 .u-btn-squareShow{
     border-radius: 0;
+=======
+.margin-none{
+    margin: 0;
+>>>>>>> b98e2aa980ad0fa98bbbca7880c4297e9e4630ba
 }
