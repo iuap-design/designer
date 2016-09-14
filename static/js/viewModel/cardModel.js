@@ -13,11 +13,10 @@ define('card',[],function(){
     var cardModel = function(data) {
         this.cardDate = ko.observableArray(data);
 
-        //this.changeBgColor = function(){
-        //    var index = $(event.target).parents("[index]").attr("index");
-        //    alert($(event.target).val());
-        //    //this.cardDate()[index].bgColor(bgColor);
-        //}.bind(this);
+        this.changeBgColor = function(){
+            var index = $(event.target).parents("[index]").attr("index");
+            this.cardDate()[index].bgColor(bgColor);
+        }.bind(this);
 
     };
 
