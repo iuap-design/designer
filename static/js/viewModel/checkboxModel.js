@@ -17,12 +17,16 @@ define('checkbox',[],function(){
             "text": ko.observable("info")
         },{
             "bgColor":ko.observable("rgb(63,81,181)"),
+            "bgClass":ko.observable("u-checkbox u-checkbox-warning"),
+            "text": ko.observable("warning")
+        },{
+            "bgColor":ko.observable("rgb(63,81,181)"),
             "bgClass":ko.observable("u-checkbox u-checkbox-danger"),
             "text": ko.observable("danger")
         },{
             "bgColor":ko.observable("rgb(63,81,181)"),
-            "bgClass":ko.observable("u-checkbox u-checkbox-warning"),
-            "text": ko.observable("warning")
+            "bgClass":ko.observable("u-checkbox u-checkbox-dark"),
+            "text": ko.observable("grey")
         }];
     var checkboxModel = function(data) {
         this.checkbox = ko.observableArray(data);
