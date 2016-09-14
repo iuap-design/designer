@@ -2,29 +2,79 @@
     <p>样式修改</p>
     <div class="panel-part"  data-bind="foreach: image">
         <div class="u-col-md-12 editcoverstyle category" data-bind="attr:{index:$index}">
-            
-           
-           
+
             <div class="u-col-md-12 editcoverstyle">
-                <span class="col-md-3 lineheight20 padding-none">更换图片</span>
-                <input class="u-form-control" type="text" data-bind="value : imageUrl" placeholder="http://" style="width: 70%"/>
+                <span class="col-md-3 lineheight20 padding-none">固定宽度</span>
+                <div class="u-select-content " id="combo1">
+                    <select data-bind="click:$parent.changeImgWidth" class="u-button-group u-split u-button-borderRadius u-form-control">
+                        <option value="width-100%">width-100%</option>
+                        <option value="width-50">width-50</option>
+                        <option value="width-100">width-100</option>
+                        <option value="width-150">width-150</option>
+                        <option value="width-200">width-200</option>
+                        <option value="width-250">width-250</option>
+                        <option value="width-300">width-300</option>
+                        <option value="width-350">width-350</option>
+                        <option value="width-400">width-400</option>
+                        <option value="width-450">width-450</option>
+                        <option value="width-500">width-500</option>
+                        <option value="width-auto">width-auto</option>
+                    </select>
+                </div>
+
             </div>
             <div class="u-col-md-12 editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">图片</span>
+                <input class="u-form-control" type="text" data-bind="value : imageUrl" placeholder="http://" style="width: 70%"/>
+
+            </div>
+           <div class="u-col-md-12 editcoverstyle">
+                <span class="col-md-3 lineheight20"></span>
+                <div>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'50%')" style="border-radius: 60px;">圆形</span>
+                    <span class="btn btn-default margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'15px')" style="border-radius: 16px;">圆角</span>
+                    <span class="btn btn-default u-btn-squareShow margin-5" data-bind="click: $parent.changeBorderRadius.bind(event,'0')" >方形</span>
+                </div>
+            </div>
+
+            <div class="u-col-md-12 editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">描边样式</span>
+                <div class="u-select-content" >
+                    <select data-bind="click:$parent.changeImgBorderColor"  class="u-button-group u-split u-button-borderRadius u-form-control">
+                        <option value="bordered-green">bordered-green</option>
+                        <option value="bordered-orange">bordered-orange</option>
+                        <option value="bordered-primary">bordered-primary</option>
+                    </select>
+                </div>
+
+            </div>
+            <!--<div class="u-col-md-12 editcoverstyle">
                 <span class="col-md-3 lineheight20">圆角</span>
                 <input class="u-form-control" type="text" data-bind="value : borderRadius" placeholder="1px" style="width: 70%"/>
-            </div>
-            <div class="u-col-md-12 editcoverstyle">
+            </div>-->
+           <!-- <div class="u-col-md-12 editcoverstyle">
             	<span class="col-md-3 lineheight20">边线</span>
                 <input class="u-form-control" type="text" data-bind="value : borderWidth" placeholder="1px" style="width: 70%"/>
             </div>
             <div class="u-col-md-12 editcoverstyle">
             	<span class="col-md-3 lineheight20">颜色</span>
                 <input class="u-form-control" type="text" data-bind="value : borderColor"  placeholder="#fff34f" style="width: 70%"/>
-            </div>
-            <div class="u-col-md-12 editcoverstyle">
+            </div>-->
+            <!--<div class="u-col-md-12 editcoverstyle">
                 <span class="col-md-3 lineheight20 padding-none">边框样式</span>
                 <input class="u-form-control" type="text" data-bind="value : borderStyle"  placeholder="solid" style="width: 70%"/>
-            </div>
+            </div>-->
+            <!--<div class="u-col-md-12 editcoverstyle">-->
+                <!--<span class="col-md-3 lineheight20 padding-none">描边样式</span>-->
+                <!--<div class="u-select-content" >-->
+                    <!--<select class="u-button-group u-split u-button-borderRadius u-form-control">-->
+                        <!--<option value="img-bordered-green">img-bordered-green</option>-->
+                        <!--<option value="img-bordered-orange">img-bordered-orange</option>-->
+                        <!--<option value="img-bordered-primary">img-bordered-primary</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+
+            <!--</div>-->
         </div>
     </div>
 </div>
