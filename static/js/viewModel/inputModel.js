@@ -5,22 +5,29 @@
 define('input',[],function(){
     var data = [
         {
-            "labelText": ko.observable(null),
+            "showLabel": ko.observable(null),
+            "feedback": ko.observable(null),
+            "sizeClass": ko.observable("u-form-group"),
+            "labelText": ko.observable(""),
             "index": ko.observable("0"),
             "sizeClass": ko.observable("u-form-group"),
-            "value": ko.observable("111"),
+            "value": ko.observable(""),
+            "align": ko.observable("left"),
             "mustEnter": ko.observable(null)
-
         },{
-            
-            "labelText": ko.observable(null),
+            "showLabel": ko.observable(null),
+            "feedback": ko.observable(true),
+            "sizeClass": ko.observable("u-form-group"),
+            "labelText": ko.observable(""),
             "index": ko.observable("1"),
             "sizeClass": ko.observable("u-form-group"),
             "value": ko.observable(""),
-            "rightIcon":ko.observable("uf uf-magnifyingglass"),
+            "align": ko.observable("left"),
             "mustEnter": ko.observable(null)
         },{
-            
+            "showLabel": ko.observable(true),      
+            "feedback": ko.observable(null),   
+            "sizeClass": ko.observable("u-form-group"),   
             "labelText": ko.observable("left"),
             "index": ko.observable("2"),
             "sizeClass": ko.observable("u-form-group"),
@@ -28,29 +35,25 @@ define('input',[],function(){
             "align": ko.observable("left"),
             "mustEnter": ko.observable(null)
         },{
-            
+            "showLabel": ko.observable(true),  
+            "feedback": ko.observable(true),   
+            "sizeClass": ko.observable("u-form-group"), 
             "labelText": ko.observable("left"),
-            "index": ko.observable("0"),
+            "index": ko.observable("3"),
             "sizeClass": ko.observable("u-form-group"),
             "value": ko.observable(""),
             "align": ko.observable("left"),
-            "rightIcon":ko.observable("uf uf-magnifyingglass"),
             "mustEnter": ko.observable(null)
         },{
-            
-            "labelText": ko.observable("左对齐"),
-            "index": ko.observable("0"),
+            "showLabel": ko.observable(true),  
+            "feedback": ko.observable(null),
+            "sizeClass": ko.observable("u-form-group"),
+            "labelText": ko.observable("left"),
+            "index": ko.observable("4"),
             "sizeClass": ko.observable("u-form-group"),
             "value": ko.observable(""),
             "align": ko.observable("left"),
-            "mustEnter": ko.observable(true)
-        },{
-            "labelText":ko.observable(null),
-            "index": ko.observable("0"),
-            "sizeClass": ko.observable("u-form-group"),
-            "value": ko.observable(""),
-            "mustEnter": ko.observable(null),
-            "textarea": ko.observable("yes")
+            "mustEnter": ko.observable("inline-block")
         }];
     var inputModel = function(data) {
         this.inputData = ko.observableArray(data);
