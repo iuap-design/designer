@@ -617,6 +617,29 @@
     padding: 5px;
     display: inline-block;
 }
+.u-drag-area-card{
+    border: 1px dashed #979797;
+    cursor: move;
+    text-align: center;
+    display: inline-block;
+
+}
+
+.u-drag-transiton{
+    padding: 10px;
+    background: #EEEEEE;
+    -moz-transition: background 0.5s ease-in,color 0.3s ease-out;
+    -webkit-transition: background 0.5s ease-in,color 0.3s ease-out;
+    -o-transition: background 0.5s ease-in,color 0.3s ease-out;
+    transition: background 0.5s ease-in,color 0.3s ease-out;
+
+}
+.u-drag-transiton:hover{
+    background:#00BCD4;
+}
+.u-card-sideBar-fontSize{
+    font-size: 14px;
+}
 .margin-bottom-0{
     margin-bottom: 0;
 }
@@ -837,6 +860,19 @@ iframe{
 .red-must-in{
     color: red;
     display: none;
+}
+.u-select-content{
+    display: inline-block;
+    width: 70%;
+    position: relative;
+}
+.u-button-borderRadius{
+    border-radius: 4px;
+    width: 100%;
+    height: 36px;
+}
+.u-btn-squareShow {
+    border-radius: 0;
 }
 .margin-none{
     margin: 0;
