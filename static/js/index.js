@@ -175,10 +175,10 @@ define('index',['./viewModel/pageSettingModel'],function(model){
 
 
             $('#preview').on('click',function(){
-                var html = $('#container-content').html()||$('.layoutBox').html();
+                $('#container-content').find('.drag-overlay').addClass('hide')
+                var html = $('#container-content').html();
+                console.log(html);
                 $('.files').val(html);
-                $('.previewFiles').find('[data-bind]').removeAttr('data-bind');
-                $('.previewFiles').find('.drag-overlay').hide();
                 $('.previewFiles').submit();
             });
 
