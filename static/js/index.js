@@ -177,6 +177,8 @@ define('index',['./viewModel/pageSettingModel'],function(model){
             $('#preview').on('click',function(){
                 var html = $('#container-content').html()||$('.layoutBox').html();
                 $('.files').val(html);
+                $('.previewFiles').find('[data-bind]').removeAttr('data-bind');
+                $('.previewFiles').find('.drag-overlay').hide();
                 $('.previewFiles').submit();
             });
 
