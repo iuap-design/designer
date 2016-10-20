@@ -178,7 +178,7 @@ define('sidebar',['./widget'],function(widgetKO){
                         }   
                         if(type=='layout'||type=='default-layout'){
                             var layoutArrays = ui.helper.find("input").val();
-                            if(layoutArrays !== ""){
+                            if(typeof layoutArrays!= 'undefined'&& layoutArrays !== ""){
                                 layoutArrays = layoutArrays.split(" ");
                                 var layoutTemp = "";
                                 for(var i in layoutArrays){
