@@ -14,7 +14,8 @@ define('pageSetting',[],function(){
         this.bgSize = ko.observable('');
         var self = this;
         this.bgImageUrlStyle = ko.computed(function() {
-            return "url(" + self.bgGround() + ")";
+            var str = typeof self.bgGround()=='undefined'?'':self.bgGround();
+            return str;
         });
     };
 
