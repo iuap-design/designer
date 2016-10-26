@@ -3,9 +3,11 @@
  */
 
 
-define('index',['./viewModel/pageSettingModel'],function(model){
+define('index',['./viewModel/pageSettingModel','./htmlformat'],function(model){
     var init = function (container){
         var template =  require('html!../../static/page/default.html');
+
+        var HTMLFormat = require('./htmlformat.js');
 
         // 给body添加滚动条优化
         // $("body").mCustomScrollbar({theme:"minimal-dark"});
@@ -184,6 +186,7 @@ define('index',['./viewModel/pageSettingModel'],function(model){
 
             $('#downLoad').on('click',function(){
                 var html = $('#container-content').html()||$('.layoutBox').html();
+                html = HTMLFormat(html);
                 $('.files').val(html);
                 $('.downloadFiles').submit();
             });
