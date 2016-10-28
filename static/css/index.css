@@ -616,6 +616,8 @@
     text-align: center;
     padding: 5px;
     display: inline-block;
+    position: relative;
+    width: 100%;
 }
 .u-drag-area-card{
     border: 1px dashed #979797;
