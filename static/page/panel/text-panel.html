@@ -13,7 +13,107 @@
                     <span class="u-button raised u-button-danger margin-5" data-bind="click: $parent.changefontColor.bind(event,'#f44336')">危险色</span>
                 </div>
             </div>
+
+
             <div class="editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">字号</span>
+                <div class="u-select-content " id="">
+                    <select data-bind="click:$parent.changeSize"  class="u-button-group u-split u-button-borderRadius u-form-control">
+                        <option value="font-size-12">font-size-12</option>
+                        <option value="font-size-0">font-size-0</option>
+                        <option value="font-size-10">font-size-10</option>
+                        <option value="font-size-14">font-size-14</option>
+                        <option value="font-size-16">font-size-16</option>
+                        <option value="font-size-18">font-size-18</option>
+                        <option value="font-size-20">font-size-20</option>
+                        <option value="font-size-24">font-size-24</option>
+                        <option value="font-size-26">font-size-26</option>
+                        <option value="font-size-30">font-size-30</option>
+                        <option value="font-size-40">font-size-40</option>
+                        <option value="font-size-50">font-size-50</option>
+                        <option value="font-size-60">font-size-60</option>
+                        <option value="font-size-70">font-size-70</option>
+                        <option value="font-size-80">font-size-80</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">标题</span>
+                <div class="u-select-content" >
+                    <select data-bind="click:$parent.changeTitle"  class="u-button-group u-split u-button-borderRadius u-form-control">
+                        <option value="h1">h1</option>
+                        <option value="h2">h2</option>
+                        <option value="h3">h3</option>
+                        <option value="h4">h4</option>
+                        <option value="h5">h5</option>
+                        <option value="h6">h6</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">内边距</span>
+                <div class="u-select-content " >
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changePaddingTop}"  value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changePaddingRight}" value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changePaddingBottom}" value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changePaddingLeft}" value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <span>px</span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">外边距</span>
+                <div class="u-select-content " >
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changeMarginTop}" value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changeMarginRight}" value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changeMarginBottom}" value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <input padding="true" type="text" data-bind="event:{blur:$parent.changeMarginLeft}"  value="10" class="form-control panel-inline" style="width: 20%;padding: 0;"></input>
+                    <span>px</span>
+                </div>
+
+            </div>
+            <div class="editcoverstyle">
+                <span class="col-md-3 lineheight20 padding-none">对齐:</span>
+                <div>
+                     <span class="btn btn-default u-button-border margin-5"  data-bind="click:$parent.changeAlignLeft">
+                        <span class="glyphicon glyphicon-align-left"></span>
+                     </span>
+                    <span class="btn btn-default u-button-border margin-5"  data-bind="click:$parent.changeAlignMiddle">
+                        <span class="glyphicon glyphicon-align-center"></span>
+                    </span>
+                    <span class="btn btn-default u-button-border margin-5"  data-bind="click:$parent.changeAlignRight">
+                        <span class="glyphicon glyphicon-align-right"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="u-col-md-12 editcoverstyle">
+                    <span class="col-md-3 lineheight20 padding-none">超链接</span>
+                    <input class="u-form-control" type="text" data-bind="event:{blur:$parent.addLinkUrl}"  placeholder="http://" style="width: 70%"/>
+
+                </div>
+            </div>
+            <div class="editcoverstyle">
+                <div class="u-col-md-12 editcoverstyle">
+                    <span class="col-md-3 lineheight20 padding-none">字重</span>
+                    <div class="u-select-content ">
+                        <select data-bind="click:$parent.changeWeight" class="u-button-group u-split u-button-borderRadius u-form-control">
+                            <option value="font-weight-100">font-weight-100</option>
+                            <option value="font-weight-200">font-weight-200</option>
+                            <option value="font-weight-300">font-weight-300</option>
+                            <option value="font-weight-400">font-weight-400</option>
+                            <option value="font-weight-500">font-weight-500</option>
+                            <option value="font-weight-600">font-weight-600</option>
+                            <option value="font-weight-700">font-weight-700</option>
+                            <option value="font-weight-800">font-weight-800</option>
+                            <option value="font-weight-900">font-weight-900</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+         <!--   <div class="editcoverstyle">
                 <div class="lineheight20 padding-none" >文本</div>
                 <div>
                     <input type="text" class="form-control" data-bind="value:text"></input>
@@ -27,7 +127,7 @@
                     <span class="uf uf-aligntoright" data-bind="click: $parent.changeAlign.bind(event,'right')"></span>
                 </div>
             </div>
-            <!-- ko if: linkurl -->
+            &lt;!&ndash; ko if: linkurl &ndash;&gt;
             <div class="editcoverstyle">
                 <div class="lineheight20 padding-none" >
                     <input type="checkbox" class="u-checkbox-input" linkChecked="true">
@@ -36,7 +136,7 @@
                 <div>
                     <input type="text" class="form-control" data-bind="value:linkurl" />
                 </div>
-            </div>
+            </div>-->
             <!-- /ko -->
         </div>
     </div>
