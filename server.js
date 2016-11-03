@@ -143,6 +143,6 @@ app.use(function *(next){
   }
 });
 
-app.use(serve(path.join(__dirname, './build')));
+app.use(serve(path.join(__dirname, './build'),{maxAge:3600000000}));
 
 app.listen( 9000 );
