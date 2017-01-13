@@ -464,7 +464,7 @@
     min-width: 200px;
     padding: 0 10px;
 }
-.eidit-panel-header .uf-removesymbol{
+.eidit-panel-header .uf-close-c{
     float: right;
     cursor:pointer;
 }
@@ -534,13 +534,13 @@
 .edit-panel .category:hover{
     border-color: #ddd !important;
 }
-.edit-panel .category:hover .uf-removesymbol{
+.edit-panel .category:hover .uf-close-c{
     visibility: visible;
 }
-.edit-panel .category .uf-removesymbol:hover{
+.edit-panel .category .uf-close-c:hover{
     color: red;
 }
-.edit-panel .category .uf-removesymbol{
+.edit-panel .category .uf-close-c{
     /*position: absolute;
     top: 0;
     right: -11px;

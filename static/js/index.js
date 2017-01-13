@@ -136,7 +136,7 @@ define('index',['./viewModel/pageSettingModel','./htmlformat'],function(model){
                 u.compMgr.updateComp();
 
             }
-            if($(target).hasClass("uf-removesymbol")){
+            if($(target).hasClass("uf-close-c")){
                 $(e.target).parents(".drag-overlay").siblings(".widget-menubar").find(".uf-pencil").attr("count","0");
                 $(target).closest('.drag-overlay').remove();
             }
