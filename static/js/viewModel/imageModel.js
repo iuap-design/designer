@@ -4,13 +4,13 @@
 
 define('image',[],function(){
     var data = [{
-            "imageUrl":ko.observable("http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg"),
+            "imageUrl":ko.observable("http://design.yonyoucloud.com/static/img/designer/sidebar/img_cd.jpg"),
             "imgWidth": ko.observable("img-responsive"),
              "borderRadius": ko.observable("4px"),
              "size": ko.observable("sm"),
              "borderStyle":ko.observable("")
         },{
-            "imageUrl":ko.observable("http://design.yyuap.com/static/img/designer/sidebar/img_cd.jpg"),
+            "imageUrl":ko.observable("http://design.yonyoucloud.com/static/img/designer/sidebar/img_cd.jpg"),
             "imgWidth": ko.observable("img-responsive"),
             "borderRadius": ko.observable("4px"),
               "size": ko.observable("sm"),

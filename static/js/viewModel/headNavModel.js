@@ -4,7 +4,7 @@
 
 define('headNav',[],function(){
     var data = {
-          "logoImg": "http://design.yyuap.com/static/img/sprite-ui.png",
+          "logoImg": "http://design.yonyoucloud.com/static/img/sprite-ui.png",
           "navlist": [
               {
                 "title": ko.observable("赛事日程"),

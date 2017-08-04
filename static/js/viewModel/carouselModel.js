@@ -5,19 +5,19 @@
 define('carousel',[],function(){
     var data = [{
         "carouselName": ko.observable("carousel-1"),
-        "carouselImg": ko.observable("http://design.yyuap.com/static/img/carousel-1.jpg"),
+        "carouselImg": ko.observable("http://design.yonyoucloud.com/static/img/carousel-1.jpg"),
         "carouselNameColor": "#fff",
         "carouselNameSize": "12px"
       },
       {
         "carouselName": ko.observable("carousel-2"),
-        "carouselImg": ko.observable("http://design.yyuap.com/static/img/carousel-2.jpg"),
+        "carouselImg": ko.observable("http://design.yonyoucloud.com/static/img/carousel-2.jpg"),
         "carouselNameColor": "#fff",
         "carouselNameSize": "12px"
       },
       {
         "carouselName": ko.observable("carousel-3"),
-        "carouselImg": ko.observable("http://design.yyuap.com/static/img/carousel-3.jpg"),
+        "carouselImg": ko.observable("http://design.yonyoucloud.com/static/img/carousel-3.jpg"),
         "carouselNameColor": "#fff",
         "carouselNameSize": "12px"
       }];
@@ -28,7 +28,7 @@ define('carousel',[],function(){
         this.addItem = function() {
             var newCarouselItem = {
                 "carouselName": ko.observable("carousel-4"),
-                "carouselImg": ko.observable("http://design.yyuap.com/static/img/carousel-2.jpg"),
+                "carouselImg": ko.observable("http://design.yonyoucloud.com/static/img/carousel-2.jpg"),
                 "carouselNameColor": "#fff",
                 "carouselNameSize": "12px"
             };

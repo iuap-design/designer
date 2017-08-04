@@ -2,14 +2,14 @@
   "backgroudColor": "#FD9C9C",
   "newslist": [
       {
-        "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
+        "textImg": "http://design.yonyoucloud.com/static/img/desiner3.jpg",
         "title": "班级新闻",
         "titleColor": "#258FB9",
         "textContext": "恭喜XXX收到新加坡国立大学研究生offer",
         "buttonText" : "查看更多",
         "titleSize": "18px"
       },{
-        "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
+        "textImg": "http://design.yonyoucloud.com/static/img/desiner3.jpg",
         "title": "班级活动",
         "titleColor": "#fff",
         "textContext": "本周六组织爬佘山，大家积极报起名来",
@@ -17,7 +17,7 @@
         "titleSize": "18px"
       },
       {
-        "textImg": "http://design.yyuap.com/static/img/desiner3.jpg",
+        "textImg": "http://design.yonyoucloud.com/static/img/desiner3.jpg",
         "title": "班级通知",
         "titleColor": "#DF5157",
         "textContext": "国庆七天大假，放10月1号~7号",
